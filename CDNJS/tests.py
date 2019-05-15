@@ -53,7 +53,7 @@ def test_fields(fields):
     print(j)
     assert j['name'] == 'jquery'
     assert j['filename'] == 'jquery.min.js'
-    assert j['version'] == '3.4.0'
+    assert j['version'] == '3.4.1'
     assert fields.headers['Content-Type'] == 'application/json; charset=utf-8'
     assert fields.status_code == 200
 
