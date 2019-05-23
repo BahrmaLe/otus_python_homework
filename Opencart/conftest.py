@@ -14,19 +14,19 @@ def driver(request):
     browser = request.config.getoption("--browser")
     if browser == 'firefox':
         options = FirefoxOptions()
-        options.add_argument("--headless")
+        # options.add_argument("--headless")
         capabilities = options.to_capabilities()
         wd = webdriver.Firefox(desired_capabilities=capabilities)
         wd.maximize_window()
     elif browser == 'chrome':
         options = ChromeOptions()
-        options.add_argument("--headless")
+        # options.add_argument("--headless")
         capabilities = options.to_capabilities()
         wd = webdriver.Chrome(desired_capabilities=capabilities)
         wd.fullscreen_window()
     elif browser == 'ie':
         options = IeOptions()
-        options.add_argument("--headless")
+        # options.add_argument("--headless")
         capabilities = options.to_capabilities()
         wd = webdriver.Ie(desired_capabilities=capabilities)
         wd.fullscreen_window()
