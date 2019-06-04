@@ -33,6 +33,14 @@ class LoginPage(BasePage):
         """Find Alert"""
         self.driver.find_element(*LoginPageLocators.ALERT)
 
+    def alerttext(self):
+        text = self.driver.find_element(*LoginPageLocators.ALERT)
+        print(text.text)
+
+    def alerticon(self):
+        """find icon"""
+        self.driver.find_element(*LoginPageLocators.ALERTICON)
+
     def alert_close_button(self):
         """Close alert"""
         self.driver.find_element(*LoginPageLocators.CLOSEALERT).click()

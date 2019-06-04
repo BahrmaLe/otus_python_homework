@@ -1,7 +1,10 @@
 """Fixtures to testing Opencart login page"""
 import sys
+import time
+
 import pytest
 from selenium import webdriver
+from Selenium.Opencart_login_page.models.page_objects.page_objects import LoginPage
 
 
 def pytest_addoption(parser):
@@ -11,11 +14,56 @@ def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="firefox", help="Browser name")
 
 
-@pytest.fixture(scope="session", autouse=True)
-def browser(request):
+@pytest.fixture(scope="session")
+def open_login_page(driver, request):
+    """Get base URL and attend admin link"""
+    url = 'opencart/admin/'
+    return driver.get("".join([request.config.getoption("--address"), url]))
+
+
+@pytest.fixture(scope="function", autouse=True)
+def login_page(open_login_page, driver):
+    """Use class from  page objects module for managing elements on the page"""
+    return LoginPage(driver)
+
+
+@pytest.fixture(scope="function", autouse=True)
+def browser_action(login_page, request):
     """Get browser from command line key"""
     browser_name = request.config.getoption("--browser")
-    return browser_name
+    print(browser_name)
+    login_page.set_username("admin")
+    login_page.set_password("")
+    if browser_name == "firefox":
+        login_page.login()
+        time.sleep(2)
+    elif browser_name == "chrome":
+        login_page.submit()
+        time.sleep(5)
+    message = login_page.alerttext()
+    time.sleep(5)
+    yield message
+    login_page.alert_close_button()
+    time.sleep(1)
+
+
+
+# @pytest.fixture(scope="function",)
+# def login(login_page):
+#     """Set Username and Password"""
+#     login_page.set_username("admin")
+#     login_page.set_password("")
+#     login_page.login()
+#     time.sleep(3)
+#
+#
+# @pytest.fixture(scope="function",)
+# def submit(login_page):
+#     """Set Username and Password by another element(locator)"""
+#     login_page.set_username("admin")
+#     login_page.set_password("")
+#     login_page.submit()
+#     time.sleep(3)
 
 
 @pytest.fixture(scope="session", autouse=True)

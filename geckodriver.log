@@ -19,3 +19,814 @@ JavaScript warning: chrome://browser/content/browser-ctrlTab.js, line 568: Array
 [GPU
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1558512587008	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.OpNIhE2h13Kj"
+1558512781758	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.RKemvx9FiIBO"
+1558512782184	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558512782184	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558512782185	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 23224, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2321558512784763	Marionette	INFO	Listening on port 2058
+1558512785012	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 17676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1767[Child 20524, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20524, Chrome_ChildThread] WARNING: pipe error: 109: f[Parent 22220, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2[Parent 22220, Gecko_IOThread] WARNING: file z:/task_1558475280/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1558512884237	Marionette	INFO	Stopped listening on port 2058
+[GPU 23708
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1558513234119	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.Mo7msEvC4UVS"
+1558513234548	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558513234549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558513234549	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 18972, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18972, Chrom1558513237287	Marionette	INFO	Listening on port 2530
+1558513237352	Marionette	WARN	TLS certificate errors will be ignored for this session
+1558513238206	Marionette	INFO	Stopped listening on port 2530
+[Parent 23080, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 24552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 24552, Chrome_[Parent 23080, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Parent 23080, Gecko_IOThread] WARNING: file z:/task_1558475280/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1558513266658	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.q62CTA4LlK5u"
+1558513267087	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558513267087	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558513267087	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 16944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21020, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 211558513269686	Marionette	INFO	Listening on port 2602
+1558513269886	Marionette	WARN	TLS certificate errors will be ignored for this session
+1558513270636	Marionette	INFO	Stopped listening on port 2602
+[Parent 16944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22636, Chrome_ChildThread] WARNING: pipe e[Child 868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 868, Chrome_ChildThread] WARNING: pipe error: 109: [Parent 16944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22892,[Parent 16944, Gecko_IOThread] WARNING: file z:/task_1558475280/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[GPU 750
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1558513317741	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.fnUUC5SCFN4q"
+1558513318295	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558513318295	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558513318295	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 13512, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1558513321067	Marionette	INFO	Listening on port 2694
+1558513321568	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 13512, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 13512, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21388, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21388, Chrome_Child[Parent 13512, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558475280/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 22836, Chrome_ChildThread] W1559563895487	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.6urgsa2RxpNa"
+1559563895909	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559563895910	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559563895910	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559563895910	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 2748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2748, Chrome_ChildT1559563898507	Marionette	INFO	Listening on port 2737
+1559563898709	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 53936, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 46280, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 46280, Chr[Parent 53936, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 53164, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5[Parent 53936, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8536, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 851559564169526	Marionette	INFO	Stopped listening on port 2737
+[GPU 5450
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+2-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 51816, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 511559564067470	Marionette	INFO	Listening on port 1119
+1559564067700	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 58540, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 58540, [Child 57856, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 51559564170781	Marionette	INFO	Stopped listening on port 1119
+[GPU 21992
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+xtension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559564156641	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 12200, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12201559564159275	Marionette	INFO	Listening on port 1255
+1559564159456	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 59544, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_[wParenitn.cc, 51864, Ge line 341
+cko_IOThr[Cead] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59372, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59372, Chrome_ChildThread] WARNING: pipe[Parent 51864, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59804, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5[Parent 51864, Gecko_IOThread] WARNING: file z:/task_1559522608/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1559564171863	Marionette	INFO	Stopped listening on port 1255
+[GPU 58756, Chrome_C
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1559564209504	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.N4ngciV1JUnm"
+1559564209928	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559564209929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559564209929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559564209929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 49684, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 60324, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 60324, Chrome_1559564212472	Marionette	INFO	Listening on port 1363
+1559564212723	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559564291602	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.5REz91xoZ6qu"
+1559564292035	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559564292035	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559564292035	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559564292035	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 47920, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 60272, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 60272, C1559564294647	Marionette	INFO	Listening on port 1474
+1559564294822	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559564326511	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.erBF3fnE6Zh0"
+1559564326939	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559564326940	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559564326940	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559564326940	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 59264, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59720, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59720, 1559564329546	Marionette	INFO	Listening on port 1556
+1559564329732	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559564333503	Marionette	INFO	Stopped listening on port 1556
+[Parent 59264, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59224, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59224[Child 50948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 50948, C[Parent 59264, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 59264, Gecko_IOThread] WARNING: file z:/task_1559522608/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[GPU 16032
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1559564736420	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.xabCJqitczOZ"
+1559564736845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559564736845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559564736845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559564736845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 59572, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 39216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 39216, C1559564739478	Marionette	INFO	Listening on port 2201
+1559564739641	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.info: services.settings: Initialize Remote Settings
+console.info: services.settings: Push notification received (version="1559562473850" phase=register)
+console.info: services.settings: Start polling for changes
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559562473850%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:205:13
+async*receivedBroadcastMessage@resource://services-settings/remote-settings.js:361:27
+receivedBroadcastMessage@resource://gre/modules/PushBroadcastService.jsm:208:23
+async*receivedBroadcastMessage@resource://gre/modules/PushService.jsm:741:26
+_handleBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:775:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1066:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:100:23
+
+console.info: services.settings: Start polling for changes
+[Child 58328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrom[Parent 59572, Gecko_IOThread] WARNING: pipe errore/common/ipc_channel_win.cc, line 341
+: 109: file z:/task_1[559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 58840, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 58840, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/[Child 27076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21559567039065	Marionette	INFO	Stopped listening on port 2201
+[GPU 58
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+vides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 20332, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20332,1559564817121	Marionette	INFO	Listening on port 2306
+1559564817265	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.info: services.settings: Initialize Remote Settings
+console.info: services.settings: Push notification received (version="1559562473850" phase=register)
+console.info: services.settings: Start polling for changes
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559562473850%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:205:13
+async*receivedBroadcastMessage@resource://services-settings/remote-settings.js:361:27
+receivedBroadcastMessage@resource://gre/modules/PushBroadcastService.jsm:208:23
+async*receivedBroadcastMessage@resource://gre/modules/PushService.jsm:741:26
+_handleBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:775:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1066:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:100:23
+
+console.info: services.settings: Start polling for changes
+[Child 10340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10340, Chrome_ChildThread] [Parent 1460, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1559567039995	Marionette	INFO	Stopped listening on port 2306
+[GPU 17
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+e (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 53228, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 47076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 47071559564874567	Marionette	INFO	Listening on port 2397
+1559564874639	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.info: services.settings: Initialize Remote Settings
+console.info: services.settings: Push notification received (version="1559562473850" phase=register)
+console.info: services.settings: Start polling for changes
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559562473850%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:205:13
+async*receivedBroadcastMessage@resource://services-settings/remote-settings.js:361:27
+receivedBroadcastMessage@resource://gre/modules/PushBroadcastService.jsm:208:23
+async*receivedBroadcastMessage@resource://gre/modules/PushService.jsm:741:26
+_handleBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:775:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1066:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:100:23
+
+console.info: services.settings: Start polling for changes
+[Parent 53228, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 45256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 45256, Ch[Child 16028, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16028, Chrome_ChildThread] WARNING:[Parent 53228, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 57848, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 571559567040980	Marionette	INFO	Stopped listening on port 2397
+[GPU 6568, Chr
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+nteger divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 14216, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7500, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7500, Chrome1559564902752	Marionette	INFO	Listening on port 2468
+1559564902932	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.info: services.settings: Initialize Remote Settings
+console.info: services.settings: Push notification received (version="1559562473850" phase=register)
+console.info: services.settings: Start polling for changes
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559562473850%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:205:13
+async*receivedBroadcastMessage@resource://services-settings/remote-settings.js:361:27
+receivedBroadcastMessage@resource://gre/modules/PushBroadcastService.jsm:208:23
+async*receivedBroadcastMessage@resource://gre/modules/PushService.jsm:741:26
+_handleBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:775:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1066:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:100:23
+
+console.info: services.settings: Start polling for changes
+[Child 8104, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8104, C[Parent 14216, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16440, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16[Parent 14216, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 59368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 591559567042291	Marionette	INFO	Stopped listening on port 2468
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+f possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 3212, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16496, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16496, Chrome_C1559564992349	Marionette	INFO	Listening on port 2589
+1559564992517	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559564996316	Marionette	INFO	Stopped listening on port 2589
+[Child 1660, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16[Parent 3212, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 34128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 34128, Chrome_ChildThread[Parent 3212, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 60440, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559522608/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6[Parent 3212, Gecko_IOThread] WARNING: file z:/task_1559522608/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[GPU 1601
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1559576142372	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.4UGPJfTjZJL8"
+1559576142917	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559576142917	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559576142918	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559576142918	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 70288, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 70288, Chrome_ChildThread] WARNING: pipe error: 109: fil1559576146883	Marionette	INFO	Listening on port 1253
+1559576147312	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559576151622	Marionette	INFO	Stopped listening on port 1253
+[Child 53940, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 53[Child 65336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 65336, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 70788, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 70788, Gecko_IOThread] WARNING: file z:/task_1559557025/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[GPU
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ 56888, Chrom
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1559576184483	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.ss76DNngw82p"
+1559576185163	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559576185163	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559576185163	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559576185164	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 49912, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 49911559576189217	Marionette	INFO	Listening on port 1333
+1559576189426	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.info: services.settings: Initialize Remote Settings
+console.info: services.settings: Push notification received (version="1559563602939" phase=register)
+console.info: services.settings: Start polling for changes
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559563602939%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:205:13
+async*receivedBroadcastMessage@resource://services-settings/remote-settings.js:361:27
+receivedBroadcastMessage@resource://gre/modules/PushBroadcastService.jsm:208:23
+async*receivedBroadcastMessage@resource://gre/modules/PushService.jsm:741:26
+_handleBroadcastReply@resource://gre/modules/PushServiceWebSocket.jsm:775:27
+_wsOnMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:1066:18
+onMessageAvailable@resource://gre/modules/PushServiceWebSocket.jsm:100:23
+
+console.info: services.settings: Start polling for changes
+[Parent 70484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 69228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 69228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/s[Parent 70484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 70484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13356, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13356, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+ negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 73188, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 731881559579298134	Marionette	INFO	Listening on port 2420
+1559579298557	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559579302406	Marionette	INFO	Stopped listening on port 2420
+[Parent 73312, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 72476, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 72476,[Parent 73312, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 73564, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 73564, Chrome_ChildThread] WARNING: pipe err[Parent 73312, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 73312, Gecko_IOThread] WARNING: file z:/task_1559557025/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1559581520249	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Nightly\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\60064265\\AppData\\Local\\Temp\\rust_mozprofile.jqrxj4QJgR80"
+1559581520799	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559581520800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1559581520800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559581520800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(337,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(343,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(385,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(289,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(366,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(369,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(174,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(225,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(262,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 65044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 75648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 756481559581524114	Marionette	INFO	Listening on port 18675
+1559581524584	Marionette	WARN	TLS certificate errors will be ignored for this session
+1559581528505	Marionette	INFO	Stopped listening on port 18675
+[Parent 65044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 45300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 45300, Chrome_ChildThread[Child 1532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1532, Chrome_ChildThread] WARNING: pipe er[Parent 65044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 64104, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1559557025/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 64104,[Parent 65044, Gecko_IOThread] WARNING: file z:/task_1559557025/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[GPU
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

@@ -17,5 +17,6 @@ class LoginPageLocators(object):
     PASSWORD = (By.ID, "input-password")
     ERROR = (By.CLASS_NAME, "alert.alert-danger.alert-dismissible")
     FORGOT = (By.LINK_TEXT, "Forgotten Password")
-    ALERT = (By.CLASS_NAME, "alert alert-danger alert-dismissible")
+    ALERT = (By.CSS_SELECTOR, "div.alert.alert-danger.alert-dismissible")
+    ALERTICON = (By.CSS_SELECTOR, "i.fa.fa-exclamation-circle")
     CLOSEALERT = (By.CLASS_NAME, 'close')
