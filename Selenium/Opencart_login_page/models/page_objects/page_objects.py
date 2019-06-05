@@ -34,8 +34,9 @@ class LoginPage(BasePage):
         self.driver.find_element(*LoginPageLocators.ALERT)
 
     def alerttext(self):
+        """Find alert text message"""
         text = self.driver.find_element(*LoginPageLocators.ALERT)
-        print(text.text)
+        return text.text
 
     def alerticon(self):
         """find icon"""

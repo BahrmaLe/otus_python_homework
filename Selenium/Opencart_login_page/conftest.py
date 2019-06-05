@@ -8,10 +8,13 @@ from Selenium.Opencart_login_page.models.page_objects.page_objects import LoginP
 
 
 def pytest_addoption(parser):
-    """Setting base URL Openacart and parametrize command line options for select browsers"""
+    """Setting base URL Openacart and parametrize command line options for select browsers and set username or
+    password """
     parser.addoption("--address", action="store", default="http://192.168.56.103/",
                      help="Opencart web address")
     parser.addoption("--browser", action="store", default="firefox", help="Browser name")
+    parser.addoption("--username", action="store", default="", help="User Name")
+    parser.addoption("--password", action="store", default="", help="User Name")
 
 
 @pytest.fixture(scope="session")
@@ -27,43 +30,50 @@ def login_page(open_login_page, driver):
     return LoginPage(driver)
 
 
-@pytest.fixture(scope="function", autouse=True)
-def browser_action(login_page, request):
-    """Get browser from command line key"""
+@pytest.fixture(scope="function")
+def forgot_link(login_page, driver):
+    """Click on Forgotten link url"""
+    login_page.forgot_link()
+    yield driver.current_url
+    time.sleep(1)
+
+
+@pytest.fixture(scope="function")
+def alert_message(login_page, request, login_action):
+    """Get text from alert message"""
     browser_name = request.config.getoption("--browser")
     print(browser_name)
-    login_page.set_username("admin")
-    login_page.set_password("")
     if browser_name == "firefox":
         login_page.login()
-        time.sleep(2)
+        time.sleep(1)
     elif browser_name == "chrome":
         login_page.submit()
-        time.sleep(5)
+        time.sleep(1)
     message = login_page.alerttext()
-    time.sleep(5)
     yield message
     login_page.alert_close_button()
     time.sleep(1)
 
 
+@pytest.fixture(scope="function", autouse=True)
+def login_action(login_page, request, driver):
+    """Set username/password by command line parameters and do login"""
+    login_page.set_username(request.config.getoption("--username"))
+    login_page.set_password(request.config.getoption("--password"))
 
-# @pytest.fixture(scope="function",)
-# def login(login_page):
-#     """Set Username and Password"""
-#     login_page.set_username("admin")
-#     login_page.set_password("")
-#     login_page.login()
-#     time.sleep(3)
-#
-#
-# @pytest.fixture(scope="function",)
-# def submit(login_page):
-#     """Set Username and Password by another element(locator)"""
-#     login_page.set_username("admin")
-#     login_page.set_password("")
-#     login_page.submit()
-#     time.sleep(3)
+
+@pytest.fixture(scope="function")
+def current_url(request, driver, login_action, login_page):
+    """Use login button element depends from browser and get current page url"""
+    browser_name = request.config.getoption("--browser")
+    print(browser_name)
+    if browser_name == "firefox":
+        login_page.login()
+        time.sleep(1)
+    elif browser_name == "chrome":
+        login_page.submit()
+        time.sleep(1)
+    yield driver.current_url
 
 
 @pytest.fixture(scope="session", autouse=True)
