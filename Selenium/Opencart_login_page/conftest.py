@@ -1,6 +1,5 @@
 """Fixtures to testing Opencart login page"""
 import sys
-import time
 
 import pytest
 from selenium import webdriver
@@ -35,7 +34,7 @@ def forgot_link(login_page, driver):
     """Click on Forgotten link url"""
     login_page.forgot_link()
     yield driver.current_url
-    time.sleep(1)
+    driver.implicitly_wait(1)
 
 
 @pytest.fixture(scope="function")
@@ -45,14 +44,14 @@ def alert_message(login_page, request, login_action):
     print(browser_name)
     if browser_name == "firefox":
         login_page.login()
-        time.sleep(1)
+        driver.implicitly_wait(1)
     elif browser_name == "chrome":
         login_page.submit()
-        time.sleep(1)
+        driver.implicitly_wait(1)
     message = login_page.alerttext()
     yield message
     login_page.alert_close_button()
-    time.sleep(1)
+    driver.implicitly_wait(1)
 
 
 @pytest.fixture(scope="function", autouse=True)
@@ -69,10 +68,10 @@ def current_url(request, driver, login_action, login_page):
     print(browser_name)
     if browser_name == "firefox":
         login_page.login()
-        time.sleep(1)
+        driver.implicitly_wait(1)
     elif browser_name == "chrome":
         login_page.submit()
-        time.sleep(1)
+        driver.implicitly_wait(1)
     yield driver.current_url
 
 
