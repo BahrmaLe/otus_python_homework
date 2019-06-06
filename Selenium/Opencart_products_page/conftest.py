@@ -2,7 +2,7 @@
 import sys
 import pytest
 from selenium import webdriver
-from Selenium.Opencart_login_page.models.page_objects.page_objects import LoginPage
+from Selenium.Opencart_products_page.models.page_objects.page_objects import LoginPage
 
 
 def pytest_addoption(parser):
@@ -11,8 +11,8 @@ def pytest_addoption(parser):
     parser.addoption("--address", action="store", default="http://192.168.56.103/",
                      help="Opencart web address")
     parser.addoption("--browser", action="store", default="firefox", help="Browser name")
-    parser.addoption("--username", action="store", default="", help="User Name")
-    parser.addoption("--password", action="store", default="", help="User Name")
+    parser.addoption("--username", action="store", default="admin", help="User Name")
+    parser.addoption("--password", action="store", default="admin", help="User Name")
 
 
 @pytest.fixture(scope="session")
@@ -28,29 +28,29 @@ def login_page(open_login_page, driver):
     return LoginPage(driver)
 
 
-@pytest.fixture(scope="function")
-def forgot_link(login_page, driver):
-    """Click on Forgotten link url"""
-    login_page.forgot_link()
-    yield driver.current_url
-    driver.implicitly_wait(1)
+# @pytest.fixture(scope="function")
+# def forgot_link(login_page, driver):
+#     """Click on Forgotten link url"""
+#     login_page.forgot_link()
+#     yield driver.current_url
+#     driver.implicitly_wait(1)
 
 
-@pytest.fixture(scope="function")
-def alert_message(login_page, request, login_action):
-    """Get text from alert message"""
-    browser_name = request.config.getoption("--browser")
-    print(browser_name)
-    if browser_name == "firefox":
-        login_page.login()
-        driver.implicitly_wait(1)
-    elif browser_name == "chrome":
-        login_page.submit()
-        driver.implicitly_wait(1)
-    message = login_page.alerttext()
-    yield message
-    login_page.alert_close_button()
-    driver.implicitly_wait(1)
+# @pytest.fixture(scope="function")
+# def alert_message(login_page, request, login_action):
+#     """Get text from alert message"""
+#     browser_name = request.config.getoption("--browser")
+#     print(browser_name)
+#     if browser_name == "firefox":
+#         login_page.login()
+#         driver.implicitly_wait(1)
+#     elif browser_name == "chrome":
+#         login_page.submit()
+#         driver.implicitly_wait(1)
+#     message = login_page.alerttext()
+#     yield message
+#     login_page.alert_close_button()
+#     driver.implicitly_wait(1)
 
 
 @pytest.fixture(scope="function", autouse=True)
