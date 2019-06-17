@@ -2,9 +2,41 @@
 from selenium.webdriver.common.by import By
 
 
+class AdminPageLocators(object):
+    """Admin page locators"""
+    # CATALOG = (By.CLASS_NAME, "parent.collapsed")
+    # PRODUCTS = (By.CLASS_NAME, "active")
+    CATALOG = (By.XPATH, '//*[@id="menu-catalog"]/a')
+    CATALOG2 = (By.CSS_SELECTOR, '#menu-catalog > a')
+    CATALOG3 = (By.LINK_TEXT, 'Catalog')
+    PRODUCTS = (By.XPATH, '//*[@id="collapse1"]/li[2]')
+    PRODUCTS2 = (By.CSS_SELECTOR, '#collapse1 > li.active')
+    PRODUCTS3 = (By.XPATH, '//*[@id="collapse1"]/li[2]/a')
+    PRODUCTS4 = (By.CSS_SELECTOR, '#collapse1 > li.active > a')
+    PRODUCTS5 = (By.LINK_TEXT, 'Products')
+    ADDNEW = (By.CLASS_NAME, "a.btn.btn-primary")
+    ADDNEW2 = (By.XPATH, '//*[@id="content"]/div[1]/div/div/a')
+    ADDNEW3 = (By.PARTIAL_LINK_TEXT, "add")
+    DELETE = (By.CSS_SELECTOR, "#content > div.page-header > div > div > button.btn.btn-danger")
+    # MATCHPRODUCT = (By.CSS_SELECTOR, '#form-product > div > table > tbody > tr:nth-child(14) > td:nth-child(1) > input[type=checkbox]')
+    MATCHPRODUCT = (By.XPATH, "//td[text()='New Product']/preceding-sibling::td[@class='text-center']/input[@type='checkbox']")
+    MATCHPRODUCT2 = (By.CSS_SELECTOR, "input[type=checkbox] + td[text='New Product']")
+    NEWPRODUCT = (By.CSS_SELECTOR, "#form-product > div > table > tbody > tr:nth-child(1) > td:nth-child(3)")
+
+
+class ProductPageLocators(object):
+    PRODUCTNAME = (By.XPATH, '//*[@id="input-name1"]')
+    PRODUCTNAME2 = (By.NAME, "category_description[1][name]")
+    PRODUCTNAME3 = (By.CSS_SELECTOR, '#input-name1')
+    METATAG = (By.XPATH, '//*[@id="input-meta-title1"]')
+    DATATAB = (By.XPATH, '//*[@id="form-product"]/ul/li[2]/a')
+    MODELNAME = (By.XPATH, '//*[@id="input-model"]')
+    SAVEBUTTON = (By.XPATH, '//*[@id="content"]/div[1]/div/div/button/i')
+
+
 class BaseLocators(object):
     """Base locator (submit button)"""
-    PRIMARY_BUTTON = (By.CLASS_NAME, "btn.btn-primary")
+    PRIMARY_BUTTON = (By.TAG_NAME, "button")
     SUBMIT_BUTTON = (By.XPATH, "//*[@type='submit']")
 
 

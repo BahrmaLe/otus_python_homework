@@ -1,34 +1,42 @@
-from selenium.webdriver.common.by import By
+def test_add_product(driver, login_action, catalog_menu, products_page, product_card):
+    catalog_menu.open_catalog()
+    catalog_menu.open_products()
+    products_page.addnew2()
+    product_card.productname('New Product')
+    product_card.metatag('New Meta Tag Keyword')
+    product_card.datatab()
+    product_card.modelname('New model')
+    product_card.savebutton()
+    driver.implicitly_wait(3)
 
 
-def test_categories(driver, request):
-    url = 'opencart/admin/'
-    driver.get("".join([request.config.getoption("--address"), url]))
-    driver.find_element(By.ID, "input-username").send_keys("admin")
-    driver.find_element(By.ID, "input-password").send_keys("admin")
-    driver.find_element(By.CLASS_NAME, "btn.btn-primary").click()
-    driver.find_element_by_class_name("close").click()
-    els = driver.find_elements_by_class_name("parent.collapsed")
-    for el in els:
-        if el.text == "Catalog":
-            catalog = el
-            break
-    catalog.click()
-    catalog_elements = driver.find_elements_by_tag_name("li")
-    for catalog_element in catalog_elements:
-        if catalog_element.text == "Categories":
-            catalog_element.click()
-            break
-    fluids = driver.find_elements_by_class_name("container-fluid")
-    for fl in fluids:
-        if "Categories" in fl.text:
-            action_fluid = fl
-            break
-    action_fluid.find_element_by_class_name("btn.btn-primary").click()
-    driver.find_element_by_name("category_description[1][name]").send_keys("Test Category")
-    driver.find_element_by_name("category_description[1][meta_title]").send_keys("Test Category")
-    driver.find_element_by_class_name("fa.fa-save").click()
-    notification = driver.find_element_by_class_name("alert.alert-success.alert-dismissible")
-    notification_text = notification.text.rstrip("\n×'")
-    assert notification
-    assert notification_text == "Success: You have modified categories!"
+def test_products(driver, open_login_page, login_action, catalog_menu):
+    catalog_menu.open_catalog()
+    catalog_menu.open_products()
+    products = driver.find_element_by_xpath('//*[@id="form-product"]/div/table/tbody')
+    products_elements = products.find_elements_by_tag_name("tr")
+    product_list = set()
+    for element in products_elements:
+        product_name = element.find_elements_by_tag_name("td")[2]
+        product_list.add(product_name.text)
+    print(product_list)
+    assert "New Product" in product_list
+
+
+def test_delete_product(driver, open_login_page, login_action, catalog_menu, products_page):
+    catalog_menu.open_catalog()
+    catalog_menu.open_products()
+    products_page.matchproduct()
+    products_page.delete()
+    alert = driver.switch_to.alert
+    print(alert.text)
+    alert.accept()
+    driver.refresh()
+    products = driver.find_element_by_xpath('//*[@id="form-product"]/div/table/tbody')
+    products_elements = products.find_elements_by_tag_name("tr")
+    product_list = set()
+    for element in products_elements:
+        product_name = element.find_elements_by_tag_name("td")[2]
+        product_list.add(product_name.text)
+    print(product_list)
+    assert "New Product" not in product_list

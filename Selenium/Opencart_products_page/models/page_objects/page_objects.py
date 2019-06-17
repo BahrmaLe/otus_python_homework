@@ -1,10 +1,61 @@
 """Module for action with elements"""
 from Selenium.Opencart_products_page.models.page import BasePage
-from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPageLocators
+from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPageLocators, AdminPageLocators, \
+    ProductPageLocators
+
+
+class CatalogMenu(BasePage):
+    def open_catalog(self):
+        """Click on catalog menu"""
+        self.driver.find_element(*AdminPageLocators.CATALOG3).click()
+
+    def open_products(self):
+        """Click on products menu"""
+        self.driver.find_element(*AdminPageLocators.PRODUCTS5).click()
+
+
+class ProductsPage(BasePage):
+    def addnew(self):
+        """Click on Add New button"""
+        self.driver.find_element(*AdminPageLocators.ADDNEW3).click()
+
+    def addnew2(self):
+        """Click on Add New button"""
+        self.driver.find_element(*AdminPageLocators.ADDNEW2).click()
+
+    def matchproduct(self):
+        self.driver.find_element(*AdminPageLocators.MATCHPRODUCT).click()
+
+    def delete(self):
+        """Click on Delete button"""
+        self.driver.find_element(*AdminPageLocators.DELETE).click()
+
+    def newproduct(self):
+        """Find new product"""
+        newproduct = self.driver.find_element(*AdminPageLocators.NEWPRODUCT)
+        return newproduct.text
+
+
+class ProductPage(BasePage):
+    def productname(self, productname):
+        self.driver.find_element(*ProductPageLocators.PRODUCTNAME).send_keys(productname)
+
+    def metatag(self, keywords):
+        self.driver.find_element(*ProductPageLocators.METATAG).send_keys(keywords)
+
+    def datatab(self):
+        self.driver.find_element(*ProductPageLocators.DATATAB).click()
+
+    def modelname(self, modelname):
+        self.driver.find_element(*ProductPageLocators.MODELNAME).send_keys(modelname)
+
+    def savebutton(self):
+        self.driver.find_element(*ProductPageLocators.SAVEBUTTON).click()
 
 
 class LoginPage(BasePage):
     """class for action with elements"""
+
     def set_username(self, username):
         """Set username"""
         self.driver.find_element(*LoginPageLocators.USERNAME3).send_keys(username)
