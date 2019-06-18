@@ -80,6 +80,41 @@ def add_product(driver, login_action, open_products_page, products_page, product
     driver.refresh()
 
 
+@pytest.fixture(scope='function')
+def edit_product(driver, login_action, open_products_page, products_page, product_card):
+    products_page.edit()
+    product_card.clear_productname()
+    product_card.productname('Edited Product')
+    product_card.clear_metatag()
+    product_card.metatag('Edited Meta Tag Keyword')
+    product_card.datatab()
+    product_card.clear_modelname()
+    product_card.modelname('Edited model')
+    product_card.savebutton()
+
+
+@pytest.fixture(scope='function')
+def delete_product(driver, login_action, open_products_page, products_page):
+    products_page.matchproduct()
+    products_page.delete()
+    alert = driver.switch_to.alert
+    print(alert.text)
+    alert.accept()
+    driver.refresh()
+
+
+@pytest.fixture(scope='function')
+def products_list(driver, open_login_page, login_action, open_products_page):
+    products = driver.find_element_by_xpath('//*[@id="form-product"]/div/table/tbody')
+    products_elements = products.find_elements_by_tag_name("tr")
+    product_list = set()
+    for element in products_elements:
+        product_name = element.find_elements_by_tag_name("td")[2]
+        product_list.add(product_name.text)
+    print(product_list)
+    return product_list
+
+
 @pytest.fixture(scope="session", autouse=True)
 def driver(request):
     """Launching webdriver"""

@@ -13,6 +13,18 @@ class CatalogMenu(BasePage):
         """Click on products menu"""
         self.driver.find_element(*AdminPageLocators.PRODUCTS5).click()
 
+    def products_list(self):
+        """Return current list of products"""
+        self.driver.find_element(*AdminPageLocators.PRODUCTSLIST)
+    #
+    # def products_elements(self):
+    #     """Return attributes for product"""
+    #     self.driver.find_elements(*AdminPageLocators.PRODUCTELEMENTS)
+    #
+    # def product_name(self):
+    #     """Return names of product from product list"""
+    #     self.driver.find_elements(*AdminPageLocators.PRODUCT_NAME[2])
+
 
 class ProductsPage(BasePage):
     def addnew(self):

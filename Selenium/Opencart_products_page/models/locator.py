@@ -4,8 +4,6 @@ from selenium.webdriver.common.by import By
 
 class AdminPageLocators(object):
     """Admin page locators"""
-    # CATALOG = (By.CLASS_NAME, "parent.collapsed")
-    # PRODUCTS = (By.CLASS_NAME, "active")
     CATALOG = (By.XPATH, '//*[@id="menu-catalog"]/a')
     CATALOG2 = (By.CSS_SELECTOR, '#menu-catalog > a')
     CATALOG3 = (By.LINK_TEXT, 'Catalog')
@@ -22,6 +20,9 @@ class AdminPageLocators(object):
                               "@type='checkbox']")
     EDIT = (By.XPATH, "//td[text()='New Product']/following-sibling::td[@class='text-right']/a["
                       "@data-original-title='Edit']")
+    PRODUCTSLIST = (By.XPATH, '//*[@id="form-product"]/div/table/tbody')
+    # PRODUCTELEMENTS = (PRODUCTSLIST.By.TAG_NAME, "tr")
+    # PRODUCT_NAME = (By.TAG_NAME, "td")
 
 
 class ProductPageLocators(object):

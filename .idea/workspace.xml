@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="Added run script with argparse parameters">
-      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_draft.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_login_page/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_login_page/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py" afterDir="false" />
@@ -16,13 +14,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="363">
+                    <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+                    <folding>
+                      <element signature="e#46#56#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="17">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -30,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="15" selection-start-line="15" selection-end-line="17" selection-end-column="65" />
               <folding>
                 <element signature="e#38#102#0" expanded="true" />
               </folding>
@@ -42,20 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1759">
-              <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
-              <folding>
-                <element signature="e#46#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="342">
+              <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -63,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_draft.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="-289">
+              <caret line="18" selection-start-line="18" selection-end-line="41" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -138,10 +146,10 @@
         <option value="$PROJECT_DIR$/Selenium/Opencart_login_page/models/locator.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_login_page/models/page_objects/page_objects.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_login_page/conftest.py" />
-        <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/test_draft.py" />
-        <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" />
       </list>
     </option>
@@ -438,7 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559833247464</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added run script with argparse parameters">
+      <created>1560791601409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560791601409</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added run script with argparse parameters">
+      <created>1560865674009</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560865674009</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -496,7 +518,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32809773" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3279743" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.3386924" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.45551983" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50132626" side_tool="true" weight="0.33469388" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.4812433" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3290461" />
@@ -833,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_draft.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_login_page/models/locator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -861,37 +876,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1759">
-          <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
-          <folding>
-            <element signature="e#46#56#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py">
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_draft.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="127" />
+        <state relative-caret-position="-289">
+          <caret line="18" selection-start-line="18" selection-end-line="41" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="15" selection-start-line="15" selection-end-line="17" selection-end-column="65" />
           <folding>
             <element signature="e#38#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+          <folding>
+            <element signature="e#46#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
