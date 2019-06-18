@@ -26,6 +26,7 @@ class AdminPageLocators(object):
 
 
 class ProductPageLocators(object):
+    """Locators for product item"""
     PRODUCTNAME = (By.XPATH, '//*[@id="input-name1"]')
     PRODUCTNAME2 = (By.NAME, "category_description[1][name]")
     PRODUCTNAME3 = (By.CSS_SELECTOR, '#input-name1')

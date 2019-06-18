@@ -5,6 +5,8 @@ from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPa
 
 
 class CatalogMenu(BasePage):
+    """class for action with elements"""
+
     def open_catalog(self):
         """Click on catalog menu"""
         self.driver.find_element(*AdminPageLocators.CATALOG3).click()
@@ -16,17 +18,11 @@ class CatalogMenu(BasePage):
     def products_list(self):
         """Return current list of products"""
         self.driver.find_element(*AdminPageLocators.PRODUCTSLIST)
-    #
-    # def products_elements(self):
-    #     """Return attributes for product"""
-    #     self.driver.find_elements(*AdminPageLocators.PRODUCTELEMENTS)
-    #
-    # def product_name(self):
-    #     """Return names of product from product list"""
-    #     self.driver.find_elements(*AdminPageLocators.PRODUCT_NAME[2])
 
 
 class ProductsPage(BasePage):
+    """class for action with elements"""
+
     def addnew(self):
         """Click on Add New button"""
         self.driver.find_element(*AdminPageLocators.ADDNEW3).click()
@@ -36,6 +32,7 @@ class ProductsPage(BasePage):
         self.driver.find_element(*AdminPageLocators.ADDNEW2).click()
 
     def matchproduct(self):
+        """Click for flag checkbox forward the product"""
         self.driver.find_element(*AdminPageLocators.MATCHPRODUCT).click()
 
     def delete(self):
@@ -48,19 +45,26 @@ class ProductsPage(BasePage):
 
 
 class ProductPage(BasePage):
+    """class for action with elements"""
+
     def productname(self, productname):
+        """Fill the product name field"""
         self.driver.find_element(*ProductPageLocators.PRODUCTNAME).send_keys(productname)
 
     def metatag(self, keywords):
+        """Fill the metatag field"""
         self.driver.find_element(*ProductPageLocators.METATAG).send_keys(keywords)
 
     def datatab(self):
+        """Go o Data tab"""
         self.driver.find_element(*ProductPageLocators.DATATAB).click()
 
     def modelname(self, modelname):
+        """Fill the model field"""
         self.driver.find_element(*ProductPageLocators.MODELNAME).send_keys(modelname)
 
     def savebutton(self):
+        """Click on save button"""
         self.driver.find_element(*ProductPageLocators.SAVEBUTTON).click()
 
     def clear_productname(self):
@@ -68,11 +72,11 @@ class ProductPage(BasePage):
         self._clear_element_(self.driver.find_element(*ProductPageLocators.PRODUCTNAME))
 
     def clear_metatag(self):
-        """Clear password"""
+        """Clear metatag"""
         self._clear_element_(self.driver.find_element(*ProductPageLocators.METATAG))
 
     def clear_modelname(self):
-        """Clear password"""
+        """Clear model name"""
         self._clear_element_(self.driver.find_element(*ProductPageLocators.MODELNAME))
 
 

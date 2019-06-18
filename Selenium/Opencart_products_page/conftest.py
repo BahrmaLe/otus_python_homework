@@ -2,13 +2,13 @@
 import sys
 import pytest
 from selenium import webdriver
-from Selenium.Opencart_products_page.models.page_objects.page_objects import LoginPage, CatalogMenu, ProductsPage, \
-    ProductPage
+from Selenium.Opencart_products_page.models.page_objects.page_objects import LoginPage, \
+    CatalogMenu, ProductsPage, ProductPage
 
 
 def pytest_addoption(parser):
-    """Setting base URL Openacart and parametrize command line options for select browsers and set username or
-    password """
+    """Setting base URL Openacart and parametrize command line options for select
+    browsers and set username or password """
     parser.addoption("--address", action="store", default="http://192.168.56.103/",
                      help="Opencart web address")
     parser.addoption("--browser", action="store", default="firefox", help="Browser name")
@@ -43,12 +43,6 @@ def catalog_menu(open_login_page, driver):
     return CatalogMenu(driver)
 
 
-@pytest.fixture(scope='function')
-def delete_product(products_page):
-    products_page.matchproduct()
-    products_page.delete()
-
-
 @pytest.fixture(scope="function")
 def products_page(open_login_page, driver):
     """Use class from  page objects module for managing elements on the page"""
@@ -63,12 +57,14 @@ def product_card(open_login_page, driver):
 
 @pytest.fixture(scope='function')
 def open_products_page(catalog_menu):
+    """Use locators for opening catalog menu - products"""
     catalog_menu.open_catalog()
     catalog_menu.open_products()
 
 
 @pytest.fixture(scope='function')
 def add_product(driver, login_action, open_products_page, products_page, product_card):
+    """Adding new product"""
     products_page.addnew2()
     product_card.productname('New Product')
     product_card.metatag('New Meta Tag Keyword')
@@ -82,6 +78,7 @@ def add_product(driver, login_action, open_products_page, products_page, product
 
 @pytest.fixture(scope='function')
 def edit_product(driver, login_action, open_products_page, products_page, product_card):
+    """Editing product"""
     products_page.edit()
     product_card.clear_productname()
     product_card.productname('Edited Product')
@@ -95,6 +92,7 @@ def edit_product(driver, login_action, open_products_page, products_page, produc
 
 @pytest.fixture(scope='function')
 def delete_product(driver, login_action, open_products_page, products_page):
+    """Matching and deleting product"""
     products_page.matchproduct()
     products_page.delete()
     alert = driver.switch_to.alert
@@ -105,6 +103,7 @@ def delete_product(driver, login_action, open_products_page, products_page):
 
 @pytest.fixture(scope='function')
 def products_list(driver, open_login_page, login_action, open_products_page):
+    """Return products list with names"""
     products = driver.find_element_by_xpath('//*[@id="form-product"]/div/table/tbody')
     products_elements = products.find_elements_by_tag_name("tr")
     product_list = set()
