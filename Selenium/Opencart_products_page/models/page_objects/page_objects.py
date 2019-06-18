@@ -30,10 +30,9 @@ class ProductsPage(BasePage):
         """Click on Delete button"""
         self.driver.find_element(*AdminPageLocators.DELETE).click()
 
-    def newproduct(self):
-        """Find new product"""
-        newproduct = self.driver.find_element(*AdminPageLocators.NEWPRODUCT)
-        return newproduct.text
+    def edit(self):
+        """Click on Edit button"""
+        self.driver.find_element(*AdminPageLocators.EDIT).click()
 
 
 class ProductPage(BasePage):
@@ -51,6 +50,18 @@ class ProductPage(BasePage):
 
     def savebutton(self):
         self.driver.find_element(*ProductPageLocators.SAVEBUTTON).click()
+
+    def clear_productname(self):
+        """Clear password"""
+        self._clear_element_(self.driver.find_element(*ProductPageLocators.PRODUCTNAME))
+
+    def clear_metatag(self):
+        """Clear password"""
+        self._clear_element_(self.driver.find_element(*ProductPageLocators.METATAG))
+
+    def clear_modelname(self):
+        """Clear password"""
+        self._clear_element_(self.driver.find_element(*ProductPageLocators.MODELNAME))
 
 
 class LoginPage(BasePage):

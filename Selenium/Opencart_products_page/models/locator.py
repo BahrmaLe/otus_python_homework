@@ -18,10 +18,10 @@ class AdminPageLocators(object):
     ADDNEW2 = (By.XPATH, '//*[@id="content"]/div[1]/div/div/a')
     ADDNEW3 = (By.PARTIAL_LINK_TEXT, "add")
     DELETE = (By.CSS_SELECTOR, "#content > div.page-header > div > div > button.btn.btn-danger")
-    # MATCHPRODUCT = (By.CSS_SELECTOR, '#form-product > div > table > tbody > tr:nth-child(14) > td:nth-child(1) > input[type=checkbox]')
-    MATCHPRODUCT = (By.XPATH, "//td[text()='New Product']/preceding-sibling::td[@class='text-center']/input[@type='checkbox']")
-    MATCHPRODUCT2 = (By.CSS_SELECTOR, "input[type=checkbox] + td[text='New Product']")
-    NEWPRODUCT = (By.CSS_SELECTOR, "#form-product > div > table > tbody > tr:nth-child(1) > td:nth-child(3)")
+    MATCHPRODUCT = (By.XPATH, "//td[text()='Edited Product']/preceding-sibling::td[@class='text-center']/input["
+                              "@type='checkbox']")
+    EDIT = (By.XPATH, "//td[text()='New Product']/following-sibling::td[@class='text-right']/a["
+                      "@data-original-title='Edit']")
 
 
 class ProductPageLocators(object):

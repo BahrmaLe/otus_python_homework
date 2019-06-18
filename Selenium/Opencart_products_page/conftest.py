@@ -80,69 +80,6 @@ def add_product(driver, login_action, open_products_page, products_page, product
     driver.refresh()
 
 
-# @pytest.fixture(scope="function", autouse=True)
-# def products_path(request, driver, login_action, login_page, catalog_menu):
-#     """Use this func for moving to products page"""
-#     browser_name = request.config.getoption("--browser")
-#     print(browser_name)
-#     if browser_name == "firefox":
-#         login_page.login()
-#         driver.implicitly_wait(1)
-#     elif browser_name == "chrome":
-#         login_page.submit()
-#         driver.implicitly_wait(1)
-
-
-# @pytest.fixture(scope="function", autouse=True)
-# def open_product_page(driver, login_action, login_page, catalog_menu):
-#     """Use this func for moving to products page"""
-#     catalog_menu.open_catalog()
-#     catalog_menu.open_products()
-#
-#
-# @pytest.fixture(scope="function", autouse=True)
-# def add_new_product(request, driver, login_page, login_action, product_page):
-#     """Use this func for moving to products page"""
-#     browser_name = request.config.getoption("--browser")
-#     print(browser_name)
-#     if browser_name == 'firefox':
-#         products_page.addnew()
-#         driver.implicitly_wait(3)
-#         product_page.productname('New Product')
-#         product_page.metatag('New Meta Tag Keyword')
-#         product_page.datatab()
-#         product_page.modelname('New model')
-#         product_page.savebutton()
-#         driver.implicitly_wait(3)
-#     elif browser_name == "chrome":
-#         products_page.addnew2()
-#         driver.implicitly_wait(3)
-#         product_page.productname('New Product')
-#         product_page.metatag('New Meta Tag Keyword')
-#         product_page.datatab()
-#         product_page.modelname('New model')
-#         product_page.savebutton()
-#         driver.implicitly_wait(3)
-
-
-# @pytest.fixture(scope="function")
-# def fill_product_page(request, driver, login_action, login_page, catalog_menu, products_page, product_page):
-#     browser_name = request.config.getoption("--browser")
-#     print(browser_name)
-#     login_page.login()
-#     driver.implicitly_wait(1)
-#     catalog_menu.open_catalog()
-#     catalog_menu.open_products()
-#     products_page.addnew()
-#     product_page.productname('New Product')
-#     product_page.metatag('New Meta Tag Keyword')
-#     product_page.datatab()
-#     product_page.modelname('New model')
-#     product_page.savebutton()
-#     driver.implicitly_wait(3)
-#     yield driver.current_url
-
-
 @pytest.fixture(scope="session", autouse=True)
 def driver(request):
     """Launching webdriver"""
@@ -164,12 +101,6 @@ def driver(request):
         capabilities['acceptInsecureCerts'] = True
         wd = webdriver.Chrome(desired_capabilities=capabilities)
         wd.fullscreen_window()
-    # elif browser == 'ie':
-    #     capabilities = webdriver.DesiredCapabilities.INTERNETEXPLORER.copy()
-    #     capabilities.pop("platform", None)
-    #     capabilities.pop("version", None)
-    #     wd = webdriver.Ie(desired_capabilities=capabilities)
-    #     wd.fullscreen_window()
     else:
         print('Unsupported browser!')
         sys.exit(1)
