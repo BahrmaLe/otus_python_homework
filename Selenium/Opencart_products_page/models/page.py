@@ -2,7 +2,7 @@
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoAlertPresentException
 
 
 class BasePage:
@@ -38,6 +38,16 @@ class BasePage:
             element = self.driver.find_element(by, value)
             return element
         except (NoSuchElementException, TimeoutException):
+            return False
+
+    def _wait_alert_(self, delay=10):
+        """Waiting when alert is presented"""
+        try:
+            WebDriverWait(self.driver, delay).until(EC.alert_is_present())
+            element = self.driver.switch_to.alert
+            element.accept()
+            print("Alert accepted")
+        except (NoSuchElementException, TimeoutException, NoAlertPresentException):
             return False
 
     def _wait_element_in_other_element_(self, element, by, value, delay=25):

@@ -13,7 +13,9 @@ def pytest_addoption(parser):
                      help="Opencart web address")
     parser.addoption("--browser", action="store", default="firefox", help="Browser name")
     parser.addoption("--username", action="store", default="admin", help="User Name")
-    parser.addoption("--password", action="store", default="admin", help="User Name")
+    parser.addoption("--password", action="store", default="admin", help="User Password")
+    parser.addoption("--iwait", action="store", default="30000", help="Implicitly wait parameter")
+    parser.addoption("--pltimeout", action="store", default="1000", help="Page load timeout")
 
 
 @pytest.fixture(scope="function")
@@ -24,7 +26,7 @@ def open_login_page(driver, request):
 
 
 @pytest.fixture(scope="function")
-def login_page(open_login_page, driver):
+def login_page(driver, open_login_page):
     """Use class from  page objects module for managing elements on the page"""
     return LoginPage(driver)
 
@@ -38,19 +40,19 @@ def login_action(login_page, request, driver):
 
 
 @pytest.fixture(scope="function")
-def catalog_menu(open_login_page, driver):
+def catalog_menu(driver, open_login_page):
     """Use class from  page objects module for managing elements on the page"""
     return CatalogMenu(driver)
 
 
 @pytest.fixture(scope="function")
-def products_page(open_login_page, driver):
+def products_page(driver, open_login_page):
     """Use class from  page objects module for managing elements on the page"""
     return ProductsPage(driver)
 
 
 @pytest.fixture(scope="function")
-def product_card(open_login_page, driver):
+def product_card(driver, open_login_page):
     """Use class from  page objects module for managing elements on the page"""
     return ProductPage(driver)
 
@@ -90,34 +92,27 @@ def edit_product(driver, login_action, open_products_page, products_page, produc
     product_card.savebutton()
 
 
+@pytest.mark.usefixtures("login_action", "open_products_page")
 @pytest.fixture(scope='function')
-def delete_product(driver, login_action, open_products_page, products_page):
+def delete_product(driver, products_page):
     """Matching and deleting product"""
     products_page.matchproduct()
     products_page.delete()
-    alert = driver.switch_to.alert
-    print(alert.text)
-    alert.accept()
+    products_page.alert()
     driver.refresh()
 
 
 @pytest.fixture(scope='function')
-def products_list(driver, open_login_page, login_action, open_products_page):
+def products_list(driver, open_login_page, login_action, open_products_page, products_page):
     """Return products list with names"""
-    products = driver.find_element_by_xpath('//*[@id="form-product"]/div/table/tbody')
-    products_elements = products.find_elements_by_tag_name("tr")
-    product_list = set()
-    for element in products_elements:
-        product_name = element.find_elements_by_tag_name("td")[2]
-        product_list.add(product_name.text)
-    print(product_list)
-    return product_list
+    return products_page.products_list()
 
 
 @pytest.fixture(scope="session", autouse=True)
 def driver(request):
     """Launching webdriver"""
     browser_name = request.config.getoption("--browser")
+    print(browser_name)
     if browser_name == 'firefox':
         capabilities = webdriver.DesiredCapabilities.FIREFOX.copy()
         capabilities['timeouts'] = {'implicit': 300000, 'pageLoad': 300000, 'script': 30000}
@@ -138,5 +133,11 @@ def driver(request):
     else:
         print('Unsupported browser!')
         sys.exit(1)
+    wd.implicitly_wait((request.config.getoption("--iwait")))
+    wd.set_page_load_timeout((request.config.getoption("--pltimeout")))
+    implicitly_wait = request.config.getoption("--iwait")
+    page_load_timeout = request.config.getoption("--pltimeout")
+    print(implicitly_wait)
+    print(page_load_timeout)
     yield wd
     wd.quit()

@@ -8,7 +8,8 @@ class AdminPageLocators(object):
     CATALOG2 = (By.CSS_SELECTOR, '#menu-catalog > a')
     CATALOG3 = (By.LINK_TEXT, 'Catalog')
     PRODUCTS = (By.XPATH, '//*[@id="collapse1"]/li[2]')
-    PRODUCTS2 = (By.CSS_SELECTOR, '#collapse1 > li.active')
+    ALLPRODUCTS = (By.XPATH, '//*[@id="form-product"]/div/table/tbody')
+    ALLPRODUCTSELEMENTS = (By.TAG_NAME, "tr")
     PRODUCTS3 = (By.XPATH, '//*[@id="collapse1"]/li[2]/a')
     PRODUCTS4 = (By.CSS_SELECTOR, '#collapse1 > li.active > a')
     PRODUCTS5 = (By.LINK_TEXT, 'Products')
@@ -20,9 +21,6 @@ class AdminPageLocators(object):
                               "@type='checkbox']")
     EDIT = (By.XPATH, "//td[text()='New Product']/following-sibling::td[@class='text-right']/a["
                       "@data-original-title='Edit']")
-    PRODUCTSLIST = (By.XPATH, '//*[@id="form-product"]/div/table/tbody')
-    # PRODUCTELEMENTS = (PRODUCTSLIST.By.TAG_NAME, "tr")
-    # PRODUCT_NAME = (By.TAG_NAME, "td")
 
 
 class ProductPageLocators(object):

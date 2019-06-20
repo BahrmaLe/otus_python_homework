@@ -1,4 +1,6 @@
 """Module for action with elements"""
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+
 from Selenium.Opencart_products_page.models.page import BasePage
 from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPageLocators, AdminPageLocators, \
     ProductPageLocators
@@ -13,11 +15,10 @@ class CatalogMenu(BasePage):
 
     def open_products(self):
         """Click on products menu"""
-        self.driver.find_element(*AdminPageLocators.PRODUCTS5).click()
-
-    def products_list(self):
-        """Return current list of products"""
-        self.driver.find_element(*AdminPageLocators.PRODUCTSLIST)
+        products = self._wait_element_(*AdminPageLocators.PRODUCTS5, delay=10)
+        if products:
+            products.click()
+        return products is not None
 
 
 class ProductsPage(BasePage):
@@ -39,9 +40,26 @@ class ProductsPage(BasePage):
         """Click on Delete button"""
         self.driver.find_element(*AdminPageLocators.DELETE).click()
 
+    def alert(self):
+        """Click submit on Alert confirmation pop-up"""
+        alert = self._wait_alert_()
+        return alert is not None
+
     def edit(self):
         """Click on Edit button"""
         self.driver.find_element(*AdminPageLocators.EDIT).click()
+
+    def products_list(self):
+        """Return current list of products"""
+        products = self._wait_element_(*AdminPageLocators.ALLPRODUCTS, delay=10)
+        if products:
+            products_elements = products.find_elements_by_tag_name("tr")
+            product_list = set()
+            for element in products_elements:
+                product_name = element.find_elements_by_tag_name("td")[2]
+                product_list.add(product_name.text)
+            print(product_list)
+            return product_list
 
 
 class ProductPage(BasePage):
