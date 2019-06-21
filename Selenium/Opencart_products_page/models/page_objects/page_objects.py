@@ -1,9 +1,7 @@
 """Module for action with elements"""
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-
 from Selenium.Opencart_products_page.models.page import BasePage
-from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPageLocators, AdminPageLocators, \
-    ProductPageLocators
+from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPageLocators, \
+    AdminPageLocators, ProductPageLocators
 
 
 class CatalogMenu(BasePage):
