@@ -3,7 +3,7 @@ import sys
 import pytest
 from selenium import webdriver
 from Selenium.Opencart_products_page.models.page_objects.page_objects import LoginPage, \
-    CatalogMenu, ProductsPage, ProductPage
+    CatalogMenu, ProductsPage, ProductPage, ProductManager
 
 
 def pytest_addoption(parser):
@@ -16,6 +16,11 @@ def pytest_addoption(parser):
     parser.addoption("--password", action="store", default="admin", help="User Password")
     parser.addoption("--iwait", action="store", default="30000", help="Implicitly wait parameter")
     parser.addoption("--pltimeout", action="store", default="1000", help="Page load timeout")
+    parser.addoption("--productname", action="store", default="New Product", help="Product Name")
+    parser.addoption("--keywords", action="store",
+                     default="New Meta Tag Keyword",
+                     help="Meta Tag Keyword")
+    parser.addoption("--modelname", action="store", default="New model", help="Model Name")
 
 
 @pytest.fixture(scope="function")
@@ -33,16 +38,20 @@ def login_page(driver, open_login_page):
 
 @pytest.fixture(scope="function")
 def login_action(login_page, request, driver):
-    """Set username/password by command line parameters and do login"""
-    login_page.set_username(request.config.getoption("--username"))
-    login_page.set_password(request.config.getoption("--password"))
-    login_page.submit()
+    """Open admin login page and login in"""
+    login_page.login(request.config.getoption("--username"), request.config.getoption("--password"))
 
 
 @pytest.fixture(scope="function")
 def catalog_menu(driver, open_login_page):
     """Use class from  page objects module for managing elements on the page"""
     return CatalogMenu(driver)
+
+
+@pytest.fixture(scope="function")
+def product_manager(driver, open_login_page):
+    """Use class from  page objects module for managing elements on the page"""
+    return ProductManager(driver)
 
 
 @pytest.fixture(scope="function")
@@ -59,53 +68,40 @@ def product_card(driver, open_login_page):
 
 @pytest.fixture(scope='function')
 def open_products_page(catalog_menu):
-    """Use locators for opening catalog menu - products"""
-    catalog_menu.open_catalog()
-    catalog_menu.open_products()
+    """Open product managements page"""
+    catalog_menu.open_products_page()
 
 
 @pytest.fixture(scope='function')
-def add_product(driver, login_action, open_products_page, products_page, product_card):
+def add_product(driver, login_action, open_products_page, product_manager, request):
     """Adding new product"""
-    products_page.addnew2()
-    product_card.productname('New Product')
-    product_card.metatag('New Meta Tag Keyword')
-    product_card.datatab()
-    product_card.modelname('New model')
-    product_card.savebutton()
+    product_manager.add_new_product(request.config.getoption("--productname"),
+                                    request.config.getoption("--keywords"),
+                                    request.config.getoption("--modelname"))
     driver.back()
     driver.back()
     driver.refresh()
 
 
 @pytest.fixture(scope='function')
-def edit_product(driver, login_action, open_products_page, products_page, product_card):
+def edit_product(driver, login_action, open_products_page, product_manager, request):
     """Editing product"""
-    products_page.edit()
-    product_card.clear_productname()
-    product_card.productname('Edited Product')
-    product_card.clear_metatag()
-    product_card.metatag('Edited Meta Tag Keyword')
-    product_card.datatab()
-    product_card.clear_modelname()
-    product_card.modelname('Edited model')
-    product_card.savebutton()
+    product_manager.edit_product("".join([request.config.getoption("--productname"), " Edited"]),
+                                 "".join([request.config.getoption("--keywords"), " Edited"]),
+                                 "".join([request.config.getoption("--modelname"), " Edited"]))
 
 
-@pytest.mark.usefixtures("login_action", "open_products_page")
 @pytest.fixture(scope='function')
-def delete_product(driver, products_page):
+def delete_product(driver, login_action, open_products_page, products_page):
     """Matching and deleting product"""
-    products_page.matchproduct()
-    products_page.delete()
-    products_page.alert()
+    products_page.delete_product()
     driver.refresh()
 
 
 @pytest.fixture(scope='function')
-def products_list(driver, open_login_page, login_action, open_products_page, products_page):
+def products_list(driver, login_action, open_products_page, products_page):
     """Return products list with names"""
-    return products_page.products_list()
+    return products_page.all_products_list()
 
 
 @pytest.fixture(scope="session", autouse=True)
