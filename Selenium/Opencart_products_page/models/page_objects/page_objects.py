@@ -167,21 +167,21 @@ class ProductManager(ProductsPage, ProductPage):
 
     def add_new_product(self, productname, keywords, modelname):
         """Add new product to site"""
-        ProductsPage._click_add_new_button2_(self)
-        ProductPage._set_product_name_(self, productname)
-        ProductPage._set_meta_tag_(self, keywords)
-        ProductPage._click_data_tab_(self)
-        ProductPage._set_model_name_(self, modelname)
-        ProductPage._click_save_button_(self)
+        self._click_add_new_button2_()
+        self._set_product_name_(productname)
+        self._set_meta_tag_(keywords)
+        self._click_data_tab_()
+        self._set_model_name_(modelname)
+        self._click_save_button_()
 
     def edit_product(self, productname, keywords, modelname):
         """Edit created product"""
-        ProductsPage._click_edit_button_(self)
-        ProductPage._clear_product_name_(self)
-        ProductPage._set_product_name_(self, productname)
-        ProductPage._clear_meta_tag_(self)
-        ProductPage._set_meta_tag_(self, keywords)
-        ProductPage._click_data_tab_(self)
-        ProductPage._clear_model_name_(self)
-        ProductPage._set_model_name_(self, modelname)
-        ProductPage._click_save_button_(self)
+        self._click_edit_button_()
+        self._clear_product_name_()
+        self._set_product_name_(productname)
+        self._clear_meta_tag_()
+        self._set_meta_tag_(keywords)
+        self._click_data_tab_()
+        self._clear_model_name_()
+        self._set_model_name_(modelname)
+        self._click_save_button_()
