@@ -6,12 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page_objects/page_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/test_image_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/test_product_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/60064265.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/60064265.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_wait.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_wait.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,43 +40,26 @@
         </state>
       </content>
     </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1360">
-                    <caret line="80" column="17" lean-forward="true" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
-                    <folding>
-                      <element signature="e#46#56#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="318" selection-start-line="318" selection-end-line="318" />
+            <state relative-caret-position="715">
+              <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
+              <folding>
+                <element signature="e#46#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page.py">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#18#65#0" expanded="true" />
               </folding>
@@ -82,51 +68,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/test_image_upload.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page_objects/page_objects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+            <state relative-caret-position="295">
+              <caret line="111" column="6" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
               <folding>
-                <element signature="e#38#102#0" expanded="true" />
+                <element signature="e#38#179#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_login_page/test_login_page.py">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/locator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="255">
+              <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/__init__.py">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="193">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
               <folding>
-                <element signature="e#788#847#0" expanded="true" />
+                <element signature="e#46#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Tests/__init__.py" />
-        <option value="$PROJECT_DIR$/Tests/tests.py" />
         <option value="$PROJECT_DIR$/Tests/conftest.py" />
         <option value="$PROJECT_DIR$/API/.pytest_cache/temp.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/requests/__init__.py" />
@@ -206,8 +181,12 @@
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/test_wait.py" />
-        <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_windows_operations/test_image_upload.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/locator.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page_objects/page_objects.py" />
+        <option value="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" />
       </list>
     </option>
   </component>
@@ -239,26 +218,26 @@
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework" type="462c0819:PsiDirectoryNode" />
               <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="Opencart_login_page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework" type="462c0819:PsiDirectoryNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
               <item name="Opencart_products_page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework" type="462c0819:PsiDirectoryNode" />
               <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="Opencart_products_page" type="462c0819:PsiDirectoryNode" />
+              <item name="Opencart_windows_operations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
+              <item name="Opencart_windows_operations" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework" type="462c0819:PsiDirectoryNode" />
               <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="Opencart_products_page" type="462c0819:PsiDirectoryNode" />
+              <item name="Opencart_windows_operations" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
               <item name="page_objects" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -271,21 +250,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../page-object-python-selenium" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Selenium/Opencart_windows_operations" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_products_page" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\CDNJS" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\OpenBreweryDB" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\API" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,7 +522,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561109018959</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added run script with argparse parameters">
+      <created>1561558280888</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1561558280888</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added run script with argparse parameters">
+      <created>1561628273844</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1561628273844</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -591,7 +584,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21232876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21232876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -602,7 +595,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32809773" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3279743" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.5541265" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" weight="0.097402595" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50132626" side_tool="true" weight="0.33469388" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.4812433" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3290461" />
@@ -611,20 +604,20 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119072706" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21255274" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41800642" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5187567" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49839228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32809773" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32809773" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.48767418" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3279743" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.097402595" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50132626" side_tool="true" weight="0.33469388" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.4816754" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.4812433" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -679,37 +672,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added run script with argparse parameters" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/chrome/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Opencart/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/firefox/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenBreweryDB/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/common/desired_capabilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Opencart/geckodriver.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -956,13 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_login_page/test_login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_wait.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -977,22 +932,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_login_page/test_login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/test_image_upload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="113" column="6" selection-start-line="113" selection-start-column="6" selection-end-line="113" selection-end-column="6" />
+          <folding>
+            <element signature="e#38#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#18#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/locator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/models/page_objects/page_objects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="111" column="6" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
+          <folding>
+            <element signature="e#38#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="17" lean-forward="true" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        <state relative-caret-position="193">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
           <folding>
             <element signature="e#46#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py">
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+        <state relative-caret-position="715">
+          <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
           <folding>
-            <element signature="e#38#102#0" expanded="true" />
+            <element signature="e#46#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
