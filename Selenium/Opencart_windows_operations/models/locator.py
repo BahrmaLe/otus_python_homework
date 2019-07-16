@@ -17,7 +17,9 @@ class ProductPageLocators(object):
     THUMB_IMAGE = (By.ID, 'thumb-image')
     IMAGE_BUTTON = (By.ID, 'button-image')
     UPLOAD_BUTTON = (By.ID, 'button-upload')
+    CLOSE_MODAL_WINDOW = (By.CSS_SELECTOR, '#filemanager > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)')
     SAVE_BUTTON = (By.XPATH, '//*[@id="content"]/div[1]/div/div/button/i')
+    FILE_MANAGER = (By.ID, 'filemanager')
 
 
 class BaseLocators(object):

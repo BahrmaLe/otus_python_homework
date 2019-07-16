@@ -7,14 +7,11 @@ from selenium import webdriver as WD
 from Selenium.Opencart_windows_operations.models.page_objects.page_objects import LoginPage, \
     ProductPage, NewProduct, ProductManager
 
-dirname = os.path.dirname(__file__)
-image = os.path.join(dirname, '1.JPG')
-
 
 def pytest_addoption(parser):
     """Setting base URL Openacart and parametrize command line options for select
     browsers and set username or password """
-    parser.addoption("--address", action="store", default="http://http://demo23.opencart.pro/",
+    parser.addoption("--address", action="store", default="http://demo23.opencart.pro/",
                      help="Opencart web address")
     parser.addoption("--browser", action="store", default="firefox", help="Browser name")
     parser.addoption("--username", action="store", default="demo", help="User Name")
@@ -96,12 +93,24 @@ def product_manager(driver, open_opencart_admin_url):
     return ProductManager(driver)
 
 
+@pytest.fixture(scope="function")
+def add_new_product(driver, set_login_data, new_product_operator, product_manager, request):
+    product_manager.add_new_product(request.config.getoption("--productname"),
+                                    request.config.getoption("--modelname"))
+
+
 @pytest.fixture(scope='function')
 def add_product_with_image(driver, set_login_data, new_product_operator, product_manager, request):
     """Adding new product"""
+    image = os.path.abspath('C:\\Users\\60064265\\PycharmProjects\\Homework\\Selenium'
+                            '\\Opencart_windows_operations\\1.JPG')
     product_manager.add_new_product_with_images(request.config.getoption("--productname"),
                                                 request.config.getoption("--modelname"), image)
-    # driver.back()
+    # driver.switch_to.frame(0)
+    # procusct._click_image_button_()
+    # self._upload_image_()
+    # self._click_save_button_()
+    # # driver.back()
     # driver.back()
     # driver.refresh()
 
@@ -116,6 +125,3 @@ def products_page_operator(driver, open_opencart_admin_url):
 def products_list(driver, open_opencart_admin_url, login_form_operator, products_page_operator):
     """Return products list with names"""
     return products_page.all_products_list()
-
-
-

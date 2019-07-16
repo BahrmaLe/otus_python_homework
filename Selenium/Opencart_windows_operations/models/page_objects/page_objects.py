@@ -61,52 +61,16 @@ class NewProduct(BasePage):
         self.driver.find_element(*AdminPageLocators.DROPDOWN).click()
 
     def _select_product_dropdown_(self):
-        self.driver.find_element(AdminPageLocators.PRODUCT).click()
+        """Click on Product element"""
+        product = self._wait_element_(*AdminPageLocators.PRODUCT, delay=10)
+        if product:
+            product.click()
+        return product is not None
 
     def _accept_delete_alert_(self):
         """Click submit on Alert confirmation pop-up"""
         alert = self._wait_alert_()
         return alert is not None
-
-    # def _click_add_new_button_(self):
-    #     """Click on Add New button"""
-    #     self.driver.find_element(*AdminPageLocators.ADDNEW3).click()
-    #
-    # def _click_add_new_button2_(self):
-    #     """Click on Add New button"""
-    #     self.driver.find_element(*AdminPageLocators.ADDNEW2).click()
-    #
-    # def _match_product_(self):
-    #     """Click for flag checkbox forward the product"""
-    #     self.driver.find_element(*AdminPageLocators.MATCHPRODUCT).click()
-    #
-    # def _click_delete_button_(self):
-    #     """Click on Delete button"""
-    #     self.driver.find_element(*AdminPageLocators.DELETE).click()
-    # def _click_edit_button_(self):
-    #     """Click on Edit button"""
-    #     self.driver.find_element(*AdminPageLocators.EDIT).click()
-
-    # def _get_product_list_(self):
-    #     """Return current list of products"""
-    #     products = self._wait_element_(*AdminPageLocators.ALLPRODUCTS, delay=10)
-    #     if products:
-    #         products_elements = products.find_elements_by_tag_name("tr")
-    #         product_list = set()
-    #         for element in products_elements:
-    #             product_name = element.find_elements_by_tag_name("td")[2]
-    #             product_list.add(product_name.text)
-    #         print(product_list)
-    #         return product_list
-    # def delete_product(self):
-    #     """Delete selected product"""
-    #     self._match_product_()
-    #     self._click_delete_button_()
-    #     self._accept_delete_alert_()
-    #
-    # def all_products_list(self):
-    #     """Show list of all products on the site"""
-    #     return self._get_product_list_()
 
 
 class ProductPage(BasePage):
@@ -134,53 +98,48 @@ class ProductPage(BasePage):
 
     def _click_image_button_(self):
         """Click on Edit Image icon/button"""
-        self.driver.find_element(*ProductPageLocators.IMAGE_BUTTON).click()
+        image_button = self._wait_element_(*ProductPageLocators.IMAGE_BUTTON, delay=10)
+        if image_button:
+            image_button.click()
 
     def _click_upload_button_(self):
         """Click on the Upload button"""
         self.driver.find_element(*ProductPageLocators.UPLOAD_BUTTON).click()
 
+    def _close_modal_window_(self):
+        """Close modal window"""
+        close = self._wait_element_(*ProductPageLocators.CLOSE_MODAL_WINDOW, delay=20)
+        if close:
+            close.click()
+        return close is not None
+
+    def _frame_switch_to_modal_window_(self):
+        """Switch to filemanager frame"""
+        self.driver.switch_to.frame(self.driver.find_element_by_link_text("Менеджер изображений"))
+
     def _upload_image_(self, image):
         """Select images and upload it"""
-        self.driver.find_element(*ProductPageLocators.UPLOAD_BUTTON).send_keys(image)
+        upload = self._wait_element_(*ProductPageLocators.UPLOAD_BUTTON, delay=20)
+        if upload:
+            upload.send_keys(image)
+        return upload is not None
 
     def _click_save_button_(self):
         """Click on save button"""
         self.driver.find_element(*ProductPageLocators.SAVE_BUTTON).click()
 
 
-    # def _set_product_name_(self, productname):
-    #     """Fill the product name field"""
-    #     self.driver.find_element(*ProductPageLocators.PRODUCTNAME).send_keys(productname)
-    #
-    # def _set_meta_tag_(self, keywords):
-    #     """Fill the metatag field"""
-    #     self.driver.find_element(*ProductPageLocators.METATAG).send_keys(keywords)
-    #
-    # def _click_data_tab_(self):
-    #     """Go o Data tab"""
-    #     self.driver.find_element(*ProductPageLocators.DATATAB).click()
-    #
-    # def _set_model_name_(self, modelname):
-    #     """Fill the model field"""
-    #     self.driver.find_element(*ProductPageLocators.MODELNAME).send_keys(modelname)
-    #
-    #
-    # def _clear_product_name_(self):
-    #     """Clear password"""
-    #     self._clear_element_(self.driver.find_element(*ProductPageLocators.PRODUCTNAME))
-    #
-    # def _clear_meta_tag_(self):
-    #     """Clear metatag"""
-    #     self._clear_element_(self.driver.find_element(*ProductPageLocators.METATAG))
-    #
-    # def _clear_model_name_(self):
-    #     """Clear model name"""
-    #     self._clear_element_(self.driver.find_element(*ProductPageLocators.MODELNAME))
-
-
 class ProductManager(NewProduct, ProductPage):
     """Managing product operations"""
+
+    def add_new_product(self, product_name, model_name):
+        """Add new product to site"""
+        self._click_add_dropdown_()
+        self._select_product_dropdown_()
+        self._fill_product_name_(product_name)
+        self._select_data_tab_()
+        self._fill_product_code_(model_name)
+        self._click_save_button_()
 
     def add_new_product_with_images(self, product_name, model_name, image):
         """Add new product to site"""
@@ -192,7 +151,9 @@ class ProductManager(NewProduct, ProductPage):
         self._select_images_tab_()
         self._click_thumb_image_()
         self._click_image_button_()
+        # self._frame_switch_to_modal_window_()
         self._upload_image_(image)
+        self._close_modal_window_()
         self._click_save_button_()
 
 
