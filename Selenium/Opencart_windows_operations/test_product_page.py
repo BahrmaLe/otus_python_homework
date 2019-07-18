@@ -7,7 +7,7 @@ import pytest
 #     pass
 
 
-def test_add_product_with_image(add_product_with_image):
+def test_three_images(add_product_with_three_images):
     """Test that New product is added"""
     pass
 

@@ -5,17 +5,19 @@ import pytest
 from selenium import webdriver as WD
 
 from Selenium.Opencart_windows_operations.models.page_objects.page_objects import LoginPage, \
-    ProductPage, NewProduct, ProductManager
+    ProductPage, ProductsPage, ProductManager
+
+image = os.path.abspath('C:/Users/60064265/PycharmProjects/Homework/Selenium/Opencart_windows_operations/1.JPG')
 
 
 def pytest_addoption(parser):
     """Setting base URL Openacart and parametrize command line options for select
     browsers and set username or password """
-    parser.addoption("--address", action="store", default="http://demo23.opencart.pro/",
+    parser.addoption("--address", action="store", default="http://192.168.56.103/opencart/",
                      help="Opencart web address")
-    parser.addoption("--browser", action="store", default="firefox", help="Browser name")
-    parser.addoption("--username", action="store", default="demo", help="User Name")
-    parser.addoption("--password", action="store", default="demo", help="User Password")
+    parser.addoption("--browser", action="store", default="chrome", help="Browser name")
+    parser.addoption("--username", action="store", default="admin", help="User Name")
+    parser.addoption("--password", action="store", default="admin", help="User Password")
     parser.addoption("--iwait", action="store", default="30000", help="Implicitly wait parameter")
     parser.addoption("--pltimeout", action="store", default="1000", help="Page load timeout")
     parser.addoption("--productname", action="store", default="New Product", help="Product Name")
@@ -23,6 +25,7 @@ def pytest_addoption(parser):
                      default="New Meta Tag Keyword",
                      help="Meta Tag Keyword")
     parser.addoption("--modelname", action="store", default="New model", help="Model Name")
+    parser.addoption("--meta", action="store", default="New meta", help="Meta Tag Title")
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -63,6 +66,12 @@ def driver(request):
 
 
 @pytest.fixture(scope="function")
+def open_store_page(driver, request):
+    """Get base URL and attend admin link"""
+    return driver.get("".join([request.config.getoption("--address")]))
+
+
+@pytest.fixture(scope="function")
 def open_opencart_admin_url(driver, request):
     """Get base URL and attend admin link"""
     url = 'admin/'
@@ -82,9 +91,15 @@ def set_login_data(login_form_operator, request, driver):
 
 
 @pytest.fixture(scope="function")
-def new_product_operator(driver, open_opencart_admin_url):
+def products_page_opening(driver, open_opencart_admin_url):
     """Use class from  page objects module for managing elements on the page"""
-    return NewProduct(driver)
+    return ProductsPage(driver)
+
+
+@pytest.fixture(scope="function")
+def products_page_operator(driver, open_opencart_admin_url):
+    """Use class from  page objects module for managing elements on the page"""
+    return ProductPage(driver)
 
 
 @pytest.fixture(scope="function")
@@ -94,34 +109,39 @@ def product_manager(driver, open_opencart_admin_url):
 
 
 @pytest.fixture(scope="function")
-def add_new_product(driver, set_login_data, new_product_operator, product_manager, request):
+def store_manager(driver, open_store_page):
+    """Use class from  page objects module for managing elements on the page"""
+    return ProductManager(driver)
+
+
+@pytest.fixture(scope="function")
+def add_new_product(driver, set_login_data, products_page_opening, product_manager, request):
     product_manager.add_new_product(request.config.getoption("--productname"),
                                     request.config.getoption("--modelname"))
 
 
 @pytest.fixture(scope='function')
-def add_product_with_image(driver, set_login_data, new_product_operator, product_manager, request):
+def add_product_with_image(driver, set_login_data, products_page_opening, product_manager, request):
     """Adding new product"""
-    image = os.path.abspath('C:\\Users\\60064265\\PycharmProjects\\Homework\\Selenium'
-                            '\\Opencart_windows_operations\\1.JPG')
-    product_manager.add_new_product_with_images(request.config.getoption("--productname"),
-                                                request.config.getoption("--modelname"), image)
-    # driver.switch_to.frame(0)
-    # procusct._click_image_button_()
-    # self._upload_image_()
-    # self._click_save_button_()
-    # # driver.back()
-    # driver.back()
-    # driver.refresh()
-
-
-@pytest.fixture(scope="function")
-def products_page_operator(driver, open_opencart_admin_url):
-    """Use class from  page objects module for managing elements on the page"""
-    return ProductPage(driver)
+    product_manager.add_new_product_with_image(request.config.getoption("--productname"),
+                                                request.config.getoption("--meta"),
+                                                request.config.getoption("--modelname"),
+                                                image)
 
 
 @pytest.fixture(scope='function')
-def products_list(driver, open_opencart_admin_url, login_form_operator, products_page_operator):
-    """Return products list with names"""
-    return products_page.all_products_list()
+def find_product_image(driver, open_store_page, store_manager):
+    store_manager.find_product_image("MacBook Pro")
+    src = store_manager.get_image_link()
+    print(type(src))
+    print(src)
+    return src
+
+# @pytest.fixture(scope='function')
+# def upload_file(driver, set_login_data, products_page_opening)
+
+
+# @pytest.fixture(scope='function')
+# def products_list(driver, open_opencart_admin_url, login_form_operator, products_page_operator):
+#     """Return products list with names"""
+#     return products_page.all_products_list()
