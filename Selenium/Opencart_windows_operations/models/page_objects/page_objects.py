@@ -1,8 +1,7 @@
 """Module for action with elements"""
-import os
 
 from Selenium.Opencart_windows_operations.models.locator import AdminPageLocators, LoginPageLocators, BaseLocators, \
-    ProductPageLocators, ProductsPageLocators, StorePageLocators
+    ProductPageLocators, ProductsPageLocators, StorePageLocators, DownloadPageLocators
 from Selenium.Opencart_windows_operations.models.page import BasePage
 
 PRODUCT_IMAGES_PATH = ("duck", "dog", "kitty")
@@ -46,11 +45,18 @@ class ProductsPage(BasePage):
         self.driver.find_element(*AdminPageLocators.CATALOG_MENU).click()
 
     def _select_products_menu_(self):
-        """Click on Product element"""
+        """Click on Products element"""
         product = self._wait_element_(*AdminPageLocators.PRODUCTS_MENU, delay=10)
         if product:
             product.click()
         return product is not None
+
+    def _select_downloads_menu_(self):
+        """Click on Downloads menu"""
+        download = self._wait_element_(*AdminPageLocators.DOWNLOADS_MENU, delay=10)
+        if download:
+            download.click()
+        return download is not None
 
     def _click_add_new_button_(self):
         """Click Add New button"""
@@ -71,17 +77,17 @@ class ProductsPage(BasePage):
     def _add_images_(self):
         """Adding three images"""
         image = self.driver.find_element(*ProductPageLocators.PRIMARY_IMAGE)
-        self.unhide_input(image)
+        self._unhide_input_(image)
         image.send_keys("".join(["C:/Users/60064265/PycharmProjects/Homework/Selenium/Opencart_windows_operations/", PRODUCT_IMAGES_PATH[0], ".jpg"]))
-        self.press_add_image()
+        self._press_add_image_()
 
         image = self.driver.find_element(*ProductPageLocators.IMAGE1)
-        self.unhide_input(image)
+        self._unhide_input_(image)
         image.send_keys("".join(["C:/Users/60064265/PycharmProjects/Homework/Selenium/Opencart_windows_operations/", PRODUCT_IMAGES_PATH[1], ".jpg"]))
-        self.press_add_image()
+        self._press_add_image_()
 
         image = self.driver.find_element(*ProductPageLocators.IMAGE2)
-        self.unhide_input(image)
+        self._unhide_input_(image)
         image.send_keys("".join(["C:/Users/60064265/PycharmProjects/Homework/Selenium/Opencart_windows_operations/", PRODUCT_IMAGES_PATH[2], ".jpg"]))
 
     def _unhide_input_(self, element):
@@ -165,35 +171,48 @@ class ProductPage(BasePage):
         self.driver.find_element(*ProductPageLocators.SAVE_BUTTON).click()
 
 
-# class DownloadPage(BasePage):
-#     """Managing page for Files to downloading"""
-#
-#     def _fill_file_desc_ru_(self, rudesc):
-#         """Fill the description for ru users"""
-#         self.driver.find_element(*DownloadPageLocators.DOWNLOAD_DESCRIPTION_RU).send_keys(rudesc)
-#
-#     def _fill_file_desc_en_(self, endesc):
-#         """Fill the description for en users"""
-#         self.driver.find_element(*DownloadPageLocators.DOWNLOAD_DESCRIPTION_EN).send_keys(endesc)
-#
-#     def _fill_file_name_(self, filename):
-#         """Fill the file name"""
-#         self.driver.find_element(*DownloadPageLocators.FILE_NAME).send_keys(filename)
-#
-#     def _upload_file_(self, file):
-#         """Upload file through file manager"""
-#         upload = self._wait_element_(*DownloadPageLocators.UPLOAD_BUTTON, delay=10)
-#         if upload:
-#             upload.send_keys(file)
-#         return upload is not None
-#
-#     def _fill_mask_(self, maskname):
-#         """Fill the mask field"""
-#         self.driver.find_element(*DownloadPageLocators.MASK).send_keys(maskname)
-#
-#     def _click_submit_(self):
-#         """Save uploaded files"""
-#         self.driver.find_element(*DownloadPageLocators.SUBMIT_BUTTON).click()
+class DownloadPage(BasePage):
+    """Managing page for Files to downloading"""
+
+    def _fill_download_name_(self, dname):
+        """Fill the description for ru users"""
+        self.driver.find_element(*DownloadPageLocators.DOWNLOAD_NAME).send_keys(dname)
+
+    def _fill_file_name_(self, filename):
+        """Fill the file name"""
+        self.driver.find_element(*DownloadPageLocators.FILE_NAME).send_keys(filename)
+
+    def _upload_file_(self, file):
+        """Upload file through file manager"""
+        upload = self._wait_element_(*DownloadPageLocators.UPLOAD_BUTTON, delay=10)
+        if upload:
+            upload.send_keys(file)
+        return upload is not None
+
+    def _fill_mask_(self, maskname):
+        """Fill the mask field"""
+        self.driver.find_element(*DownloadPageLocators.MASK).send_keys(maskname)
+
+    def _return_file_name_(self):
+        """Get File name"""
+        file_name = self.driver.find_element(*DownloadPageLocators.FILE_NAME_TITLE)
+        if file_name:
+            print(file_name.text())
+            file_name_string = str(file_name.text())
+            print(type(file_name_string))
+            return file_name_string
+
+    def _get_files_list_(self):
+        """Return current list of products"""
+        files = self._wait_element_(*DownloadPageLocators.ALL_FILES, delay=10)
+        if files:
+            files_elements = files.find_elements_by_tag_name("tr")
+            file_list = set()
+            for element in files_elements:
+                file_name = element.find_elements_by_tag_name("td")[1]
+                file_list.add(file_name.text)
+            print(file_list)
+            return file_list
 
 
 class StorePage(BasePage):
@@ -273,22 +292,27 @@ class ProductManager(ProductsPage, ProductPage, StorePage):
         self._click_search_()
 
     def get_image_link(self):
+        """Get image src attribute (link)"""
         return self._return_image_name_()
 
 
+class DownloadManager(ProductsPage, ProductPage, DownloadPage):
+    """Managing files for downloading"""
 
+    def add_file(self, dname, filename, maskname, file):
+        """Upload file"""
+        self._expand_catalog_menu_()
+        self._select_downloads_menu_()
+        self._click_add_new_button_()
+        self._fill_download_name_(dname)
+        self._fill_file_name_(filename)
+        self._fill_mask_(maskname)
+        self._upload_file_(file)
+        self._accept_image_upload_alert_()
+        self._click_save_button_()
 
-
-# class DownloadManager(DownloadPage):
-#     """Managing files for downloading"""
-#
-#     def add_file(self, rudesc, endesc, filename, maskname, file):
-#         """Upload file"""
-#         self._click_add_dropdown_()
-#         self._select_upload_dropdown_()
-#         self._fill_file_desc_ru_(rudesc)
-#         self._fill_file_desc_en_(endesc)
-#         self._fill_file_name_(filename)
-#         self._fill_mask_(maskname)
-#         self._upload_file_(file)
-#         self._click_submit_()
+    def get_file_name(self):
+        """Get file name"""
+        self._expand_catalog_menu_()
+        self._select_downloads_menu_()
+        return self._get_files_list_()

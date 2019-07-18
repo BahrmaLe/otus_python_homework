@@ -5,7 +5,7 @@ import pytest
 from selenium import webdriver as WD
 
 from Selenium.Opencart_windows_operations.models.page_objects.page_objects import LoginPage, \
-    ProductPage, ProductsPage, ProductManager
+    ProductPage, ProductsPage, ProductManager, DownloadPage, DownloadManager
 
 image = os.path.abspath('C:/Users/60064265/PycharmProjects/Homework/Selenium/Opencart_windows_operations/1.JPG')
 
@@ -26,6 +26,9 @@ def pytest_addoption(parser):
                      help="Meta Tag Keyword")
     parser.addoption("--modelname", action="store", default="New model", help="Model Name")
     parser.addoption("--meta", action="store", default="New meta", help="Meta Tag Title")
+    parser.addoption("--dname", action="store", default="New File for Download", help="Download name")
+    parser.addoption("--filename", action="store", default="New File Name", help="File name")
+    parser.addoption("--maskname", action="store", default="New Mask", help="Mask Name")
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -38,7 +41,7 @@ def driver(request):
         capabilities['timeouts'] = {'implicit': 300000, 'pageLoad': 300000, 'script': 30000}
         capabilities['loggingPrefs'] = {'browser': 'ALL', 'client': 'ALL', 'driver': 'ALL',
                                         'performance': 'ALL', 'server': 'ALL'}
-        capabilities['unexpectedAlertBehaviour'] = 'dismiss'
+        capabilities['unexpectedAlertBehaviour'] = 'accept'
         profile = WD.FirefoxProfile()
         profile.set_preference('app.update.auto', False)
         profile.set_preference('app.update.enabled', False)
@@ -97,6 +100,12 @@ def products_page_opening(driver, open_opencart_admin_url):
 
 
 @pytest.fixture(scope="function")
+def downloads_page_opening(driver, open_opencart_admin_url):
+    """Use class from  page objects module for managing elements on the page"""
+    return DownloadPage(driver)
+
+
+@pytest.fixture(scope="function")
 def products_page_operator(driver, open_opencart_admin_url):
     """Use class from  page objects module for managing elements on the page"""
     return ProductPage(driver)
@@ -115,33 +124,52 @@ def store_manager(driver, open_store_page):
 
 
 @pytest.fixture(scope="function")
-def add_new_product(driver, set_login_data, products_page_opening, product_manager, request):
-    product_manager.add_new_product(request.config.getoption("--productname"),
-                                    request.config.getoption("--modelname"))
+def downloads_manager(driver, open_opencart_admin_url):
+    """Use class from  page objects module for managing elements on the page"""
+    return DownloadManager(driver)
+
+
+# @pytest.fixture(scope="function")
+# def add_new_product(driver, set_login_data, products_page_opening, product_manager, request):
+#     product_manager.add_new_product(request.config.getoption("--productname"),
+#                                     request.config.getoption("--modelname"))
 
 
 @pytest.fixture(scope='function')
 def add_product_with_image(driver, set_login_data, products_page_opening, product_manager, request):
     """Adding new product"""
     product_manager.add_new_product_with_image(request.config.getoption("--productname"),
-                                                request.config.getoption("--meta"),
-                                                request.config.getoption("--modelname"),
-                                                image)
+                                               request.config.getoption("--meta"),
+                                               request.config.getoption("--modelname"),
+                                               image)
 
 
 @pytest.fixture(scope='function')
 def find_product_image(driver, open_store_page, store_manager):
+    """Find image"""
     store_manager.find_product_image("MacBook Pro")
     src = store_manager.get_image_link()
     print(type(src))
     print(src)
     return src
 
-# @pytest.fixture(scope='function')
-# def upload_file(driver, set_login_data, products_page_opening)
+
+@pytest.fixture(scope='function')
+def upload_file(driver, set_login_data, downloads_page_opening, downloads_manager, request):
+    """Upload file to Downloads page"""
+    downloads_manager.add_file(request.config.getoption("--dname"),
+                               request.config.getoption("--filename"),
+                               request.config.getoption("--maskname"),
+                               image)
 
 
-# @pytest.fixture(scope='function')
-# def products_list(driver, open_opencart_admin_url, login_form_operator, products_page_operator):
-#     """Return products list with names"""
-#     return products_page.all_products_list()
+@pytest.fixture(scope='function')
+def check_uploaded_file(driver, set_login_data, downloads_page_opening, downloads_manager):
+    """Upload file to Downloads page"""
+    return downloads_manager.get_file_name()
+
+
+@pytest.fixture(scope='function')
+def products_list(driver, open_opencart_admin_url, login_form_operator, products_page_operator):
+    """Return products list with names"""
+    return products_page.all_products_list()

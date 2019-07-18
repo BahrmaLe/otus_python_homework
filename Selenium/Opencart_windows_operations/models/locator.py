@@ -15,6 +15,7 @@ class AdminPageLocators(object):
     # UPLOAD = (By.LINK_TEXT, 'Загрузку')
     CATALOG_MENU = (By.XPATH, '//*[@id="menu-catalog"]')
     PRODUCTS_MENU = (By.LINK_TEXT, 'Products')
+    DOWNLOADS_MENU = (By.LINK_TEXT, 'Downloads')
 
 
 class ProductsPageLocators(object):
@@ -43,14 +44,14 @@ class ProductPageLocators(object):
     # FILE_MANAGER = (By.ID, 'filemanager')
 
 
-# class DownloadPageLocators(object):
-#     """Download page locators"""
-#     DOWNLOAD_DESCRIPTION_RU =
-#     DOWNLOAD_DESCRIPTION_EN =
-#     FILE_NAME =
-#     MASK =
-#     UPLOAD_BUTTON =
-#     SUBMIT_BUTTON =
+class DownloadPageLocators(object):
+    """Download page locators"""
+    DOWNLOAD_NAME = (By.XPATH, '//*[@class="form-control"]')
+    FILE_NAME = (By.XPATH, '//*[@id="input-filename"]')
+    MASK = (By.XPATH, '//*[@id="input-mask"]')
+    UPLOAD_BUTTON = (By.LINK_TEXT, 'Upload')
+    FILE_NAME_TITLE = (By.XPATH, '//*[@class="text-left"]')
+    ALL_FILES = (By.XPATH, '//*[@id="form-download"]/div/table/tbody')
 
 
 class BaseLocators(object):
