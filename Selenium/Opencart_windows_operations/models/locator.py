@@ -22,8 +22,11 @@ class AdminPageLocators(object):
 
 class CustomMenuLocators(object):
     """Custom menu locators"""
-    CUSTOM_MENU_ELEMENT1 =
-    
+    CUSTOM_MENU_ELEMENT1 = (By.XPATH, '//*[@id="custommenu-child-item-34"]')
+    CUSTOM_MENU_ELEMENT2 = (By.XPATH, '//*[@id="custommenu-child-item-47"]')
+    CUSTOM_MENU_ELEMENT3 = (By.CSS_SELECTOR, '#custommenu-child-item-42 > dl > dt')
+    CUSTOM_MENU_ELEMENT4 = (By.CSS_SELECTOR, '#custommenu-child-item-44 > dl > dt')
+    SUBMIT_BUTTON = (By.CSS_SELECTOR, '#form-ecustommenu > button')
 
 
 class ProductsPageLocators(object):

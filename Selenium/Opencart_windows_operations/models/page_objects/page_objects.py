@@ -1,7 +1,8 @@
 """Module for action with elements"""
+from selenium.webdriver import ActionChains
 
 from Selenium.Opencart_windows_operations.models.locator import AdminPageLocators, LoginPageLocators, BaseLocators, \
-    ProductPageLocators, ProductsPageLocators, StorePageLocators, DownloadPageLocators
+    ProductPageLocators, ProductsPageLocators, StorePageLocators, DownloadPageLocators, CustomMenuLocators
 from Selenium.Opencart_windows_operations.models.page import BasePage
 
 PRODUCT_IMAGES_PATH = ("duck", "dog", "kitty")
@@ -57,6 +58,28 @@ class ProductsPage(BasePage):
         if download:
             download.click()
         return download is not None
+
+    def _open_design_custom_menu_(self):
+        """OPen"""
+        design_menu = self.driver.find_element(*AdminPageLocators.DESIGN_MENU)
+        if design_menu:
+            ActionChains(self.driver).move_to_element(design_menu).perform()
+            custom_menu = self._wait_element_(*AdminPageLocators.CUSTOM_MENU, delay=10)
+            if custom_menu:
+                custom_menu.click()
+            return custom_menu is not None
+
+        """ def setUp(self):
+        self.webdriver = webdriver.Ie()
+        self.mouse = webdriver.ActionChains(self.webdriver)
+        self.webdriver.get("http://foo")
+
+    def test_webdriver(self):
+        mouse = self.mouse
+        wd = self.webdriver
+        wd.implicitly_wait(10)
+        element = wd.find_element_by_xpath("//div[@title='Create Page']")
+        mouse.move_to_element(element).perform()"""
 
     def _click_add_new_button_(self):
         """Click Add New button"""
@@ -216,6 +239,7 @@ class DownloadPage(BasePage):
 
 
 class StorePage(BasePage):
+    """Store"""
 
     def _click_on_search_(self):
         search = self._wait_element_(*StorePageLocators.SEARCH_FIELD, delay=10)
@@ -239,6 +263,34 @@ class StorePage(BasePage):
             image_name_string = str(image_name.get_attribute("src"))
             print(type(image_name_string))
             return image_name_string
+
+
+class CustomMenuDesignPage(BasePage):
+    """Design"""
+
+    def _find_source_1_(self):
+        """Find"""
+        self.driver.find_element(*CustomMenuLocators.CUSTOM_MENU_ELEMENT1)
+
+    def _find_source_2_(self):
+        """Find"""
+        self.driver.find_element(*CustomMenuLocators.CUSTOM_MENU_ELEMENT1)
+
+    def _click_submit_button_(self):
+        """Submit"""
+        self.driver.find_element(*CustomMenuLocators.SUBMIT_BUTTON).click()
+
+
+class CustomMenuDesigner(ProductsPage, CustomMenuDesignPage):
+    """Class"""
+
+    def drag_and_drop_menu(self):
+        """Drug"""
+        self._open_design_custom_menu_()
+        source1 = self.driver.find_element(*CustomMenuLocators.CUSTOM_MENU_ELEMENT3)
+        source2 = self.driver.find_element(*CustomMenuLocators.CUSTOM_MENU_ELEMENT4)
+        ActionChains(self.driver).drag_and_drop(source1, source2).perform()
+        self._click_submit_button_()
 
 
 class ProductManager(ProductsPage, ProductPage, StorePage):
@@ -316,3 +368,4 @@ class DownloadManager(ProductsPage, ProductPage, DownloadPage):
         self._expand_catalog_menu_()
         self._select_downloads_menu_()
         return self._get_files_list_()
+

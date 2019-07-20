@@ -5,7 +5,7 @@ import pytest
 from selenium import webdriver as WD
 
 from Selenium.Opencart_windows_operations.models.page_objects.page_objects import LoginPage, \
-    ProductPage, ProductsPage, ProductManager, DownloadPage, DownloadManager
+    ProductPage, ProductsPage, ProductManager, DownloadPage, DownloadManager, CustomMenuDesignPage, CustomMenuDesigner
 
 image = os.path.abspath('C:/Users/60064265/PycharmProjects/Homework/Selenium/Opencart_windows_operations/1.JPG')
 
@@ -21,7 +21,7 @@ def pytest_addoption(parser):
     parser.addoption("--username", action="store", default="admin", help="User Name")
     parser.addoption("--password", action="store", default="admin", help="User Password")
     parser.addoption("--username2", action="store", default="demo", help="User Name")
-    parser.addoption("--password3", action="store", default="demo", help="User Password")
+    parser.addoption("--password2", action="store", default="demo", help="User Password")
     parser.addoption("--iwait", action="store", default="30000", help="Implicitly wait parameter")
     parser.addoption("--pltimeout", action="store", default="1000", help="Page load timeout")
     parser.addoption("--productname", action="store", default="New Product", help="Product Name")
@@ -109,6 +109,12 @@ def downloads_page_opening(driver, open_opencart_admin_url):
     return DownloadPage(driver)
 
 
+@pytest.fixture()
+def custom_menu_page_opening(driver, open_opencart_admin_url):
+    """Use"""
+    return CustomMenuDesignPage(driver)
+
+
 @pytest.fixture(scope="function")
 def products_page_operator(driver, open_opencart_admin_url):
     """Use class from  page objects module for managing elements on the page"""
@@ -132,6 +138,11 @@ def downloads_manager(driver, open_opencart_admin_url):
     """Use class from  page objects module for managing elements on the page"""
     return DownloadManager(driver)
 
+
+@pytest.fixture()
+def custom_menu_designer(driver, open_opencart_admin_url):
+    """USe"""
+    return CustomMenuDesigner(driver)
 
 # @pytest.fixture(scope="function")
 # def add_new_product(driver, set_login_data, products_page_opening, product_manager, request):
@@ -174,6 +185,6 @@ def check_uploaded_file(driver, set_login_data, downloads_page_opening, download
 
 
 @pytest.fixture(scope='function')
-def products_list(driver, open_opencart_admin_url, login_form_operator, products_page_operator):
+def drag_and_drop_custom(driver, set_login_data, custom_menu_page_opening, custom_menu_designer):
     """Return products list with names"""
-    return products_page.all_products_list()
+    return custom_menu_designer.drag_and_drop_menu()
