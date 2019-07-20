@@ -15,9 +15,13 @@ def pytest_addoption(parser):
     browsers and set username or password """
     parser.addoption("--address", action="store", default="http://192.168.56.103/opencart/",
                      help="Opencart web address")
+    parser.addoption("--address2", action="store", default="http://demo23.opencart.pro/",
+                     help="Opencart web address")
     parser.addoption("--browser", action="store", default="chrome", help="Browser name")
     parser.addoption("--username", action="store", default="admin", help="User Name")
     parser.addoption("--password", action="store", default="admin", help="User Password")
+    parser.addoption("--username2", action="store", default="demo", help="User Name")
+    parser.addoption("--password3", action="store", default="demo", help="User Password")
     parser.addoption("--iwait", action="store", default="30000", help="Implicitly wait parameter")
     parser.addoption("--pltimeout", action="store", default="1000", help="Page load timeout")
     parser.addoption("--productname", action="store", default="New Product", help="Product Name")
@@ -78,7 +82,7 @@ def open_store_page(driver, request):
 def open_opencart_admin_url(driver, request):
     """Get base URL and attend admin link"""
     url = 'admin/'
-    return driver.get("".join([request.config.getoption("--address"), url]))
+    return driver.get("".join([request.config.getoption("--address2"), url]))
 
 
 @pytest.fixture(scope="function")
@@ -90,7 +94,7 @@ def login_form_operator(driver, open_opencart_admin_url):
 @pytest.fixture(scope="function")
 def set_login_data(login_form_operator, request, driver):
     """Open admin login page and login in"""
-    login_form_operator.login(request.config.getoption("--username"), request.config.getoption("--password"))
+    login_form_operator.login(request.config.getoption("--username2"), request.config.getoption("--password2"))
 
 
 @pytest.fixture(scope="function")

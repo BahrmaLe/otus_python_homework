@@ -16,6 +16,14 @@ class AdminPageLocators(object):
     CATALOG_MENU = (By.XPATH, '//*[@id="menu-catalog"]')
     PRODUCTS_MENU = (By.LINK_TEXT, 'Products')
     DOWNLOADS_MENU = (By.LINK_TEXT, 'Downloads')
+    DESIGN_MENU = (By.CSS_SELECTOR, '#menu-design')
+    CUSTOM_MENU = (By.LINK_TEXT, 'Конструктор Меню')
+
+
+class CustomMenuLocators(object):
+    """Custom menu locators"""
+    CUSTOM_MENU_ELEMENT1 =
+    
 
 
 class ProductsPageLocators(object):
