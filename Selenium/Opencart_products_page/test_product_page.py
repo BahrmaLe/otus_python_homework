@@ -18,3 +18,5 @@ def test_edit_product(products_list):
 def test_delete_product(products_list):
     """Test that product is deleted"""
     assert "New Product Edited" not in products_list
+
+

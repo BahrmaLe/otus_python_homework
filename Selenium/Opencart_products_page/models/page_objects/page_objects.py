@@ -1,4 +1,5 @@
 """Module for action with elements"""
+from Selenium.Opencart_products_page.log.log import TestListener
 from Selenium.Opencart_products_page.models.page import BasePage
 from Selenium.Opencart_products_page.models.locator import BaseLocators, LoginPageLocators, \
     AdminPageLocators, ProductPageLocators
@@ -162,7 +163,7 @@ class LoginPage(BasePage):
         self._click_submit_button_()
 
 
-class ProductManager(ProductsPage, ProductPage):
+class ProductManager(ProductsPage, ProductPage, TestListener):
     """Managing product operations"""
 
     def add_new_product(self, productname, keywords, modelname):
