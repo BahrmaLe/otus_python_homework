@@ -1,6 +1,8 @@
 """Fixtures to testing Opencart login page"""
+import platform
 import sys
 from logging import exception
+# from selenium.webdriver.chrome.options import Options
 
 import pytest
 from selenium import webdriver
@@ -16,7 +18,7 @@ def pytest_addoption(parser):
     browsers and set username or password """
     parser.addoption("--address", action="store", default="http://192.168.56.103/",
                      help="Opencart web address")
-    parser.addoption("--browser", action="store", default="firefox", help="Browser name")
+    parser.addoption("--browser", action="store", default="chrome", help="Browser name")
     parser.addoption("--username", action="store", default="admin", help="User Name")
     parser.addoption("--password", action="store", default="admin", help="User Password")
     parser.addoption("--iwait", action="store", default="30000", help="Implicitly wait parameter")
@@ -140,7 +142,9 @@ def driver(request):
         capabilities = webdriver.DesiredCapabilities.CHROME.copy()
         capabilities['acceptSslCerts'] = True
         capabilities['acceptInsecureCerts'] = True
-        capabilities['loggingPrefs'] = {'performance': 'ALL'}
+        capabilities['goog:loggingPrefs'] = {'performance': 'ALL'}
+        # chrome_options = Options()
+        # chrome_options.add_experimental_option('w3c', False)
         wd = EventFiringWebDriver(webdriver.Chrome(desired_capabilities=capabilities), TestListener())
         wd.fullscreen_window()
     else:
@@ -154,3 +158,22 @@ def driver(request):
     print(page_load_timeout)
     yield wd
     wd.quit()
+
+
+@pytest.mark.usefixtures("environment_info")
+@pytest.fixture(scope='session', autouse=True)
+def configure_html_report_env(request, environment_info):
+    request.config._metadata.update(
+        {"browser": request.config.getoption("--browser"),
+         "address": request.config.getoption("--address")})
+    yield
+
+
+@pytest.fixture(scope="session")
+def environment_info():
+    os_platform = platform.platform()
+    windows_dist = platform.win32_ver()
+    python_build = platform.python_build()
+    machine = platform.machine()
+    lib = platform.libc_ver()
+    return os_platform, windows_dist, python_build, machine, lib
