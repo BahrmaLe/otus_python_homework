@@ -28,6 +28,8 @@ def pytest_addoption(parser):
                      default="New Meta Tag Keyword",
                      help="Meta Tag Keyword")
     parser.addoption("--modelname", action="store", default="New model", help="Model Name")
+    # parser.addoption("--report", action="store", default="--alluredir /C:/Users/60064265/PycharmProjects/Homework"
+    #                                                      "/Selenium/Opencart_products_page/log/allure_reports")
 
 
 @pytest.fixture(scope="function")
@@ -40,7 +42,7 @@ def logger():
 def open_login_page(driver, request, logger):
     """Get base URL and attend admin link"""
     url = 'opencart/admin/'
-    logger.before_navigate_to(url, driver)
+    # logger.before_navigate_to(url, driver)
     return driver.get("".join([request.config.getoption("--address"), url]))
 
 
