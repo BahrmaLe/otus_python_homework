@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
+    <option name="FILTER_RESOLVED_ITEMS" value="false" />
     <option name="SCOPE_TYPE" value="8" />
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/AccessLog/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessLog/logs/test.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessLog/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessLog/parser_access_log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessLog/read.me" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,24 +23,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
+        <entry file="file://$PROJECT_DIR$/AccessLog/parser_access_log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2130">
-              <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+            <state relative-caret-position="-1263">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
               <folding>
-                <element signature="e#46#61#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py">
+        <entry file="file://$PROJECT_DIR$/AccessLog/parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+            <state relative-caret-position="247">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="e#30#43#0" expanded="true" />
+                <element signature="e#17#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,6 +56,46 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="-48" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AccessLog/logs/test.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="385">
+              <caret line="121" column="326" selection-start-line="121" selection-start-column="326" selection-end-line="121" selection-end-column="326" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AccessLog/logs/test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="70" selection-start-column="70" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/log/sample.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AccessLog/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AccessLog/read.me">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -82,12 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OpenBreweryDB/conftest.py" />
-        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/requests/models.py" />
-        <option value="$PROJECT_DIR$/CDNJS/conftest.py" />
-        <option value="$PROJECT_DIR$/launch_test_script.py" />
-        <option value="$PROJECT_DIR$/launch.py" />
-        <option value="$PROJECT_DIR$/CDNJS/tests.py" />
         <option value="$PROJECT_DIR$/OpenBreweryDB/tests.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/Opencart/draft/tests.ru.py" />
@@ -133,6 +171,12 @@
         <option value="$PROJECT_DIR$/Selenium/Opencart_login_page/conftest.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" />
         <option value="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" />
+        <option value="$PROJECT_DIR$/AccessLog/__init__.py" />
+        <option value="$PROJECT_DIR$/AccessLog/process_log.py" />
+        <option value="$PROJECT_DIR$/AccessLog/access_log.py" />
+        <option value="$PROJECT_DIR$/AccessLog/parser_access_log.py" />
+        <option value="$PROJECT_DIR$/AccessLog/parser.py" />
+        <option value="$PROJECT_DIR$/AccessLog/logs/test.log" />
       </list>
     </option>
   </component>
@@ -159,7 +203,7 @@
             <path>
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="Homework" type="462c0819:PsiDirectoryNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="AccessLog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
@@ -171,13 +215,6 @@
               <item name="Homework" type="462c0819:PsiDirectoryNode" />
               <item name="Selenium" type="462c0819:PsiDirectoryNode" />
               <item name="Opencart_products_page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework" type="462c0819:PsiDirectoryNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="Opencart_products_page" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -187,17 +224,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SeleniumCloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AccessLog/logs" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\AccessLog\logs" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumCloud" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumCloud\models" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_products_page" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
@@ -217,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_product_page.py">
+  <component name="RunManager" selected="Python.parser">
     <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,7 +297,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="log" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AccessLog" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AccessLog/parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="parser_access_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -268,11 +323,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium/Opencart_products_page/log" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AccessLog" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Selenium/Opencart_products_page/log/log.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AccessLog/parser_access_log.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -300,21 +355,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_product_page.test_edit_product" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium/Opencart_products_page" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_product_page.test_edit_product&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in test_product_page.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -349,11 +389,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.parser" />
+        <item itemvalue="Python.parser_access_log" />
         <item itemvalue="Python tests.pytest in test_product_page.py" />
         <item itemvalue="Python.conftest" />
         <item itemvalue="Python tests.pytest in tests.py" />
-        <item itemvalue="Python.log" />
-        <item itemvalue="Python tests.pytest for test_product_page.test_edit_product" />
       </list>
     </recent_temporary>
   </component>
@@ -550,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564041539742</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added run script with argparse parameters">
+      <created>1564055802455</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1564055802456</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -596,22 +643,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14541623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14541623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3279743" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41800642" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.66262406" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3279743" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41786107" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24035281" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32809773" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3279743" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.477398" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49867374" visible="true" weight="0.33737597" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50132626" side_tool="true" weight="0.33469388" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.48080438" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3290461" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.48070562" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32855567" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -685,54 +733,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added run script with argparse parameters" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/firefox/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_login_page/models/locator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Opencart/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="11" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Opencart/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_draft.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="318" selection-start-line="318" selection-end-line="318" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#788#847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_wait.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -861,10 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/log/sample.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/sample.log" />
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/screenshots/exception22-07-2019-16-52.png" />
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/page_objects/page_objects.py">
@@ -876,9 +872,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/models/locator.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -994,6 +987,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding>
+            <element signature="e#30#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2130">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AccessLog/parser_access_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1263">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AccessLog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2986">
+          <caret line="1321" column="8" selection-start-line="1321" selection-start-column="8" selection-end-line="1321" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AccessLog/read.me">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/log/sample.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/log/log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1004,22 +1047,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2130">
-          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-          <folding>
-            <element signature="e#46#61#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-48" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AccessLog/logs/access.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="358">
+          <caret line="122" column="326" lean-forward="true" selection-start-line="1" selection-end-line="122" selection-end-column="326" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py">
+    <entry file="file://$PROJECT_DIR$/AccessLog/logs/test.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="385">
+          <caret line="121" column="326" selection-start-line="121" selection-start-column="326" selection-end-line="121" selection-end-column="326" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AccessLog/logs/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        <state>
+          <caret column="70" selection-start-column="70" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AccessLog/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#30#43#0" expanded="true" />
+            <element signature="e#17#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
