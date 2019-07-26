@@ -8,7 +8,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 
-from Selenium.Opencart_products_page.log.log import TestListener
+from Selenium.Opencart_products_page.log.log_to_db import TestListenerDB
 from Selenium.Opencart_products_page.models.page_objects.page_objects import LoginPage, \
     CatalogMenu, ProductsPage, ProductPage, ProductManager
 
@@ -35,14 +35,19 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def logger():
     """Use class from  page objects module for managing elements on the page"""
-    return TestListener()
+    return TestListenerDB()
 
 
 @pytest.fixture(scope="function")
-def open_login_page(driver, request, logger):
+def table_creating(logger):
+    logger.create_table()
+
+
+@pytest.fixture(scope="function")
+def open_login_page(table_creating, driver, request, logger):
     """Get base URL and attend admin link"""
     url = 'opencart/admin/'
-    # logger.before_navigate_to(url, driver)
+    logger.before_navigate_to(url, driver)
     return driver.get("".join([request.config.getoption("--address"), url]))
 
 
@@ -89,8 +94,9 @@ def open_products_page(catalog_menu):
 
 
 @pytest.fixture(scope='function')
-def add_product(driver, login_action, open_products_page, product_manager, request):
+def add_product(driver, login_action, open_products_page, product_manager, request, logger):
     """Adding new product"""
+    logger.before_navigate_to(url=driver.current_url, driver=driver)
     product_manager.add_new_product(request.config.getoption("--productname"),
                                     request.config.getoption("--keywords"),
                                     request.config.getoption("--modelname"))
@@ -100,11 +106,12 @@ def add_product(driver, login_action, open_products_page, product_manager, reque
 
 
 @pytest.fixture(scope='function')
-def edit_product(driver, login_action, open_products_page, product_manager, request):
+def edit_product(driver, login_action, open_products_page, product_manager, request, logger):
     """Editing product"""
     product_manager.edit_product("".join([request.config.getoption("--productname"), " Edited"]),
                                  "".join([request.config.getoption("--keywords"), " Edited"]),
                                  "".join([request.config.getoption("--modelname"), " Edited"]))
+    logger.after_navigate_to(url=driver.current_url, driver=driver)
 
 
 @pytest.fixture(scope='function')
@@ -138,7 +145,7 @@ def driver(request):
         profile.set_preference('app.update.enabled', False)
         profile.accept_untrusted_certs = True
         wd = EventFiringWebDriver(webdriver.Firefox(firefox_profile=profile,
-                                                    capabilities=capabilities), TestListener())
+                                                    capabilities=capabilities), TestListenerDB())
         wd.maximize_window()
     elif browser_name == 'chrome':
         capabilities = webdriver.DesiredCapabilities.CHROME.copy()
@@ -147,7 +154,7 @@ def driver(request):
         capabilities['goog:loggingPrefs'] = {'performance': 'ALL'}
         # chrome_options = Options()
         # chrome_options.add_experimental_option('w3c', False)
-        wd = EventFiringWebDriver(webdriver.Chrome(desired_capabilities=capabilities), TestListener())
+        wd = EventFiringWebDriver(webdriver.Chrome(desired_capabilities=capabilities), TestListenerDB())
         wd.fullscreen_window()
     else:
         print('Unsupported browser!')
