@@ -7,15 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/log/log_to_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/models/locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/models/page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/models/page_objects/page_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/ssh_connector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpencartSSHConnetor/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccessLog/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/AccessLog/logs/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/log/logs/log2.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_products_page/test_product_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeleniumCloud/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SeleniumCloud/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeleniumGrid/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SeleniumGrid/conftest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/AccessLog/logs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/OpencartSSHConnetor" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
@@ -62,11 +61,11 @@
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\OpencartSSHConnetor" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\opencartSSH" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\AccessLog\logs" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumCloud" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumCloud\models" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_products_page" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_product_page.py">
+  <component name="RunManager" selected="Python.ssh_connector">
     <configuration name="launch_test_script" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,27 +144,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="parser_access_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AccessLog" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AccessLog/parser_access_log.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="run" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,6 +157,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ssh_connector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OpencartSSHConnetor" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpencartSSHConnetor/ssh_connector.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ssh_connector" />
         <item itemvalue="Python tests.pytest in test_product_page.py" />
         <item itemvalue="Python tests.pytest for test_product_page.test_db" />
         <item itemvalue="Python.log_to_db" />
         <item itemvalue="Python.parser" />
-        <item itemvalue="Python.parser_access_log" />
       </list>
     </recent_temporary>
   </component>
@@ -441,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564069025159</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added run script with argparse parameters">
+      <created>1564144116923</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1564144116923</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -499,6 +505,11 @@
           <url>file://$PROJECT_DIR$/Selenium/Opencart_products_page/log/log_to_db.py</url>
           <line>31</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/OpencartSSHConnetor/ssh_connector.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
