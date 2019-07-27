@@ -12,3 +12,9 @@ def test_products(products_list):
     """Test that New product is added"""
     # allure.attach(products_list, 'Attach with HTML type', allure.attachment_type.HTML)
     assert "product_id" in products_list
+
+
+@pytest.mark.usefixtures("add_product")
+def test_db(db_connect):
+    for rows in db_connect:
+        print(rows)

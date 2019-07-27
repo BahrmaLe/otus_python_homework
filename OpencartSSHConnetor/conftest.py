@@ -3,7 +3,7 @@ import platform
 import sys
 from logging import exception
 # from selenium.webdriver.chrome.options import Options
-
+import psycopg2
 import pytest
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
@@ -43,7 +43,7 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope="function")
-def open_login_page(table_creating, driver, request, logger):
+def open_login_page(driver, request):
     """Get base URL and attend admin link"""
     url = 'opencart/admin/'
     # logger.before_navigate_to(url, driver)
@@ -93,7 +93,7 @@ def open_products_page(catalog_menu):
 
 
 @pytest.fixture(scope='function')
-def add_product(driver, login_action, open_products_page, product_manager, request, logger):
+def add_product(driver, login_action, open_products_page, product_manager, request):
     """Adding new product"""
     # logger.before_navigate_to(url=driver.current_url, driver=driver)
     product_manager.add_new_product(request.config.getoption("--productname"),
@@ -121,12 +121,9 @@ def delete_product(driver, login_action, open_products_page, products_page):
 
 
 @pytest.fixture(scope='function')
-def products_list(driver, login_action, open_products_page, products_page, logger):
+def products_list(driver, login_action, open_products_page, products_page):
     """Return products list with names"""
-    try:
-        return products_page.all_products_list()
-    except logger.on_exception(exception, driver):
-        print(exception)
+    return products_page.all_products_list()
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -184,3 +181,23 @@ def environment_info():
     machine = platform.machine()
     lib = platform.libc_ver()
     return os_platform, windows_dist, python_build, machine, lib
+
+
+@pytest.fixture()
+def db_connect():
+    """Create a database connection"""
+    conn = psycopg2.connect(database='opencart', user='ocuser', password='PASSWORD', host='192.168.56.103')
+    cur = conn.cursor()
+    conn.execute("INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, "
+                 "`location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, "
+                 "`points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, "
+                 "`height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, "
+                 "`date_added`, `date_modified`, `oct_product_stickers`) VALUES ('51','Бумажные обои','ES80501',"
+                 "'', '', '', '', '','Москва','245','5','catalog/main/big_ES80501.jpg','','1','4278','0', '0', "
+                 "'2017-01-29', '0.00000000', '1','8.23','0.68','0.53','1', '1', '1', '1', '1', '0', '2017-01-29 "
+                 "17:50:53', '2017-01-29 23:02:00', '')")
+    conn.commit()
+    result = cur.fetchall()
+    print(result)
+    conn.close()
+    return result
