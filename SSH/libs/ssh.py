@@ -32,7 +32,7 @@ port = 22
 class ShhClient:
     """Lib"""
 
-    def __init__(self, user, secret, host, port):
+    def __init__(self, host, user, secret, port):
         """Init block"""
         self.client = paramiko.SSHClient()
         self.secret = secret

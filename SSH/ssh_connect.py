@@ -1,3 +1,5 @@
+import os
+
 import paramiko
 import requests
 
@@ -18,6 +20,9 @@ def test_ssh_connection():
     stdin, stdout, stderr = client.exec_command('sudo systemctl start apache2.service', get_pty=True)
     stdin.write("toor" + "\n")
     stdin.flush()
+    stdin, stdout, stderr = client.exec_command('sudo systemctl status apache2.service', get_pty=True)
+    stdin.write("toor" + "\n")
+    print(stdin, stdout)
     print(stdout.channel.recv_exit_status())
     assert stdout.channel.recv_exit_status() == 0
 
