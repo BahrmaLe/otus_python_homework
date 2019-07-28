@@ -1,28 +1,13 @@
-import time
-import requests
-import paramiko
+def test_restart_opencart_mysql_service(restart_mysql):
+    assert "active (running)" in restart_mysql
+    print(restart_mysql)
 
 
-def test_restart_opencart_services():
-    host = '192.168.56.103'
-    user = 'akuksenko'
-    secret = 'toor'
-    port = 22
+def test_restart_opencart_apache_service(restart_apache):
+    assert "active (running)" in restart_apache
+    print(restart_apache)
 
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(hostname=host, username=user,
-                   password=secret, port=port)
 
-    with client.invoke_shell() as ssh:
-        ssh.recv(10000).decode("utf-8")
-        ssh.send("sudo systemctl restart mysql.service \n")
-        ssh.send("".join([secret, "\n"]))
-        time.sleep(10)
-
-        ssh.send("sudo systemctl restart apache2.service \n")
-        time.sleep(10)
-
-        r = requests.get("/".join(["http:/", host, "opencart"]))
-        print(r.status_code)
-        assert r.status_code == 200
+def test_opencart_is_active(request_opencart):
+    print(request_opencart.status_code)
+    assert request_opencart.status_code == 200
