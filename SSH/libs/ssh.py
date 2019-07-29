@@ -94,14 +94,25 @@ class ShhClient:
         self.execute(password)
         self.execute("chown {0}:{1} /var/ftp_home".format(user, user))
         self.execute("usermod -d /var/ftp_home/ {0}".format(user))
-        
+
     def check_user(self, user):
-        stdin, stdout, stderr = self.client.exec_command("cat /etc/passwd | grep {0}".format(user))
+        stdin, stdout, stderr = self.client.exec_command(("cat /etc/passwd {0}| grep {0}".format(user)), get_pty=True)
+        print(stdout.read().decode())
+        print(len(stdout.read()))
         return len(stdout.read()) > 0
+
+    def check_user_ftp(self, user):
+        with self.client.invoke_shell() as ssh:
+            ssh.send("cat /etc/passwd {0}| grep {0}".format(user))
+            out = ssh.recv(10000).decode("utf-8")
+            print(out)
+            return out
 
     def delete_ftp_user(self, user):
         """Delete FTP User"""
-        self.execute("".join(["sudo userdel", user]))
+        with self.client.invoke_shell() as ssh:
+            ssh.send("".join(["sudo userdel", user]))
+            ssh.send("".join([secret, "\n"]))
 
     def get_ftp_port(self):
         """Show FTP port"""

@@ -7,10 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Socket/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Socket/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Socket/html_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Socket/requests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Socket/test_HTML_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Socket/test_socket.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/ssh_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/ssh_connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/test_ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/test_ssh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSH/libs/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ssh.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,22 +50,22 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/OpencartSSHConnetor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\OpencartSSHConnetor" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\opencartSSH" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\AccessLog\logs" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumCloud" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumCloud\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -76,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_ssh.test_restart_opencart_mysql_service">
+  <component name="RunManager" selected="Python tests.pytest in tests.py">
     <configuration name="launch_test_script" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,88 +123,94 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_ssh.test_opencart_is_active" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="ssh" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SSH/libs/ssh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_create_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_ssh.test_opencart_is_active&quot;" />
+      <option name="_new_target" value="&quot;tests.test_create_user&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_ssh.test_restart_opencart_apache_service" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for tests.test_delete_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_ssh.test_restart_opencart_apache_service&quot;" />
+      <option name="_new_target" value="&quot;tests.test_delete_user&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_ssh.test_restart_opencart_mysql_service" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for tests.test_upload_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_ssh.test_restart_opencart_mysql_service&quot;" />
+      <option name="_new_target" value="&quot;tests.test_upload_file&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_ssh.test_restart_opencart_services" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in tests.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_ssh.test_restart_opencart_services&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_ssh.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/SSH/test_ssh.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/SSH/libs/tests.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_ssh.test_restart_opencart_mysql_service" />
-        <item itemvalue="Python tests.pytest for test_ssh.test_restart_opencart_apache_service" />
-        <item itemvalue="Python tests.pytest for test_ssh.test_opencart_is_active" />
-        <item itemvalue="Python tests.pytest in test_ssh.py" />
-        <item itemvalue="Python tests.pytest for test_ssh.test_restart_opencart_services" />
+        <item itemvalue="Python tests.pytest in tests.py" />
+        <item itemvalue="Python tests.pytest for tests.test_create_user" />
+        <item itemvalue="Python tests.pytest for tests.test_delete_user" />
+        <item itemvalue="Python tests.pytest for tests.test_upload_file" />
+        <item itemvalue="Python.ssh" />
       </list>
     </recent_temporary>
   </component>
@@ -460,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564304052088</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added run script with argparse parameters">
+      <created>1564325695812</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1564325695812</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -521,8 +538,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SSH/libs/tests.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="21" />
+          <line>31</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
