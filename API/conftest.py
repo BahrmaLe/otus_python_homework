@@ -22,9 +22,10 @@ PAIRS = [(url, header) for url in URLS for header in HEADERS]
 @pytest.fixture(params=PAIRS)
 def pairs_of_response(request):
     """pairwise testing for content-type, headers in responses for all urls """
+    response = requests.get(request.param[0], headers=request.param[1])
     print(request.param[0])
     print(request.param[1])
-    return requests.get(request.param[0], headers=request.param[1])
+    return response
 
 
 @pytest.fixture()

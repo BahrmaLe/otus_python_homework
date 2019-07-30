@@ -7,15 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSH/libs/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subprocess/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subprocess/draft.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subprocess/get_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subprocess/test_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CDNJS/test_mock.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ssh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/conftest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,22 +46,23 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Subprocess" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/API/MockedAPI" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\API\MockedAPI" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\API\MockedAPI" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Subprocess" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\OpencartSSHConnetor" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\opencartSSH" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\AccessLog\logs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,49 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
-    <configuration name="draft" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Subprocess/draft.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="get_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Subprocess/get_info.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest for API.MockedAPI.test_mock">
     <configuration name="launch_test_script" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,18 +128,63 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_info.test_check_default_route" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for API.MockedAPI.test_mock" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_info.test_check_default_route&quot;" />
+      <option name="_new_target" value="&quot;API.MockedAPI.test_mock&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for API.MockedAPI.test_mock" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;API.MockedAPI.test_mock&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for API.MockedAPI.test_mock" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;API.MockedAPI.test_mock&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for API.MockedAPI.test_mock.BasicTests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;API.MockedAPI.test_mock.BasicTests&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -204,43 +203,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in draft.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_mock.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Subprocess/draft.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_info.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Subprocess/test_info.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/API/MockedAPI/test_mock.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.draft" />
-        <item itemvalue="Python tests.pytest for test_info.test_check_default_route" />
-        <item itemvalue="Python tests.pytest in test_info.py" />
-        <item itemvalue="Python.get_info" />
-        <item itemvalue="Python tests.pytest in draft.py" />
+        <item itemvalue="Python tests.pytest for API.MockedAPI.test_mock" />
+        <item itemvalue="Python tests.pytest for API.MockedAPI.test_mock" />
+        <item itemvalue="Python tests.pytest in test_mock.py" />
+        <item itemvalue="Python tests.pytest for API.MockedAPI.test_mock" />
+        <item itemvalue="Python tests.pytest for API.MockedAPI.test_mock.BasicTests" />
       </list>
     </recent_temporary>
   </component>
@@ -514,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564392183969</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added run script with argparse parameters">
+      <created>1564490956561</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1564490956562</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
