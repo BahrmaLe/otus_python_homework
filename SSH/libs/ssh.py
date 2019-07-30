@@ -97,9 +97,10 @@ class ShhClient:
 
     def check_user(self, user):
         stdin, stdout, stderr = self.client.exec_command(("cat /etc/passwd {0}| grep {0}".format(user)), get_pty=True)
-        print(stdout.read().decode())
-        print(len(stdout.read()))
-        return len(stdout.read()) > 0
+        out = str(stdout.read().decode("utf-8"))
+        print(type(out))
+        print(out)
+        return out
 
     def check_user_ftp(self, user):
         with self.client.invoke_shell() as ssh:
