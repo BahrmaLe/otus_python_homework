@@ -32,13 +32,13 @@ def search_query_human_readable():
     return response
 
 
-@pytest.fixture()
+# @pytest.fixture()
 def base_url():
     """Return base API url"""
     return BASE_URL
 
 
-@pytest.fixture(params=querystring)
+# @pytest.fixture(params=querystring)
 def human_output():
     """Get request with human output params"""
     response = requests.request("GET", BASE_URL, params=querystring)

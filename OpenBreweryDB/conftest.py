@@ -4,7 +4,7 @@ import pytest
 BASE_URL = 'https://api.openbrewerydb.org'
 
 
-@pytest.fixture
+# @pytest.fixture
 def base_url():
     """Return base API url"""
     return BASE_URL
