@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     # Get info about process
     logging.info("".join(["programm ", arguments.program]))
-    p1 = subprocess.Popen(["ps", "-o", "pid,ppid,user,args,lstart,etime"],
+    p1 = subprocess.Popen(["ps", "aux"],
                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.read()
