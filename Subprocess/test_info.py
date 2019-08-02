@@ -5,7 +5,7 @@ import subprocess
 logging.basicConfig(level=logging.INFO)
 
 
-def test_if():
+def test_ifconfig():
     pat_local = re.compile(b"lo:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
     pat_enp = re.compile(b"enp0s8.*:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
     resp = subprocess.check_output(["ifconfig"])
@@ -49,27 +49,9 @@ def test_network_bytes():
         print("Transmit bytes: {}".format(tx_bytes))
         assert int(rx_bytes) > 0
         assert int(tx_bytes) > 0
-# def test_if_stat():
-    # resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
-    # print(resp)
-    # pat = re.compile(r'enp0s8: ([1-9]\d*)', re.MULTILINE)
-    # print(pat)
-    # enp = pat.findall(resp)
-    # print(enp)
-    # capturedproc = []
-    # try:
-    #     enp = pat.findall(resp)[0]
-    #     print(type(enp))
-    #     print(enp)
-    #     capturedproc.append(enp)
-    #     assert int(enp) > 0
-    #     logging.info(enp)
-    # except IndexError:
-    #     print('No proc match for {}'.format(pat))
 
 
-
-def test_service_stat():
+def test_apache_service_stat():
     resp = subprocess.check_output(["systemctl", "status", "apache2.service"]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
@@ -77,13 +59,13 @@ def test_service_stat():
     assert status == "active"
 
 
-def test_cur_dir():
+def test_current_dir():
     resp = subprocess.check_output(["pwd"]).decode()
     assert "/home/akuksenko/otus/otus_python_homework/Subprocess" in resp
     logging.info(resp)
 
 
-def test_cernel_version():
+def test_kernel_version():
     resp = subprocess.check_output(["uname", "-r"]).decode()
     assert "4.15.0-55-generic" in resp
     logging.info(resp)
