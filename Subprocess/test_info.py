@@ -19,7 +19,7 @@ def test_if():
     logging.info(enp0s8_ip)
 
     assert lo_ip == "127.0.0.1"
-    assert enp0s8_ip == "192.168.56.1"
+    assert enp0s8_ip == "192.168.56.103"
 
 
 def test_check_default_route():
@@ -44,7 +44,12 @@ def test_processor_info():
 def test_if_stat():
     resp = subprocess.check_output(["tail",  "/proc/net/dev"]).decode()
     pat = re.compile(r"enp0s8: ([1-9]\d*)", re.MULTILINE)
-    wl = pat.findall(resp)[0]
+    capturedproc = []
+    try:
+        wl = pat.findall(resp)[0]
+        capturedproc.append(wl)
+    except IndexError:
+        print('No proc match for {}'.format(pat))
     assert int(wl) > 0
     logging.info(wl)
 
