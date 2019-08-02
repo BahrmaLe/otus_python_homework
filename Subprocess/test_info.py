@@ -42,7 +42,7 @@ def test_processor_info():
 def test_if_stat():
     resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
     print(resp)
-    pat = re.compile(r'enp0s8: ([1-9]\d*)', re.MULTILINE)
+    pat = re.compile(r'.*s8: ([1-9]\d*)', re.MULTILINE)
     print(pat)
     enp = pat.findall(resp)
     print(enp)
