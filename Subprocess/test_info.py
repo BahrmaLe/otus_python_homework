@@ -40,7 +40,7 @@ def test_processor_info():
 
 
 def test_network_bytes():
-    resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
+    resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode("utf-8")
     print(resp)
     for line in resp:
         print(type(line))
