@@ -42,7 +42,7 @@ def test_processor_info():
 
 
 def test_if_stat():
-    resp = subprocess.check_output(["tail",  "/proc/net/dev"]).decode()
+    resp = subprocess.check_output(["tail",  "/proc/net/dev"]).decode("utf-8")
     pat = re.compile(r"enp0s8: ([1-9]\d*)", re.MULTILINE)
     capturedproc = []
     try:
