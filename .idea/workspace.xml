@@ -76,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_info.test_network_bytes">
+  <component name="RunManager" selected="Python tests.pytest in test_info.py">
     <configuration name="draft" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,7 +229,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in draft2.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_info.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,17 +240,17 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Subprocess/draft2.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Subprocess/test_info.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_info.py" />
         <item itemvalue="Python tests.pytest for test_info.test_network_bytes" />
         <item itemvalue="Python tests.pytest for test_info.test_if_stat" />
         <item itemvalue="Python.draft2" />
         <item itemvalue="Python.draft" />
-        <item itemvalue="Python tests.pytest in draft2.py" />
       </list>
     </recent_temporary>
   </component>
@@ -264,13 +264,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added run script with argparse parameters">
-      <created>1564144116923</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1564144116923</updated>
     </task>
     <task id="LOCAL-00031" summary="Added run script with argparse parameters">
       <created>1564151555326</created>
@@ -608,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564749664060</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Added run script with argparse parameters">
+      <created>1564752710298</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1564752710298</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">

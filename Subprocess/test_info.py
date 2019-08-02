@@ -93,8 +93,8 @@ def test_os_version():
     logging.info(resp)
 
 
-if __name__ == "__main__":
-    # Check version of the package
+def package_version():
+    """Getting package version"""
     arguments = args()
     if args() == "package":
         print("Getting package version")
@@ -104,31 +104,39 @@ if __name__ == "__main__":
         p.communicate()
         sleep(2)
 
+
+def list_of_directory():
+    """Getting files in the current directory"""
+    arguments = args()
     if args() == "dir":
         print("Getting files in the current directory")
-        # Get files in the current directory
         logging.info(arguments.dir)
         logging.info("getting files list")
         resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
         print(resp)
         sleep(2)
 
+
+def port_activity():
+    """getting port state"""
+    arguments = args()
     if args() == "port":
         print("Getting port activity")
         logging.info(arguments.port)
-        """getting port state"""
         p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
         line = p2.stdout.readline()
         print(line.decode())
         sleep(2)
 
+
+def process_info():
+    """Get info about process"""
+    arguments = args()
     if args() == "program":
         print("Getting info about process")
-        # Get info about process
         logging.info("".join(["programm ", arguments.program]))
-        p1 = subprocess.Popen(["ps", "aux"],
-                              stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p1 = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
         line = p2.stdout.read()
         print(line.decode())
