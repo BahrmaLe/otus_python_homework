@@ -37,7 +37,7 @@ def test_processor_info():
     resp = subprocess.check_output("lscpu").decode()
     pat = re.compile(r".*Model name:( *)(.*)", re.MULTILINE)
     model = pat.findall(resp)[0][1]
-    assert "i5-8265U" in model
+    assert "Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz" in model
     logging.info(model)
 
 
@@ -65,7 +65,7 @@ def test_cur_dir():
 
 def test_cernel_version():
     resp = subprocess.check_output(["uname", "-r"]).decode()
-    assert "4.15.0-1043-oem" in resp
+    assert "4.15.0-55-generic" in resp
     logging.info(resp)
 
 
