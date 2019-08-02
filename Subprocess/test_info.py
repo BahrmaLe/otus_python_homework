@@ -39,7 +39,7 @@ def test_processor_info():
     logging.info(model)
 
 
-def get_network_bytes(interface):
+def test_network_bytes(interface):
     for line in open('/proc/net/dev', 'r'):
         if interface in line:
             data = line.split('%s:' % interface)[1].split()
