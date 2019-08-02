@@ -18,7 +18,7 @@ def test_if():
     logging.info(wl_ip)
 
     assert lo_ip == "127.0.0.1"
-    assert wl_ip == "192.168.56.103"
+    assert wl_ip == "192.168.56.1"
 
 
 def test_check_default_route():
@@ -30,7 +30,7 @@ def test_check_default_route():
     ip = re.match(pat, line)
     default_route = ip.group(1).decode()
     logging.info(default_route)
-    assert "192.168.56.103" == default_route
+    assert "192.168.56.1" == default_route
 
 
 def test_processor_info():
@@ -59,7 +59,7 @@ def test_service_stat():
 
 def test_cur_dir():
     resp = subprocess.check_output(["pwd"]).decode()
-    assert "/home/ksenia/work/otus-qa-course/Lesson23" in resp
+    assert "/home/akuksenko/otus/otus_python_homework/Subprocess" in resp
     logging.info(resp)
 
 
