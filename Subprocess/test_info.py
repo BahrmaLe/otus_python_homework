@@ -39,11 +39,16 @@ def test_processor_info():
     logging.info(model)
 
 
-def test_if_stat():
-    resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
-    print(type(resp))
-    print(resp)
-    # pat = re.compile(b"enp0s8.*:. ([1-9]\d*)", re.MULTILINE)
+def get_network_bytes(interface):
+    for line in open('/proc/net/dev', 'r'):
+        if interface in line:
+            data = line.split('%s:' % interface)[1].split()
+            rx_bytes, tx_bytes = (data[0], data[8])
+            print(rx_bytes, tx_bytes)
+# def test_if_stat():
+    # resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
+    # print(resp)
+    # pat = re.compile(r'enp0s8: ([1-9]\d*)', re.MULTILINE)
     # print(pat)
     # enp = pat.findall(resp)
     # print(enp)
