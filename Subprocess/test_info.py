@@ -2,7 +2,7 @@ import logging
 import re
 import subprocess
 import argparse
-from time import sleep
+
 
 logging.basicConfig(level=logging.INFO)
 
@@ -93,49 +93,48 @@ def test_os_version():
     logging.info(resp)
 
 
-def package_version():
+class GetInfo:
     """Getting package version"""
     arguments = args()
-    if args() == "package":
+
+    if args == "package":
         print("Getting package version")
         logging.info("".join(['package =' + arguments.package]))
         logging.info("getting verion info")
-        p = subprocess.Popen([arguments.package, "--version"])
-        p.communicate()
-        sleep(2)
+        # p = subprocess.Popen([arguments.package, "--version"])
+        # p.communicate()
+        # sleep(2)
+        resp = subprocess.check_output([arguments.package, "--version"]).decode()
+        print(resp)
 
-
-def list_of_directory():
-    """Getting files in the current directory"""
-    arguments = args()
-    if args() == "dir":
+# def list_of_directory():
+#     """Getting files in the current directory"""
+#     arguments = args()
+    elif args == 'dir':
         print("Getting files in the current directory")
         logging.info(arguments.dir)
         logging.info("getting files list")
         resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
         print(resp)
-        sleep(2)
 
-
-def port_activity():
-    """getting port state"""
-    arguments = args()
-    if args() == "port":
+# def port_activity():
+#     """getting port state"""
+#     arguments = args()
+    elif args == "port":
         print("Getting port activity")
         logging.info(arguments.port)
         p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
         line = p2.stdout.readline()
         print(line.decode())
-        sleep(2)
 
 
-def process_info():
-    """Get info about process"""
-    arguments = args()
-    if args() == "program":
+# # def process_info():
+# #     """Get info about process"""
+#     arguments = args()
+    elif args == "program":
         print("Getting info about process")
-        logging.info("".join(["programm ", arguments.program]))
+        logging.info("".join(["program ", arguments.program]))
         p1 = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
         line = p2.stdout.read()

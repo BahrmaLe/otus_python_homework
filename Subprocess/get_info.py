@@ -17,14 +17,15 @@ def args():
                         help='Get version of the package')
     parser.add_argument('-d', action='store', dest='dir', default=".",
                         help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port', default=":21",
+    parser.add_argument('--port', action='store', dest='port', default="",
                         help='Get file list in the directory')
-    parser.add_argument('--program', action='store', dest='program', default="skype",
+    parser.add_argument('--program', action='store', dest='program', default="",
                         help='Get program info')
     return parser.parse_args()
 
 
-if __name__ == "__main__":
+if args.package:
+
     # Check version of the package
     arguments = args()
     logging.info("".join(['package =' + arguments.package]))
