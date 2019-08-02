@@ -7,8 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Subprocess/get_list_of_directory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Subprocess/get_port_activity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Subprocess/get_proc_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Subprocess/get_version_package.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subprocess/get_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/get_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subprocess/draft.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subprocess/draft2.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -264,13 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Added run script with argparse parameters">
-      <created>1564263461012</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1564263461012</updated>
     </task>
     <task id="LOCAL-00035" summary="Added run script with argparse parameters">
       <created>1564304052088</created>
@@ -608,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564757154001</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Added run script with argparse parameters">
+      <created>1564758904374</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1564758904374</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TodoView">
