@@ -6,19 +6,17 @@ logging.basicConfig(level=logging.INFO)
 
 
 def test_if():
-    pat_lo = re.compile(b"lo:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
-    pat_en = re.compile(b"enp0s8.*:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
-    # pat_wl = re.compile(b"wl.*:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
+    pat_local = re.compile(b"lo:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
+    pat_enp = re.compile(b"enp0s8.*:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
     resp = subprocess.check_output(["ifconfig"])
 
-    lo_ip = pat_lo.findall(resp)[0].decode()
-    enp0s8_ip = pat_en.findall(resp)[0].decode()
-    # wl_ip = pat_wl.findall(resp)[0].decode()
+    local_ip = pat_local.findall(resp)[0].decode()
+    enp0s8_ip = pat_enp.findall(resp)[0].decode()
 
-    logging.info(lo_ip)
+    logging.info(local_ip)
     logging.info(enp0s8_ip)
 
-    assert lo_ip == "127.0.0.1"
+    assert local_ip == "127.0.0.1"
     assert enp0s8_ip == "192.168.56.103"
 
 
@@ -42,20 +40,24 @@ def test_processor_info():
 
 
 def test_if_stat():
-    resp = subprocess.check_output(["tail",  "/proc/net/dev"]).decode()
-    pat = re.compile(r'.*enp0s8: ([1-9]\d*)', re.MULTILINE)
+    resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
+    pat = re.compile(r'enp0s8: ([1-9]\d*)', re.MULTILINE)
     capturedproc = []
     try:
-        wl = pat.findall(resp)[3]
-        capturedproc.append(wl)
-        assert int(wl) > 0
-        logging.info(wl)
+        enp = pat.findall(resp)[0]
+        print(type(enp))
+        print(enp)
+        capturedproc.append(enp)
+        assert int(enp) > 0
+        logging.info(enp)
     except IndexError:
         print('No proc match for {}'.format(pat))
+        print(type(enp))
+        print(enp)
 
 
 def test_service_stat():
-    resp = subprocess.check_output(["systemctl",  "status", "apache2.service"]).decode("utf-8")
+    resp = subprocess.check_output(["systemctl", "status", "apache2.service"]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
     logging.info(status)
@@ -78,4 +80,3 @@ def test_os_version():
     resp = subprocess.check_output(["cat", "/proc/version"]).decode()
     assert "Ubuntu 7.4.0-1ubuntu1~18.04.1)" in resp
     logging.info(resp)
-

@@ -280,20 +280,6 @@
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
     </task>
-    <task id="LOCAL-00006" summary="Added run script with argparse parameters">
-      <created>1559727172521</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1559727172521</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added run script with argparse parameters">
-      <created>1559729135461</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1559729135461</updated>
-    </task>
     <task id="LOCAL-00008" summary="Added run script with argparse parameters">
       <created>1559833247464</created>
       <option name="number" value="00008" />
@@ -623,7 +609,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564741134932</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Added run script with argparse parameters">
+      <created>1564741666430</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1564741666431</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added run script with argparse parameters">
+      <created>1564741743203</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1564741743203</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -684,7 +684,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Subprocess/test_info.py</url>
-          <line>32</line>
+          <line>30</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
