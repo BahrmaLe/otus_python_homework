@@ -52,8 +52,8 @@ def test_if_stat():
         logging.info(enp)
     except IndexError:
         print('No proc match for {}'.format(pat))
-        print(type(enp))
-        print(enp)
+    print(type(enp))
+    print(enp)
 
 
 def test_service_stat():
