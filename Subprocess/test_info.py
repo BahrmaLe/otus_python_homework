@@ -48,10 +48,10 @@ def test_if_stat():
     try:
         wl = pat.findall(resp)[0]
         capturedproc.append(wl)
+        assert int(wl) > 0
+        logging.info(wl)
     except IndexError:
         print('No proc match for {}'.format(pat))
-    assert int(wl) > 0
-    logging.info(wl)
 
 
 def test_service_stat():
