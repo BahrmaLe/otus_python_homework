@@ -22,7 +22,6 @@ def test_if():
 
 
 def test_check_default_route():
-    p0 = subprocess.Popen('cmd')
     p1 = subprocess.Popen(['ip', 'r'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     p2 = subprocess.Popen(["grep", "default"], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.readline()
@@ -50,7 +49,7 @@ def test_if_stat():
 
 
 def test_service_stat():
-    resp = subprocess.check_output(["systemctl",  "status", "apache2.service"]).decode()
+    resp = subprocess.check_output(["systemctl",  "status", "apache2.service"]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
     logging.info(status)
