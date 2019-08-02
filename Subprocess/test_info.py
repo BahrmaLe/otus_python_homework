@@ -43,7 +43,7 @@ def test_processor_info():
 
 def test_if_stat():
     resp = subprocess.check_output(["tail",  "/proc/net/dev"]).decode()
-    pat = re.compile(r"enp0s8: (\d*)", re.MULTILINE)
+    pat = re.compile(r"enp0s8: (\w*)", re.MULTILINE)
     capturedproc = []
     try:
         wl = pat.findall(resp)[0]
