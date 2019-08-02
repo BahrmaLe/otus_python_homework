@@ -44,8 +44,11 @@ def test_network_bytes():
     for line in resp:
         if "enp0s8" in line:
             data = line.split('%s:' % "enp0s8")[1].split()
+            print(data)
             rx_bytes, tx_bytes = (data[0], data[8])
             print(rx_bytes, tx_bytes)
+            assert rx_bytes > 0
+            assert tx_bytes > 0
 # def test_if_stat():
     # resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
     # print(resp)
