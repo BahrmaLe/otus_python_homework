@@ -41,7 +41,7 @@ def test_processor_info():
 
 def test_network_bytes():
     resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
-    for line in resp
+    for line in resp:
         if "enp0s8" in line:
             data = line.split('%s:' % "enp0s8")[1].split()
             rx_bytes, tx_bytes = (data[0], data[8])
