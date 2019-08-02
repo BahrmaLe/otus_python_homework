@@ -44,10 +44,9 @@ def test_network_bytes():
     print(resp)
     if "enp0s8" in resp:
         data = resp.split('%s:' % "enp0s8")[1].split()
-        print(type(data))
         rx_bytes, tx_bytes = (data[0], data[8])
-        print(rx_bytes)
-        print(tx_bytes)
+        print("Received bytes: {}".format(rx_bytes))
+        print("Transmit bytes: {}".format(tx_bytes))
         assert int(rx_bytes) > 0
         assert int(tx_bytes) > 0
 # def test_if_stat():
