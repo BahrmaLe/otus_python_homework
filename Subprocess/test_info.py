@@ -44,6 +44,8 @@ def test_if_stat():
     print(resp)
     pat = re.compile(r'enp0s8: ([1-9]\d*)', re.MULTILINE)
     print(pat)
+    enp = pat.findall(resp)[0]
+    print(enp)
     # capturedproc = []
     # try:
     #     enp = pat.findall(resp)[0]
