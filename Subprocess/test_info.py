@@ -43,17 +43,16 @@ def test_if_stat():
     resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
     pat = re.compile(r'enp0s8: ([1-9]\d*)', re.MULTILINE)
     capturedproc = []
-    try:
-        enp = pat.findall(resp)[0]
-        print(type(enp))
-        print(enp)
-        capturedproc.append(enp)
-        assert int(enp) > 0
-        logging.info(enp)
-    except IndexError:
-        print('No proc match for {}'.format(pat))
+    # try:
+    enp = pat.findall(resp)[0]
     print(type(enp))
     print(enp)
+    capturedproc.append(enp)
+    assert int(enp) > 0
+    logging.info(enp)
+    # except IndexError:
+    #     print('No proc match for {}'.format(pat))
+
 
 
 def test_service_stat():
