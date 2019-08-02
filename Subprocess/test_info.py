@@ -42,17 +42,14 @@ def test_processor_info():
 def test_network_bytes():
     resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode("utf-8")
     print(resp)
-    for line in resp:
-        print(type(line))
-        print(line)
-        if "enp0s8" in line:
-            data = line.split('%s:' % "enp0s8")[1].split()
-            print(type(data))
-            rx_bytes, tx_bytes = (data[0], data[8])
-            print(rx_bytes)
-            print(tx_bytes)
-            assert int(rx_bytes) > 0
-            assert int(tx_bytes) > 0
+    if "enp0s8" in resp:
+        data = resp.split('%s:' % "enp0s8")[1].split()
+        print(type(data))
+        rx_bytes, tx_bytes = (data[0], data[8])
+        print(rx_bytes)
+        print(tx_bytes)
+        assert int(rx_bytes) > 0
+        assert int(tx_bytes) > 0
 # def test_if_stat():
     # resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode()
     # print(resp)
