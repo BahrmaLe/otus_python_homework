@@ -24,8 +24,7 @@ def args():
     return parser.parse_args()
 
 
-if args.package:
-
+if __name__ == "__main__":
     # Check version of the package
     arguments = args()
     logging.info("".join(['package =' + arguments.package]))
