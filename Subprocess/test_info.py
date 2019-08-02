@@ -7,20 +7,6 @@ import argparse
 logging.basicConfig(level=logging.INFO)
 
 
-def args():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument('-p', action='store', dest='package', default="bash",
-                        help='Get version of the package')
-    parser.add_argument('-d', action='store', dest='dir', default=".",
-                        help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port', default=":21",
-                        help='Get file list in the directory')
-    parser.add_argument('--program', action='store', dest='program', default="",
-                        help='Get program info')
-    return parser.parse_args()
-
-
 def test_ifconfig():
     pat_local = re.compile(b"lo:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
     pat_enp = re.compile(b"enp0s8.*:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
@@ -93,61 +79,3 @@ def test_os_version():
     logging.info(resp)
 
 
-class GetInfo:
-    """Getting package version"""
-    arguments = args()
-
-    if args == "package":
-        print("Getting package version")
-        logging.info("".join(['package =' + arguments.package]))
-        logging.info("getting verion info")
-        # p = subprocess.Popen([arguments.package, "--version"])
-        # p.communicate()
-        # sleep(2)
-        resp = subprocess.check_output([arguments.package, "--version"]).decode()
-        print(resp)
-
-# def list_of_directory():
-#     """Getting files in the current directory"""
-#     arguments = args()
-    elif args == 'dir':
-        print("Getting files in the current directory")
-        logging.info(arguments.dir)
-        logging.info("getting files list")
-        resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
-        print(resp)
-
-# def port_activity():
-#     """getting port state"""
-#     arguments = args()
-    elif args == "port":
-        print("Getting port activity")
-        logging.info(arguments.port)
-        p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
-        line = p2.stdout.readline()
-        print(line.decode())
-
-
-# # def process_info():
-# #     """Get info about process"""
-#     arguments = args()
-    elif args == "program":
-        print("Getting info about process")
-        logging.info("".join(["program ", arguments.program]))
-        p1 = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
-        line = p2.stdout.read()
-        print(line.decode())
-
-
-#     print(subprocess.check_output(["ps", "aux"]).decode())
-#
-#     if args() == "package":
-#         print("Getting package version")
-#     if args()  == "dir":
-#         print("openbreweryDB API testing")
-# elif args.command == c:
-#     print("CDNJS API testing")
-# results = (subprocess.check_output(["pytest", "-v", args.command]))
-# print(results.decode('utf-8'))
