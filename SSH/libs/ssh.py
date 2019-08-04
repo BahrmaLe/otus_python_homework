@@ -87,20 +87,18 @@ class ShhClient:
 
     def create_ftp_user(self, user, password):
         """Create FTP User"""
-        self.execute("sudo mkdir /var/ftp_home")
-        self.execute("".join(["sudo useradd", user]))
+        self.execute("".join(["sudo adduser", user]))
         self.execute("".join(["sudo passwd", user]))
         self.execute(password)
         self.execute(password)
-        self.execute("chown {0}:{1} /var/ftp_home".format(user, user))
-        self.execute("usermod -d /var/ftp_home/ {0}".format(user))
+        # self.execute("chown {0}:{1} /var/ftp_home".format(user, user))
+        # self.execute("usermod -d /var/ftp_home/ {0}".format(user))
 
     def check_user(self, user):
-        stdin, stdout, stderr = self.client.exec_command(("cat /etc/passwd {0}| grep {0}".format(user)), get_pty=True)
-        out = str(stdout.read().decode("utf-8"))
-        print(type(out))
-        print(out)
-        return out
+        stdin, stdout, stderr = self.client.exec_command(("getent passwd {0}".format(user)))
+        print(stdout.read().decode())
+        print(len(stdout.read()))
+        return len(stdout.read())
 
     def check_user_ftp(self, user):
         with self.client.invoke_shell() as ssh:

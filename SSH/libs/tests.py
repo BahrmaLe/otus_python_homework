@@ -19,9 +19,8 @@ def test_install_vsftpd():
 
 def test_create_user():
     ssh = ShhClient(host, user, secret, port)
-    if "cat: ftp_user: No such file or directory" in ssh.check_user("ftp_user"):
-        ssh.create_ftp_user("ftp_user", "1111")
-    assert "/home/ftp_user/:bin/sh" in ssh.check_user("ftp_user")
+    ssh.create_ftp_user("ftp_user", "1111")
+    assert ssh.check_user("ftp_user")
     ssh.close()
 
 
