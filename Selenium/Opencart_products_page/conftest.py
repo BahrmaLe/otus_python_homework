@@ -168,13 +168,13 @@ def driver(request):
     wd.quit()
 
 
-@pytest.mark.usefixtures("environment_info")
-@pytest.fixture(scope='session', autouse=True)
-def configure_html_report_env(request, environment_info):
-    request.config._metadata.update(
-        {"browser": request.config.getoption("--browser"),
-         "address": request.config.getoption("--address")})
-    yield
+# @pytest.mark.usefixtures("environment_info")
+# @pytest.fixture(scope='session', autouse=True)
+# def configure_html_report_env(request, environment_info):
+#     request.config._metadata.update(
+#         {"browser": request.config.getoption("--browser"),
+#          "address": request.config.getoption("--address")})
+#     yield
 
 
 @pytest.fixture(scope="session")
