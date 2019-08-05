@@ -42,7 +42,7 @@ RUN git clone https://@github.com/BahrmaLe/otus_python_homework.git /otus
 # set display port to avoid crash
 ENV DISPLAY=:99
 
-WORKDIR /otus
+WORKDIR /otus/Selenium/Opencart_products_page
 
 
 CMD ["/bin/bash"]
