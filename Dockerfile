@@ -31,6 +31,7 @@ RUN tar xvzf /tmp/geckodriver.tar.gz -C /usr/local/bin/
 RUN pip install pytest
 RUN pip install selenium
 RUN pip install pep8
+RUN pip install allure-pytest
 
 RUN apt-get install xvfb -y
 RUN Xvfb :99 & export DISPLAY=:99
