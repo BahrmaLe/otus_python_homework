@@ -8,10 +8,10 @@ RUN apt-get install -y python python-pip python-dev && pip install --upgrade pip
 
 RUN apt-get update -y && apt-get install git -y
 
-RUN wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-RUN sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list'
-RUN apt-get -y update
-RUN apt-get install -y google-chrome-stable
+#RUN wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#RUN sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list'
+#RUN apt-get -y update
+#RUN apt-get install -y google-chrome-stable
 
 RUN apt-get -y update
 RUN apt-get install -y firefox
