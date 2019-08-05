@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SeleniumGrid/selenium-server-standalone-3.141.59.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ssh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/ssh_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/ssh_connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeleniumGrid/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SeleniumGrid/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeleniumGrid/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SeleniumGrid/tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -263,13 +257,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Added run script with argparse parameters">
-      <created>1564392183969</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1564392183969</updated>
     </task>
     <task id="LOCAL-00038" summary="Added run script with argparse parameters">
       <created>1564490956561</created>
@@ -607,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564760357512</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Added run script with argparse parameters">
+      <created>1564912316417</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1564912316419</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView">
