@@ -28,8 +28,7 @@ def pytest_addoption(parser):
                      default="New Meta Tag Keyword",
                      help="Meta Tag Keyword")
     parser.addoption("--modelname", action="store", default="New model", help="Model Name")
-    # parser.addoption("--report", action="store", default="--alluredir /C:/Users/60064265/PycharmProjects/Homework"
-    #                                                      "/Selenium/Opencart_products_page/log/allure_reports")
+    parser.addoption("--report", action="store", default="--alluredir /allure_reports")
 
 
 @pytest.fixture(scope="function")
