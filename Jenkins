@@ -1,0 +1,24 @@
+pipeline {
+	agent {
+		docker {image "bahrmale/otus_hw"}
+	}
+	stages {
+		stage('Check') {
+			steps {
+				echo params["address"]
+				echo params["browser"]
+			}
+		}
+
+        	stage('Pytest') {
+            		steps {
+                		sh "pytest -s -v --alluredir=reports test_product_page.py --address=" + params['address'] + " --browser=" + params['browser']
+            		}
+        	}
+	}
+	post {
+        always {
+            archiveArtifacts artifacts: 'reports/*.*', fingerprint: true
+        }
+    }
+}
