@@ -238,13 +238,6 @@
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
     </task>
-    <task id="LOCAL-00054" summary="Added run script with argparse parameters">
-      <created>1564741134932</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1564741134932</updated>
-    </task>
     <task id="LOCAL-00055" summary="Added run script with argparse parameters">
       <created>1564741666430</created>
       <option name="number" value="00055" />
@@ -581,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565101060041</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Added run script with argparse parameters">
+      <created>1565105240166</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1565105240166</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -641,19 +641,9 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Subprocess/test_info.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CDNJS/test_mock.py</url>
           <line>33</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Subprocess/test_info.py</url>
-          <line>65</line>
-          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

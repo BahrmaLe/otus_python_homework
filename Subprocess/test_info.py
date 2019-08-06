@@ -2,20 +2,23 @@ import logging
 import re
 import subprocess
 import argparse
+import pytest
 
 
 logging.basicConfig(level=logging.INFO)
 
+
+@pytest.fixture(scope="function")
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-d', action='store', dest='dir', default=".",
+    parser.add_argument('-d', action='store', dest='dir', const=".", default=".",
                         help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port', default="80",
+    parser.add_argument('--port', action='store', dest='port', const="80", default="80",
                         help='Get file list in the directory')
-    parser.add_argument('--program', action='store', dest='program', default="docker",
+    parser.add_argument('--program', action='store', dest='program', const="docker", default="docker",
                         help='Get program info')
-    parser.add_argument('-p', action='store', dest='package', default="docker",
+    parser.add_argument('-p', action='store', dest='package', const="docker", default="docker",
                         help='Get version of the package')
     return parser.parse_args()
 
@@ -92,16 +95,16 @@ def test_os_version():
     logging.info(resp)
 
 
-def test_list_of_files():
-    arguments = args()
+def test_list_of_files(args):
+    arguments = args
     resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
     print(resp)
     assert "total" in resp
     logging.info(resp)
 
 
-def test_version_package():
-    arguments = args()
+def test_version_package(args):
+    arguments = args
     resp = subprocess.Popen([arguments.package, "--version"])
     resp.communicate()
     print(resp)
@@ -110,8 +113,8 @@ def test_version_package():
     logging.info(resp)
 
 
-def test_proc_info():
-    arguments = args()
+def test_proc_info(args):
+    arguments = args
     p1 = subprocess.Popen(["ps", "aux"],
                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
@@ -121,8 +124,8 @@ def test_proc_info():
     assert "akuksen+" in line
 
 
-def test_port_activity():
-    arguments = args()
+def test_port_activity(args):
+    arguments = args
     p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.readline()
