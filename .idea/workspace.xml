@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkins" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_login_page/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_login_page/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subprocess/test_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/test_info.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_product_page.test_products">
+  <component name="RunManager" selected="Python tests.pytest in test_info.py">
     <configuration name="launch_test_script" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,21 +142,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_info.test_network_bytes" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_info.test_network_bytes&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for test_login_page.TestLoginPage.test_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,6 +187,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_login_page.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium/Opencart_login_page" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Selenium/Opencart_login_page/test_login_page.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in tests.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -221,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_info.py" />
+        <item itemvalue="Python tests.pytest in test_login_page.py" />
         <item itemvalue="Python tests.pytest for test_product_page.test_products" />
         <item itemvalue="Python tests.pytest for test_login_page.TestLoginPage.test_login" />
         <item itemvalue="Python tests.pytest in tests.py" />
-        <item itemvalue="Python tests.pytest in test_info.py" />
-        <item itemvalue="Python tests.pytest for test_info.test_network_bytes" />
       </list>
     </recent_temporary>
   </component>
@@ -239,13 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Added run script with argparse parameters">
-      <created>1564741073072</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1564741073072</updated>
     </task>
     <task id="LOCAL-00054" summary="Added run script with argparse parameters">
       <created>1564741134932</created>
@@ -583,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565075870540</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Added run script with argparse parameters">
+      <created>1565101060041</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1565101060041</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView">
@@ -644,7 +642,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Subprocess/test_info.py</url>
-          <line>32</line>
+          <line>45</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -654,7 +652,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Subprocess/test_info.py</url>
-          <line>52</line>
+          <line>65</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>

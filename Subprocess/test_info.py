@@ -6,6 +6,19 @@ import argparse
 
 logging.basicConfig(level=logging.INFO)
 
+def args():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-d', action='store', dest='dir', default=".",
+                        help='Get file list in the directory')
+    parser.add_argument('--port', action='store', dest='port', default="80",
+                        help='Get file list in the directory')
+    parser.add_argument('--program', action='store', dest='program', default="docker",
+                        help='Get program info')
+    parser.add_argument('-p', action='store', dest='package', default="docker",
+                        help='Get version of the package')
+    return parser.parse_args()
+
 
 def test_ifconfig():
     pat_local = re.compile(b"lo:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
@@ -77,5 +90,47 @@ def test_os_version():
     resp = subprocess.check_output(["cat", "/proc/version"]).decode()
     assert "Ubuntu 7.4.0-1ubuntu1~18.04.1)" in resp
     logging.info(resp)
+
+
+def test_list_of_files():
+    arguments = args()
+    resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+    print(resp)
+    assert "total" in resp
+    logging.info(resp)
+
+
+def test_version_package():
+    arguments = args()
+    resp = subprocess.Popen([arguments.package, "--version"])
+    resp.communicate()
+    print(resp)
+    assert "version" in resp
+    assert "build" in resp
+    logging.info(resp)
+
+
+def test_proc_info():
+    arguments = args()
+    p1 = subprocess.Popen(["ps", "aux"],
+                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
+    line = p2.stdout.read()
+    print(line.decode())
+    print(line)
+    assert "akuksen+" in line
+
+
+def test_port_activity():
+    arguments = args()
+    p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
+    line = p2.stdout.readline()
+    print(line.decode())
+    assert "unix" in line
+    assert "STREAM" in line
+
+
+
 
 
