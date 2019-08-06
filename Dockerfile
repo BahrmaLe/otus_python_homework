@@ -37,7 +37,7 @@ RUN apt-get install xvfb -y
 RUN Xvfb :99 & export DISPLAY=:99
 
 RUN git clone https://@github.com/BahrmaLe/otus_python_homework.git /otus
-
+cd
 
 # set display port to avoid crash
 ENV DISPLAY=:99

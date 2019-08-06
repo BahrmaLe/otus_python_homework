@@ -22,3 +22,33 @@ pipeline {
         }
     }
 }
+
+pipeline {
+	agent {
+		docker {
+		    image "bahrmale/otus_hw"
+		}
+	}
+	stages {
+		stage('Check') {
+			steps {
+				echo params["address"]
+				echo params["browser"]
+			}
+		}
+        stage('Pytest') {
+        	steps {
+        	    sh "cd /Selenium/Opencart_products_page/"
+        	    sh "sudo find / test_product_page.py"
+        	    sh "ls -la"
+        	    sh "pwd"
+                sh "pytest -s -v --alluredir=reports /Selenium/Opencart_products_page/test_product_page.py --address=" + params['address'] + " --browser=" + params['browser']
+            }
+        }
+	}
+	post {
+        always {
+            archiveArtifacts artifacts: 'reports/*.*', fingerprint: true
+        }
+    }
+}
