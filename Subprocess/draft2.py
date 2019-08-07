@@ -198,7 +198,7 @@ if __name__ == "__main__":
     raise SystemExit
 
     if arguments.command == "service":
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
     print(resp)
     raise SystemExit
 
