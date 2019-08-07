@@ -6,7 +6,9 @@
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="" />
+    <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Subprocess/draft2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/draft2.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,20 +242,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Added run script with argparse parameters">
-      <created>1564758904374</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1564758904374</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Added run script with argparse parameters">
-      <created>1564760052560</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1564760052560</updated>
     </task>
     <task id="LOCAL-00085" summary="Added run script with argparse parameters">
       <created>1564760357512</created>
@@ -584,7 +572,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565190990189</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Added run script with argparse parameters">
+      <created>1565191048625</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1565191048625</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Added run script with argparse parameters">
+      <created>1565191256196</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1565191256196</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TodoView">
