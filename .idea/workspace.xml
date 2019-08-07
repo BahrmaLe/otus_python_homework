@@ -244,13 +244,6 @@
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
     </task>
-    <task id="LOCAL-00080" summary="Added run script with argparse parameters">
-      <created>1564753366315</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1564753366315</updated>
-    </task>
     <task id="LOCAL-00081" summary="Added run script with argparse parameters">
       <created>1564753482583</created>
       <option name="number" value="00081" />
@@ -587,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565188807522</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Added run script with argparse parameters">
+      <created>1565190126551</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1565190126551</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TodoView">

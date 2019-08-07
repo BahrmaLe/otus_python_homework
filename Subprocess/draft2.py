@@ -17,28 +17,28 @@ def args():
                         help='Get port activity')
     parser.add_argument('--program', action='store', dest='program', default="docker",
                         help='Get program info')
-    parser.add_argument('--ifconfig', action='store_const', dest='ifconfig', const="test_ifconfig",
+    parser.add_argument('--ifconfig', action='store_const', dest='command', const="test_ifconfig",
                         default="test_ifconfig",
                         help='Get ifconfig info')
-    parser.add_argument('--route', action='store_const', dest='route', const="test_check_default_route",
+    parser.add_argument('--route', action='store_const', dest='command', const="test_check_default_route",
                         default="test_check_default_route",
                         help='Get route')
-    parser.add_argument('--cpu', action='store_const', dest='cpu', const="test_processor_info",
+    parser.add_argument('--cpu', action='store_const', dest='command', const="test_processor_info",
                         default="test_processor_info",
                         help='Get CPU info')
-    parser.add_argument('--net', action='store_const', dest='net', const="test_network_bytes",
+    parser.add_argument('--net', action='store_const', dest='command', const="test_network_bytes",
                         default="test_network_bytes",
                         help='Get Net stats')
-    parser.add_argument('--service', action='store_const', dest='service', const="apache2.service",
+    parser.add_argument('--service', action='store_const', dest='command', const="apache2.service",
                         default="test_service_stat",
                         help='Get Service stats')
-    parser.add_argument('--curdir', action='store_const', dest='curdir', const="test_current_dir",
+    parser.add_argument('--curdir', action='store_const', dest='command', const="test_current_dir",
                         default="test_current_dir",
                         help='Get Current path')
-    parser.add_argument('--krln', action='store_const', dest='kernel', const="test_kernel_version",
+    parser.add_argument('--krln', action='store_const', dest='command', const="test_kernel_version",
                         default="test_kernel_version",
                         help='Get Kernel version')
-    parser.add_argument('--os', action='store_const', dest='os', const="test_os_version",
+    parser.add_argument('--os', action='store_const', dest='command', const="test_os_version",
                         default="test_os_version",
                         help='Get OS Version')
     return parser.parse_args()
@@ -92,7 +92,7 @@ def test_network_bytes():
 
 def test_service_stat():
     arguments = args()
-    resp = subprocess.check_output(["systemctl", "status", arguments.service]).decode("utf-8")
+    resp = subprocess.check_output(["systemctl", "status", arguments.command]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
     logging.info(status)
@@ -158,47 +158,47 @@ def test_port_activity():
 
 if __name__ == "__main__":
     arguments = args()
-    if arguments.ifconfig:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.ifconig]).decode()
+    if arguments.command == "ifconfig":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
         print(resp)
         raise SystemExit
-    elif arguments.route:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.route]).decode()
+    elif arguments.command == "route":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
         print(resp)
-        raise SystemExit
-    elif arguments.package:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.dir:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.port:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.cpu:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.cpu]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.net:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.net]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.service:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.service]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.curdir:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.curdir]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.kernel:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.kernel]).decode()
-        print(resp)
-        raise SystemExit
-    elif arguments.os:
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.os]).decode()
-        print(resp)
-        raise SystemExit
+    #     raise SystemExit
+    # elif arguments.package:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.dir:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.port:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.command:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.command:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.command:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.command:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.command:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    #     print(resp)
+    #     raise SystemExit
+    # elif arguments.command:
+    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    #     print(resp)
+    #     raise SystemExit
