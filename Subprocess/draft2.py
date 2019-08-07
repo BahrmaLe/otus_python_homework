@@ -170,44 +170,54 @@ if __name__ == "__main__":
     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
     print(resp)
     raise SystemExit
-    # elif arguments.command == "route":
-    #     print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
-    # resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    # print(resp)
-    #     raise SystemExit
-    # elif arguments.package:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.dir:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.port:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.command:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.command:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.command:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.command:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.command:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.command:
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    #     print(resp)
-    #     raise SystemExit
+
+    if arguments.command == "cpu":
+        print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
+    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.package == "p":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.dir == "d":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.port == "port":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.command == "net":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.command == "service":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.command == "curdir":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.command == "krln":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.command == "os":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    print(resp)
+    raise SystemExit
+
+    if arguments.program == "program"
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_proc_info"]).decode()
+    print(resp)
+    raise SystemExit
