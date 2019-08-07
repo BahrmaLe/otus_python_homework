@@ -5,17 +5,17 @@ import argparse
 import pytest
 
 
-logging.basicConfig(level=logging.INFO)
-
-parser = argparse.ArgumentParser()
-parser.add_argument('-d', action='store_const', dest='dir', const=".", default=".",
-                        help='Get file list in the directory')
-parser.add_argument('--port', action='store_const', dest='port', const="80", default="80",
-                        help='Get file list in the directory')
-parser.add_argument('--program', action='store_const', dest='program', const="docker", default="docker",
-                        help='Get program info')
-parser.add_argument('-p', action='store_const', dest='package', const="docker", default="docker",
-                        help='Get version of the package')
+# logging.basicConfig(level=logging.INFO)
+#
+# parser = argparse.ArgumentParser()
+# parser.add_argument('-d', action='store_const', dest='dir', const=".", default=".",
+#                         help='Get file list in the directory')
+# parser.add_argument('--port', action='store_const', dest='port', const="80", default="80",
+#                         help='Get file list in the directory')
+# parser.add_argument('--program', action='store_const', dest='program', const="docker", default="docker",
+#                         help='Get program info')
+# parser.add_argument('-p', action='store_const', dest='package', const="docker", default="docker",
+#                         help='Get version of the package')
 
 
 def test_ifconfig():
@@ -128,8 +128,5 @@ def test_port_activity(args):
     assert "unix" in line
     assert "STREAM" in line
 
-
-if __name__ == '__main__':
-    args = parser.parse_args()
 
 
