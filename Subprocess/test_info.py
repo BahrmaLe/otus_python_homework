@@ -5,9 +5,9 @@ import argparse
 import pytest
 
 
-# logging.basicConfig(level=logging.INFO)
-#
-# parser = argparse.ArgumentParser()
+logging.basicConfig(level=logging.INFO)
+
+parser = argparse.ArgumentParser()
 # parser.add_argument('-d', action='store_const', dest='dir', const=".", default=".",
 #                         help='Get file list in the directory')
 # parser.add_argument('--port', action='store_const', dest='port', const="80", default="80",
@@ -16,6 +16,8 @@ import pytest
 #                         help='Get program info')
 # parser.add_argument('-p', action='store_const', dest='package', const="docker", default="docker",
 #                         help='Get version of the package')
+parser.add_argument('--ifconfig', action='store_const', dest='command', const=test_ifconfig(), default=test_ifconfig(),
+                        help='Get ifconfig info')
 
 
 def test_ifconfig():
