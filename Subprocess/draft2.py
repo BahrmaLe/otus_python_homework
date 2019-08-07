@@ -217,7 +217,7 @@ if __name__ == "__main__":
     print(resp)
     raise SystemExit
 
-    if arguments.program == "program"
+    if arguments.program == "program":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_proc_info"]).decode()
     print(resp)
     raise SystemExit
