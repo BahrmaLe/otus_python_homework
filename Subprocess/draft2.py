@@ -53,6 +53,7 @@ def test_network_bytes():
 
 
 def test_service_stat():
+    arguments = args()
     resp = subprocess.check_output(["systemctl", "status", arguments.service]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
