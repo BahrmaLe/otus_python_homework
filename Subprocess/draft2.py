@@ -70,7 +70,7 @@ def args():
 
 if __name__ == "__main__":
     arguments = args()
-    resp = subprocess.check_output(["pytest", "-s", "-v" "draft2.py::", arguments.command]).decode()
+    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::", arguments.command]).decode()
     print(resp)
     sleep(2)
 
