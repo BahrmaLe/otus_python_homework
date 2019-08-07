@@ -56,13 +56,13 @@ def args():
                         help='Get file list in the directory')
     parser.add_argument('--program', action='store', dest='program', default="skype",
                         help='Get program info')
-    parser.add_argument('--ifconfig', action='store_const', dest='command', const=test_ifconfig(),
+    parser.add_argument('--ifconfig', action='store_const', dest='command', const="test_ifconfig",
                         default=test_ifconfig(),
                         help='Get ifconfig info')
-    parser.add_argument('--route', action='store_const', dest='command', const=test_check_default_route(),
+    parser.add_argument('--route', action='store_const', dest='command', const="test_check_default_route",
                         default=test_check_default_route(),
                         help='Get route')
-    parser.add_argument('--cpu', action='store_const', dest='command', const=test_processor_info(),
+    parser.add_argument('--cpu', action='store_const', dest='command', const="test_processor_info",
                         default=test_processor_info(),
                         help='Get CPU info')
     return parser.parse_args()
@@ -70,9 +70,8 @@ def args():
 
 if __name__ == "__main__":
     arguments = args()
-    resp = subprocess.Popen(["pytest", "-s", "-v", arguments.command])
-    line = resp.stdout.read()
-    print(line.decode())
+    resp = subprocess.check_output(["pytest", "-s", "-v" "draft2.py::", arguments.command]).decode()
+    print(resp)
     sleep(2)
 
     # Check version of the package
