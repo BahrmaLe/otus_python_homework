@@ -70,8 +70,6 @@ def args():
 
 if __name__ == "__main__":
     arguments = args()
-    logging.info("".join(['ifconfig =' + arguments.command]))
-    logging.info("getting ifconfig info")
     resp = subprocess.check_output(["pytest", "-s", "-v", arguments.command]).decode()
     print(resp)
     sleep(2)
