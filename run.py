@@ -2,7 +2,7 @@ import argparse
 import subprocess
 
 a = "C:\\Users\\60064265\\PycharmProjects\\Homework\\API\\tests.py"
-b = "C:\\Users\\60064265\\PycharmProjects\\Homework\\OpenBreweryDB\\tests.py"
+b = "/home/akuksenko/otus/otus_python_homework/OpenBreweryDB/tests.py"
 c = "C:\\Users\\60064265\\PycharmProjects\\Homework\\CDNJS\\tests.py"
 # d = "C:\\Users\\60064265\\GitHub\\otus-qa\\Lesson3\\example1-parametrize\\test_example1_params.py"
 names = [a, b, c]
