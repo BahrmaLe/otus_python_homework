@@ -158,11 +158,20 @@ def test_port_activity():
 
 if __name__ == "__main__":
     arguments = args()
-    if arguments.command == "ifconfig":
-        print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    print(resp)
-    raise SystemExit
+
+    def run_ifconfig():
+        if arguments.command == "ifconfig":
+            print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+
+    def run_route():
+        if arguments.command == "route":
+            print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.command == "route":
     #     print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
     # resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
