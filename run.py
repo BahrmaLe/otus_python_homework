@@ -14,7 +14,7 @@ parser.add_argument('--cdn', action='store_const', const=c, dest="command")
 # parser.add_argument('--wrong', action='store_const', const=d, dest="command")
 # parser.add_argument("-p", "--path", action="store", dest="command")
 
-args = parser.parse_args()
+args = parser.parse_args()-
 
 if args.command not in names:
     raise argparse.ArgumentTypeError("is not allowed directory")

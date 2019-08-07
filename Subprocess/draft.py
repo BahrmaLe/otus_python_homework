@@ -20,11 +20,11 @@ parser = argparse.ArgumentParser()
 #                         help='Get program info')
 # parser.add_argument('-p', action='store_const', dest='package', const="docker", default="docker",
 #                         help='Get version of the package')
-parser.add_argument('--ifconfig', action='store_const', dest='package', const=test_ifconfig(), default=test_ifconfig(),
+parser.add_argument('--ifconfig', action='store_const', dest='command', const=test_ifconfig(), default=test_ifconfig(),
                         help='Get ifconfig info')
-parser.add_argument('--route', action='store_const', dest='package', const=test_check_default_route(), default=test_check_default_route(),
+parser.add_argument('--route', action='store_const', dest='command', const=test_check_default_route(), default=test_check_default_route(),
                         help='Get route')
-parser.add_argument('--cpu', action='store_const', dest='package', const=test_processor_info(), default=test_processor_info(),
+parser.add_argument('--cpu', action='store_const', dest='command', const=test_processor_info(), default=test_processor_info(),
                         help='Get CPU info')
 
 
