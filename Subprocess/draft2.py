@@ -70,8 +70,9 @@ def args():
 
 if __name__ == "__main__":
     arguments = args()
-    resp = subprocess.check_output(["pytest", "-s", "-v", arguments.command]).decode()
-    print(resp)
+    resp = subprocess.Popen(["pytest", "-s", "-v", arguments.command])
+    line = resp.stdout.read()
+    print(line.decode())
     sleep(2)
 
     # Check version of the package
