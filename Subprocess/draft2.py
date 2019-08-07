@@ -45,12 +45,19 @@ def test_processor_info():
     logging.info(model)
 
 
+def test_list_of_files():
+    resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+    print(resp)
+    assert "total" in resp
+    logging.info(resp)
+
+
 def args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-p', action='store', dest='package', default="bash",
                         help='Get version of the package')
-    parser.add_argument('-d', action='store', dest='dir', default=".",
+    parser.add_argument('-d', action='store_const', dest='command', const="test_list_of_files", default=".",
                         help='Get file list in the directory')
     parser.add_argument('--port', action='store', dest='port', default=":21",
                         help='Get file list in the directory')
@@ -70,41 +77,52 @@ def args():
 
 if __name__ == "__main__":
     arguments = args()
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-    print(resp)
-    sleep(2)
+    if arguments.command == "test_processor_info":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_check_default_route":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_list_of_files":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
 
-    # Check version of the package
-    arguments = args()
-    logging.info("".join(['package =' + arguments.package]))
-    logging.info("getting verion info")
-    p = subprocess.Popen([arguments.package, "--version"])
-    p.communicate()
-    sleep(2)
 
-    # Get files in the current directory
-    logging.info(arguments.dir)
-    logging.info("getting files list")
-    resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
-    print(resp)
-    sleep(2)
 
-    logging.info(arguments.port)
-    p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
-    line = p2.stdout.readline()
-    print(line.decode())
-    sleep(2)
+    # # Check version of the package
+    # arguments = args()
+    # logging.info("".join(['package =' + arguments.package]))
+    # logging.info("getting verion info")
+    # p = subprocess.Popen([arguments.package, "--version"])
+    # p.communicate()
+    # sleep(2)
 
-    # Get info about process
-    logging.info("".join(["programm ", arguments.program]))
-    p1 = subprocess.Popen(["ps", "-o", "pid,ppid,user,args,lstart,etime"],
-                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
-    line = p2.stdout.read()
-    print(line.decode())
+    # # Get files in the current directory
+    # logging.info(arguments.dir)
+    # logging.info("getting files list")
+    # resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+    # print(resp)
+    # sleep(2)
 
-    print(subprocess.check_output(["ps", "aux"]).decode())
+    # logging.info(arguments.port)
+    # p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    # p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
+    # line = p2.stdout.readline()
+    # print(line.decode())
+    # sleep(2)
+    #
+    # # Get info about process
+    # logging.info("".join(["programm ", arguments.program]))
+    # p1 = subprocess.Popen(["ps", "-o", "pid,ppid,user,args,lstart,etime"],
+    #                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    # p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
+    # line = p2.stdout.read()
+    # print(line.decode())
+    #
+    # print(subprocess.check_output(["ps", "aux"]).decode())
 
 
 
