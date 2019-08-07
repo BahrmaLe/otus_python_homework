@@ -1,7 +1,6 @@
 import argparse
 import subprocess
 import logging
-from Subprocess import test_info
 from Subprocess.test_info import test_ifconfig, test_check_default_route, test_processor_info
 
 # a = "C:\\Users\\60064265\\PycharmProjects\\Homework\\API\\tests.py"
