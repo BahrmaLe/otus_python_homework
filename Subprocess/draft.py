@@ -39,13 +39,13 @@ args = parser.parse_args()
 
 # if args.command not in names:
 #     raise argparse.ArgumentTypeError("is not allowed directory")
-
-if args.command == test_ifconfig():
-    print("Checking ifconfig info")
-elif args.command == test_check_default_route():
-    print("Checking default route")
-elif args.command == test_processor_info():
-    print("Checking CPU")
-results = (subprocess.check_output(["pytest", "-s", "-v", args.command]))
-print(results.decode('utf-8'))
+if __name__ == "__main__":
+    if args.command == test_ifconfig():
+        print("Checking ifconfig info")
+    elif args.command == test_check_default_route():
+        print("Checking default route")
+    elif args.command == test_processor_info():
+        print("Checking CPU")
+    results = (subprocess.check_output(["pytest", "-s", "-v", args.command]))
+    print(results.decode('utf-8'))
 
