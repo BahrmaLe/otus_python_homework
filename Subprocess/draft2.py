@@ -164,75 +164,75 @@ if __name__ == "__main__":
         def run_test_processor_info(arguments):
             if arguments.command is "test_processor_info":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
-        def run_test_check_default_route(self, arguments):
+        def run_test_check_default_route(arguments):
             if arguments.command is "test_check_default_route":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_version_package(self, arguments):
             if arguments.package:
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_list_of_files(self, arguments):
             if arguments.dir:
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_port_activity(self, arguments):
             if arguments.port:
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_ifconfig(self, arguments):
             if arguments.command is "test_ifconfig":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_network_bytes(self, arguments):
             if arguments.command is "test_network_bytes":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_service_stat(self, arguments):
             if arguments.service:
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.service]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_current_dir(self, arguments):
             if arguments.command is "test_current_dir":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_kernel_version(self, arguments):
             if arguments.command == "test_kernel_version":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
 
         @staticmethod
         def run_test_os_version(self, arguments):
             if arguments.command is "test_os_version":
                 resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
-                print(resp)
-                raise SystemExit
+            print(resp)
+            raise SystemExit
