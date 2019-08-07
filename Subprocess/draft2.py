@@ -29,13 +29,13 @@ def args():
     parser.add_argument('--net', action='store_const', dest='command', const="test_network_bytes",
                         default="test_network_bytes",
                         help='Get Net stats')
-    parser.add_argument('--service', action='store_const', dest='command', const="apache2.service",
+    parser.add_argument('--service', action='store_const', dest='command', const="apache2",
                         default="test_service_stat",
                         help='Get Service stats')
     parser.add_argument('--curdir', action='store_const', dest='command', const="test_current_dir",
                         default="test_current_dir",
                         help='Get Current path')
-    parser.add_argument('--krln', action='store_const', dest='command', const="test_kernel_version",
+    parser.add_argument('--kernel', action='store_const', dest='command', const="test_kernel_version",
                         default="test_kernel_version",
                         help='Get Kernel version')
     parser.add_argument('--os', action='store_const', dest='command', const="test_os_version",
@@ -207,7 +207,7 @@ if __name__ == "__main__":
     print(resp)
     raise SystemExit
 
-    if arguments.command == "krln":
+    if arguments.command == "kernel":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
     print(resp)
     raise SystemExit
