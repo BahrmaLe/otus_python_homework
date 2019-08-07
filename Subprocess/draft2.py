@@ -1,12 +1,7 @@
-"""
-Check package version
-List all files in a specified directory
-"""
 import re
 import argparse
 import logging
 import subprocess
-from time import sleep
 
 logging.basicConfig(level=logging.INFO)
 
@@ -45,23 +40,89 @@ def test_processor_info():
     logging.info(model)
 
 
+def test_network_bytes():
+    resp = subprocess.check_output(["tail", "/proc/net/dev"]).decode("utf-8")
+    print(resp)
+    if "enp0s8" in resp:
+        data = resp.split('%s:' % "enp0s8")[1].split()
+        rx_bytes, tx_bytes = (data[0], data[8])
+        print("Received bytes: {}".format(rx_bytes))
+        print("Transmit bytes: {}".format(tx_bytes))
+        assert int(rx_bytes) > 0
+        assert int(tx_bytes) > 0
+
+
+def test_service_stat():
+    resp = subprocess.check_output(["systemctl", "status", arguments.service]).decode("utf-8")
+    pat = re.compile(r"Active: (\w*)", re.MULTILINE)
+    status = pat.findall(resp)[0]
+    logging.info(status)
+    assert status == "active"
+
+
+def test_current_dir():
+    resp = subprocess.check_output(["pwd"]).decode()
+    assert "/home/akuksenko/otus/otus_python_homework/Subprocess" in resp
+    logging.info(resp)
+
+
+def test_kernel_version():
+    resp = subprocess.check_output(["uname", "-r"]).decode()
+    assert "4.15.0-55-generic" in resp
+    logging.info(resp)
+
+
+def test_os_version():
+    resp = subprocess.check_output(["cat", "/proc/version"]).decode()
+    assert "Ubuntu 7.4.0-1ubuntu1~18.04.1)" in resp
+    logging.info(resp)
+
+
 def test_list_of_files():
-    resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+    resp = subprocess.check_output(["ls", "-l", arguments.command]).decode()
     print(resp)
     assert "total" in resp
     logging.info(resp)
 
 
+def test_version_package():
+    resp = subprocess.Popen([arguments.package, "--version"])
+    resp.communicate()
+    print(resp)
+    assert "version" in resp
+    assert "build" in resp
+    logging.info(resp)
+
+
+def test_proc_info():
+    p1 = subprocess.Popen(["ps", "aux"],
+                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
+    line = p2.stdout.read()
+    print(line.decode())
+    print(line)
+    assert "akuksen+" in line
+
+
+def test_port_activity():
+    p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
+    line = p2.stdout.readline()
+    print(line.decode())
+    assert "unix" in line
+    assert "STREAM" in line
+
+
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store', dest='package', default="bash",
+    parser.add_argument('-p', action='store_const', dest='package', const="docker", default="bash",
                         help='Get version of the package')
-    parser.add_argument('-d', action='store_const', dest='command', const="test_list_of_files", default=".",
+    parser.add_argument('-d', action='store_const', dest='dir', const=".", default=".",
                         help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port', default=":21",
-                        help='Get file list in the directory')
-    parser.add_argument('--program', action='store', dest='program', default="skype",
+    parser.add_argument('--port', action='store_const', dest='port', const=":21", default=":21",
+                        help='Get port activity')
+    parser.add_argument('--program', action='store', dest='program', const="docker", default="docker",
                         help='Get program info')
     parser.add_argument('--ifconfig', action='store_const', dest='command', const="test_ifconfig",
                         default=test_ifconfig(),
@@ -72,6 +133,21 @@ def args():
     parser.add_argument('--cpu', action='store_const', dest='command', const="test_processor_info",
                         default=test_processor_info(),
                         help='Get CPU info')
+    parser.add_argument('--net', action='store_const', dest='command', const="test_network_bytes",
+                        default=test_network_bytes(),
+                        help='Get Net stats')
+    parser.add_argument('--service', action='store_const', dest='service', const="apache2.service",
+                        default=test_service_stat(),
+                        help='Get Service stats')
+    parser.add_argument('--curdir', action='store_const', dest='command', const="test_current_dir",
+                        default=test_current_dir(),
+                        help='Get Current path')
+    parser.add_argument('--krln', action='store_const', dest='command', const="test_kernel_version",
+                        default=test_kernel_version(),
+                        help='Get Kernel version')
+    parser.add_argument('--os', action='store_const', dest='command', const="test_os_version",
+                        default=test_os_version(),
+                        help='Get OS Version')
     return parser.parse_args()
 
 
@@ -85,44 +161,43 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
         print(resp)
         raise SystemExit
-    elif arguments.command == "test_list_of_files":
+    elif arguments.package:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.dir:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.port:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_ifconfig":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_network_bytes":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.service:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.service]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_current_dir":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_kernel_version":
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.command == "test_os_version":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
         print(resp)
         raise SystemExit
 
-
-
-    # # Check version of the package
-    # arguments = args()
-    # logging.info("".join(['package =' + arguments.package]))
-    # logging.info("getting verion info")
-    # p = subprocess.Popen([arguments.package, "--version"])
-    # p.communicate()
-    # sleep(2)
-
-    # # Get files in the current directory
-    # logging.info(arguments.dir)
-    # logging.info("getting files list")
-    # resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
-    # print(resp)
-    # sleep(2)
-
-    # logging.info(arguments.port)
-    # p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    # p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
-    # line = p2.stdout.readline()
-    # print(line.decode())
-    # sleep(2)
-    #
-    # # Get info about process
-    # logging.info("".join(["programm ", arguments.program]))
-    # p1 = subprocess.Popen(["ps", "-o", "pid,ppid,user,args,lstart,etime"],
-    #                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    # p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
-    # line = p2.stdout.read()
-    # print(line.decode())
-    #
-    # print(subprocess.check_output(["ps", "aux"]).decode())
 
 
 
