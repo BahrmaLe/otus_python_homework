@@ -116,36 +116,36 @@ def test_port_activity():
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store_const', dest='package', const="docker", default="bash",
+    parser.add_argument('-p', nargs='*', action='store_const', dest='package', const="docker", default="bash",
                         help='Get version of the package')
-    parser.add_argument('-d', action='store_const', dest='dir', const=".", default=".",
+    parser.add_argument('-d', nargs='*', action='store_const', dest='dir', const=".", default=".",
                         help='Get file list in the directory')
-    parser.add_argument('--port', action='store_const', dest='port', const=":21", default=":21",
+    parser.add_argument('--port', nargs='*', action='store_const', dest='port', const=":21", default=":21",
                         help='Get port activity')
-    parser.add_argument('--program', action='store', dest='program', const="docker", default="docker",
+    parser.add_argument('--program', nargs='*', action='store', dest='program', const="docker", default="docker",
                         help='Get program info')
-    parser.add_argument('--ifconfig', action='store_const', dest='command', const="test_ifconfig",
+    parser.add_argument('--ifconfig', nargs='*', action='store_const', dest='command', const="test_ifconfig",
                         default=test_ifconfig(),
                         help='Get ifconfig info')
-    parser.add_argument('--route', action='store_const', dest='command', const="test_check_default_route",
+    parser.add_argument('--route', nargs='*', action='store_const', dest='command', const="test_check_default_route",
                         default=test_check_default_route(),
                         help='Get route')
-    parser.add_argument('--cpu', action='store_const', dest='command', const="test_processor_info",
+    parser.add_argument('--cpu', nargs='*', action='store_const', dest='command', const="test_processor_info",
                         default=test_processor_info(),
                         help='Get CPU info')
-    parser.add_argument('--net', action='store_const', dest='command', const="test_network_bytes",
+    parser.add_argument('--net', nargs='*', action='store_const', dest='command', const="test_network_bytes",
                         default=test_network_bytes(),
                         help='Get Net stats')
-    parser.add_argument('--service', action='store_const', dest='service', const="apache2.service",
+    parser.add_argument('--service', nargs='*', action='store_const', dest='service', const="apache2.service",
                         default=test_service_stat(),
                         help='Get Service stats')
-    parser.add_argument('--curdir', action='store_const', dest='command', const="test_current_dir",
+    parser.add_argument('--curdir', nargs='*', action='store_const', dest='command', const="test_current_dir",
                         default=test_current_dir(),
                         help='Get Current path')
-    parser.add_argument('--krln', action='store_const', dest='command', const="test_kernel_version",
+    parser.add_argument('--krln', nargs='*', action='store_const', dest='command', const="test_kernel_version",
                         default=test_kernel_version(),
                         help='Get Kernel version')
-    parser.add_argument('--os', action='store_const', dest='command', const="test_os_version",
+    parser.add_argument('--os', nargs='*', action='store_const', dest='command', const="test_os_version",
                         default=test_os_version(),
                         help='Get OS Version')
     return parser.parse_args()
