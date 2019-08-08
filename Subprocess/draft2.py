@@ -20,9 +20,7 @@ def args():
     parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
     parser.add_argument('--route', action='store_true', dest='route_config', default="", help='Get route')
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
-    parser.add_argument('--net', action='store_const', dest='net_info', const="test_network_bytes",
-                        default="test_network_bytes",
-                        help='Get Net stats')
+    parser.add_argument('--net', action='store_true', dest='net_info', default="", help='Get Net stats')
     parser.add_argument('--service', action='store_true', dest='service_status', default="test_service_stat",
                         help='Get Service stats')
     parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
@@ -172,6 +170,11 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
         print(resp)
         raise SystemExit
+    elif arguments.net_info:
+        print(arguments.net_info)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_network_bytes"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
@@ -187,11 +190,7 @@ if __name__ == "__main__":
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
     #     print(resp)
     #     raise SystemExit
-    # elif arguments.net:
-    #     print(arguments.net_info)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_network_bytes"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+
     # elif arguments.service:
     #     print(arguments.service_status)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
