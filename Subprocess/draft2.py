@@ -89,6 +89,7 @@ def test_apache_stat():
         print(resp)
         print(status)
         assert status == "active"
+        return status
 
 
 def test_current_dir():
@@ -176,8 +177,8 @@ if __name__ == "__main__":
         raise SystemExit
     elif arguments.apache:
         print(arguments.apache)
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"], shell=True).decode()
-        print(resp)
+        subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"]).decode()
+        print(test_apache_stat())
         raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
