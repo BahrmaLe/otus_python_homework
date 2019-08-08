@@ -21,7 +21,7 @@ def args():
     parser.add_argument('--route', action='store_true', dest='route_config', default="", help='Get route')
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
     parser.add_argument('--net', action='store_true', dest='net_info', default="", help='Get Net stats')
-    parser.add_argument('--apache', action='store', dest='apache', default="", help='Get Service stats')
+    parser.add_argument('--apache', action='store_true', dest='apache', default="", help='Get Service stats')
     parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
                         default="test_current_dir",
                         help='Get Current path')
