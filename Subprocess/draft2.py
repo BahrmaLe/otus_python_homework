@@ -23,9 +23,7 @@ def args():
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
     parser.add_argument('--net', action='store_true', dest='net_info', default="", help='Get Net stats')
     parser.add_argument('--apache', action='store_true', dest='apache', default="", help='Get Service stats')
-    parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
-                        default="test_current_dir",
-                        help='Get Current path')
+    parser.add_argument('--curdir', action='store_true', dest='current_directory', default="", help='Get Current path')
     parser.add_argument('--kernel', action='store_const', dest='kernel_version', const="test_kernel_version",
                         default="test_kernel_version",
                         help='Get Kernel version')
@@ -181,6 +179,11 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"]).decode()
         print(resp)
         raise SystemExit
+    elif arguments.current_directory:
+        print(arguments.current_directory)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_current_dir"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
@@ -198,11 +201,7 @@ if __name__ == "__main__":
     #     raise SystemExit
 
 
-    # elif arguments.curdir:
-    #     print(arguments.current_directory)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_current_dir"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+
     # elif arguments.kernel:
     #     print(arguments.kernel_version)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_kernel_version"]).decode()
