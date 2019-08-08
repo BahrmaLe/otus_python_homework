@@ -161,12 +161,10 @@ if __name__ == "__main__":
 
     if arguments.ip_config:
         print(arguments.ip_config)
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
-    print(resp)
-    raise SystemExit
-
-    # noinspection PyUnreachableCode
-    if arguments.route_config:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.route_config:
         print(arguments.route_config)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
         print(resp)
