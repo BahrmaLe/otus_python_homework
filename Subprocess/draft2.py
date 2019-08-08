@@ -87,10 +87,10 @@ def test_apache_stat():
     if "apache2.service" in resp:
         pat = re.compile(r"Active: (\w*)", re.MULTILINE)
         status = pat.findall(resp)[0]
-        print(resp)
+        # print(resp)
         print(status)
         assert status == "active"
-        return status
+        # return status
 
 
 def test_current_dir():
@@ -178,9 +178,8 @@ if __name__ == "__main__":
         raise SystemExit
     elif arguments.apache:
         print(arguments.apache)
-        resp = subprocess.Popen(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"],  stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        line = resp.stdout.readline()
-        print(line)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"]).decode()
+        print(resp)
         raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
