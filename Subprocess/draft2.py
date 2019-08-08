@@ -49,6 +49,7 @@ def test_ifconfig():
     enp0s8_ip = pat_enp.findall(resp)[0].decode()
     logging.info(local_ip)
     logging.info(enp0s8_ip)
+    print(resp)
     assert local_ip == "127.0.0.1"
     assert enp0s8_ip == "192.168.56.103"
 
