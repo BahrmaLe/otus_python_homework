@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subprocess/draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/draft.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Subprocess/draft2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/draft2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -244,13 +242,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Added run script with argparse parameters">
-      <created>1565009535919</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1565009535919</updated>
     </task>
     <task id="LOCAL-00091" summary="Added run script with argparse parameters">
       <created>1565009816921</created>
@@ -588,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565193348237</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Added run script with argparse parameters">
+      <created>1565256799212</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1565256799212</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TodoView">

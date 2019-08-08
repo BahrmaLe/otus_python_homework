@@ -163,73 +163,73 @@ if __name__ == "__main__":
     arguments = args()
 
     if arguments.ip_config:
-        print(args())
+        print(arguments.ip_config)
     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.route_config:
-        print(args())
+        print(arguments.route_config)
     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.cpu_info:
-        print(args())
+        print(arguments.cpu_info)
     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.package == "p":
-        print(args())
+    if arguments.package_version:
+        print(arguments.package_version)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.dir == "d":
-        print(args())
+    if arguments.directory:
+        print(arguments.directory)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.port == "port":
-        print(args())
+    if arguments.port_activity:
+        print(arguments.port_activity)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.net_info:
-        print(args())
+        print(arguments.net_info)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_network_bytes"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.service_status:
-        print(args())
+        print(arguments.service_status)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.current_directory:
-        print(args())
+        print(arguments.current_directory)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_current_dir"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.kernel_version:
-        print(args())
+        print(arguments.kernel_version)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_kernel_version"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.os_verison:
-        print(args())
+        print(arguments.os_verison)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_os_version"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.program == "program":
-        print(args())
+    if arguments.program_proccess:
+        print(arguments.program_proccess)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_proc_info"]).decode()
     print(resp)
     raise SystemExit
