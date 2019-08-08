@@ -82,7 +82,7 @@ def test_network_bytes():
 
 
 def test_apache_stat():
-    resp = subprocess.check_output(["systemctl", "status", "apache2"]).decode("utf-8")
+    resp = subprocess.check_output(["systemctl", "status", "apache2.service"]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
     logging.info(status)
