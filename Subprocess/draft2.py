@@ -159,8 +159,8 @@ def test_port_activity():
 if __name__ == "__main__":
     arguments = args()
 
-    if arguments.ifconfig:
-        print(arguments.ifconfig)
+    if arguments.ip_config:
+        print(arguments.ip_config)
     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
     print(resp)
     raise SystemExit
