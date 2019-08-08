@@ -112,13 +112,13 @@ def test_list_of_files():
     logging.info(resp)
 
 
-def test_version_package():
-    arguments = args()
-    resp = subprocess.Popen([arguments.package_version, "--version"])
-    resp.communicate()
-    print(resp)
-    assert "version" in resp
-    assert "build" in resp
+# def test_version_package():
+#     arguments = args()
+#     resp = subprocess.Popen([arguments.package_version, "--version"])
+#     resp.communicate()
+#     print(resp)
+#     assert "version" in resp
+#     assert "build" in resp
 
 
 def test_proc_info():
@@ -186,10 +186,14 @@ if __name__ == "__main__":
         print(resp)
         raise SystemExit
     elif arguments.package_version:
-        print(arguments.package_version)
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
-        print(resp)
-        raise SystemExit
+        arguments = args()
+        logging.info("".join(['package =' + arguments.package_version]))
+        logging.info("getting verion info")
+        p = subprocess.Popen([arguments.package, "--version"])
+        p.communicate()
+        assert "version" in p
+        assert "build" in p
+
     # elif arguments.d:
     #     print(arguments.directory)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
