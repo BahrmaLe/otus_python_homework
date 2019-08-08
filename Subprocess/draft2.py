@@ -25,9 +25,7 @@ def args():
     parser.add_argument('--apache', action='store_true', dest='apache', default="", help='Get Service stats')
     parser.add_argument('--curdir', action='store_true', dest='current_directory', default="", help='Get Current path')
     parser.add_argument('--kernel', action='store_true', dest='kernel_version', default="", help='Get Kernel version')
-    parser.add_argument('--os', action='store_const', dest='os_verison', const="test_os_version",
-                        default="test_os_version",
-                        help='Get OS Version')
+    parser.add_argument('--os', action='store_true', dest='os_verison', default="", help='Get OS Version')
     return parser.parse_args()
 
 
@@ -187,6 +185,11 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_kernel_version"]).decode()
         print(resp)
         raise SystemExit
+    elif arguments.os_verison:
+        print(arguments.os_verison)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_os_version"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
@@ -200,19 +203,6 @@ if __name__ == "__main__":
     # elif arguments.port:
     #     print(arguments.port_activity)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
-    #     print(resp)
-    #     raise SystemExit
-
-
-
-    elif arguments.kernel_version:
-        print(arguments.kernel_version)
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_kernel_version"]).decode()
-        print(resp)
-        raise SystemExit
-    # elif arguments.os:
-    #     print(arguments.os_verison)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_os_version"]).decode()
     #     print(resp)
     #     raise SystemExit
     # elif arguments.program:
