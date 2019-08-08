@@ -2,6 +2,7 @@ import re
 import argparse
 import logging
 import subprocess
+from sys import stdout, stderr
 
 logging.basicConfig(level=logging.INFO)
 
@@ -177,8 +178,9 @@ if __name__ == "__main__":
         raise SystemExit
     elif arguments.apache:
         print(arguments.apache)
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"]).decode()
-        print(resp)
+        resp = subprocess.Popen(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"],  stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        line = resp.stdout.readline()
+        print(line)
         raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
