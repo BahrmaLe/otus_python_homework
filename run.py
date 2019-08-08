@@ -27,4 +27,39 @@ elif args.command == c:
     print("CDNJS API testing")
 results = (subprocess.check_output(["pytest", "-v", args.command]))
 print(results.decode('utf-8'))
+# def test_list_of_files():
+#     arguments = args()
+#     resp = subprocess.check_output(["ls", "-l", arguments.directory]).decode()
+#     print(resp)
+#     assert "total" in resp
+#     logging.info(resp)
 
+
+# def test_version_package():
+#     arguments = args()
+#     resp = subprocess.Popen([arguments.package_version, "--version"])
+#     resp.communicate()
+#     print(resp)
+#     assert "version" in resp
+#     assert "build" in resp
+
+
+# def test_proc_info():
+#     arguments = args()
+#     p1 = subprocess.Popen(["ps", "aux"],
+#                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+#     p2 = subprocess.Popen(["grep", arguments.program_process], stdin=p1.stdout, stdout=subprocess.PIPE)
+#     line = p2.stdout.read()
+#     print(line.decode())
+#     print(line)
+#     assert "akuksen+" in line
+#
+#
+# def test_port_activity():
+#     arguments = args()
+#     p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+#     p2 = subprocess.Popen(["grep", arguments.port_activity], stdin=p1.stdout, stdout=subprocess.PIPE)
+#     line = p2.stdout.readline()
+#     print(line.decode())
+#     assert "unix" in line
+#     assert "STREAM" in line
