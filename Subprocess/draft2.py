@@ -9,13 +9,13 @@ logging.basicConfig(level=logging.INFO)
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store', dest='package_version', default="docker",
+    parser.add_argument('-p', action='store_true', dest='package_version', default="docker",
                         help='Get version of the package')
-    parser.add_argument('-d', action='store', dest='directory', default=".",
+    parser.add_argument('-d', action='store_true', dest='directory', default=".",
                         help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port_activity', default=":21",
+    parser.add_argument('--port', action='store_true', dest='port_activity', default=":21",
                         help='Get port activity')
-    parser.add_argument('--program', action='store', dest='program_proccess', default="docker",
+    parser.add_argument('--program', action='store_true', dest='program_proccess', default="docker",
                         help='Get program info')
     parser.add_argument('--ifconfig', action='store_const', dest='ip_config', const="test_ifconfig",
                         default="test_ifconfig",
@@ -29,7 +29,7 @@ def args():
     parser.add_argument('--net', action='store_const', dest='net_info', const="test_network_bytes",
                         default="test_network_bytes",
                         help='Get Net stats')
-    parser.add_argument('--service', action='store_const', dest='service_status', const="apache2",
+    parser.add_argument('--service', action='store_true', dest='service_status', const="",
                         default="test_service_stat",
                         help='Get Service stats')
     parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
@@ -167,69 +167,58 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
         print(resp)
         raise SystemExit
-
-    if arguments.route:
+    elif arguments.route:
         print(arguments.route_config)
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.cpu:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.cpu:
         print(arguments.cpu_info)
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.p:
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.p:
         print(arguments.package_version)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.d:
+        print(resp)
+        raise SystemExit
+    elif arguments.d:
         print(arguments.directory)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.port:
+        print(resp)
+        raise SystemExit
+    elif arguments.port:
         print(arguments.port_activity)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.net:
+        print(resp)
+        raise SystemExit
+    elif arguments.net:
         print(arguments.net_info)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_network_bytes"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.service:
+        print(resp)
+        raise SystemExit
+    elif arguments.service:
         print(arguments.service_status)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.curdir:
+        print(resp)
+        raise SystemExit
+    elif arguments.curdir:
         print(arguments.current_directory)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_current_dir"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.kernel:
+        print(resp)
+        raise SystemExit
+    elif arguments.kernel:
         print(arguments.kernel_version)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_kernel_version"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.os:
+        print(resp)
+        raise SystemExit
+    elif arguments.os:
         print(arguments.os_verison)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_os_version"]).decode()
-    print(resp)
-    raise SystemExit
-
-    if arguments.program:
+        print(resp)
+        raise SystemExit
+    elif arguments.program:
         print(arguments.program_proccess)
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_proc_info"]).decode()
-    print(resp)
-    raise SystemExit
+        print(resp)
+        raise SystemExit
