@@ -117,7 +117,6 @@ def test_version_package():
     resp = subprocess.Popen([arguments.package_version, "--version"])
     resp.communicate()
     # print(resp)
-    logging.info(resp)
     assert "version" in resp
     assert "build" in resp
 
