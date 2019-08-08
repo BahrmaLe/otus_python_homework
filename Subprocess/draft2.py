@@ -10,10 +10,10 @@ logging.basicConfig(level=logging.INFO)
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store', dest='package_version', default="bash", help='Get version of the package')
-    parser.add_argument('-d', action='store', dest='directory', default=".", help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port_activity', default=":21", help='Get port activity')
-    parser.add_argument('--program', action='store', dest='program_process', default="docker", help='Get program info')
+    parser.add_argument('-p', action='store_true', dest='package_version', default="", help='Get version of the package')
+    parser.add_argument('-d', action='store_true', dest='directory', default="", help='Get file list in the directory')
+    parser.add_argument('--port', action='store_true', dest='port_activity', default="", help='Get port activity')
+    parser.add_argument('--program', action='store_true', dest='program_process', default="", help='Get program info')
     parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
     parser.add_argument('--route', action='store_true', dest='route_config', default="", help='Get route')
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
@@ -195,7 +195,7 @@ if __name__ == "__main__":
     elif arguments.directory:
         logging.info(arguments.directory)
         logging.info("getting files list")
-        resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+        resp = subprocess.check_output(["ls", "-l", arguments.directory]).decode()
         print(resp)
         raise SystemExit
     elif arguments.port_activity:
