@@ -27,8 +27,7 @@ def args():
     parser.add_argument('--net', action='store_const', dest='net_info', const="test_network_bytes",
                         default="test_network_bytes",
                         help='Get Net stats')
-    parser.add_argument('--service', action='store_true', dest='service_status', const="",
-                        default="test_service_stat",
+    parser.add_argument('--service', action='store_true', dest='service_status', default="test_service_stat",
                         help='Get Service stats')
     parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
                         default="test_current_dir",
