@@ -10,14 +10,10 @@ logging.basicConfig(level=logging.INFO)
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store_true', dest='package_version', default="docker",
-                        help='Get version of the package')
-    parser.add_argument('-d', action='store_true', dest='directory', default=".",
-                        help='Get file list in the directory')
-    parser.add_argument('--port', action='store_true', dest='port_activity', default=":21",
-                        help='Get port activity')
-    parser.add_argument('--program', action='store_true', dest='program_proccess', default="docker",
-                        help='Get program info')
+    parser.add_argument('-p', action='store_true', dest='package_version', default="", help='Get version of the package')
+    parser.add_argument('-d', action='store_true', dest='directory', default="", help='Get file list in the directory')
+    parser.add_argument('--port', action='store_true', dest='port_activity', default="", help='Get port activity')
+    parser.add_argument('--program', action='store_true', dest='program_proccess', default="", help='Get program info')
     parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
     parser.add_argument('--route', action='store_true', dest='route_config', default="", help='Get route')
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
@@ -118,12 +114,12 @@ def test_list_of_files():
 
 def test_version_package():
     arguments = args()
-    resp = subprocess.Popen([arguments.p, "--version"])
+    resp = subprocess.Popen([arguments.package_version, "--version"])
     resp.communicate()
-    print(resp)
+    # print(resp)
+    logging.info(resp)
     assert "version" in resp
     assert "build" in resp
-    logging.info(resp)
 
 
 def test_proc_info():
@@ -190,11 +186,11 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_os_version"]).decode()
         print(resp)
         raise SystemExit
-    # elif arguments.p:
-    #     print(arguments.package_version)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+    elif arguments.package_version:
+        print(arguments.package_version)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.d:
     #     print(arguments.directory)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
