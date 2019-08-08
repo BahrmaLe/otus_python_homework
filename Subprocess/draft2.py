@@ -21,8 +21,7 @@ def args():
     parser.add_argument('--route', action='store_true', dest='route_config', default="", help='Get route')
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
     parser.add_argument('--net', action='store_true', dest='net_info', default="", help='Get Net stats')
-    parser.add_argument('--service', action='store_true', dest='service_status', default="test_service_stat",
-                        help='Get Service stats')
+    parser.add_argument('--service', action='store_true', dest='service_status', default="", help='Get Service stats')
     parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
                         default="test_current_dir",
                         help='Get Current path')
@@ -84,7 +83,7 @@ def test_network_bytes():
 
 def test_service_stat():
     arguments = args()
-    resp = subprocess.check_output(["systemctl", "status", arguments.service]).decode("utf-8")
+    resp = subprocess.check_output(["systemctl", "status", arguments.service_status]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
     logging.info(status)
@@ -175,6 +174,11 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_network_bytes"]).decode()
         print(resp)
         raise SystemExit
+    elif arguments.service_status:
+        print(arguments.service_status)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
@@ -191,11 +195,7 @@ if __name__ == "__main__":
     #     print(resp)
     #     raise SystemExit
 
-    # elif arguments.service:
-    #     print(arguments.service_status)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+
     # elif arguments.curdir:
     #     print(arguments.current_directory)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_current_dir"]).decode()
