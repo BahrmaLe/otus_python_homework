@@ -17,9 +17,7 @@ def args():
                         help='Get port activity')
     parser.add_argument('--program', action='store_true', dest='program_proccess', default="docker",
                         help='Get program info')
-    parser.add_argument('--ifconfig', action='store_const', dest='ip_config', const="test_ifconfig",
-                        default="test_ifconfig",
-                        help='Get ifconfig info')
+    parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
     parser.add_argument('--route', action='store_const', dest='route_config', const="test_check_default_route",
                         default="test_check_default_route",
                         help='Get route')
