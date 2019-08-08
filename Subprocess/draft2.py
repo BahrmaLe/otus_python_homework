@@ -189,7 +189,7 @@ if __name__ == "__main__":
         arguments = args()
         logging.info("".join(['package =' + arguments.package_version]))
         logging.info("getting verion info")
-        p = subprocess.Popen([arguments.package, "--version"])
+        p = subprocess.Popen([arguments.package_version, "--version"])
         p.communicate()
         assert "version" in p
         assert "build" in p
