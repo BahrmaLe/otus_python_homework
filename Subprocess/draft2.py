@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store', dest='package_version', default="bash", help='Get version of the package')
+    parser.add_argument('-p', action='store_const', dest='package_version', const="bash", help='Get version of the package')
     parser.add_argument('-d', action='store', dest='directory', default=".", help='Get file list in the directory')
     parser.add_argument('--port', action='store', dest='port_activity', default=":21", help='Get port activity')
     parser.add_argument('--program', action='store', dest='program_process', default="docker", help='Get program info')
