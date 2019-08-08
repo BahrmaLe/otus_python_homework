@@ -176,7 +176,7 @@ if __name__ == "__main__":
         raise SystemExit
     elif arguments.apache:
         print(arguments.apache)
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"])
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"], shell=True).decode()
         print(resp)
         raise SystemExit
     # elif arguments.p:
