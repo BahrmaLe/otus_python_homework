@@ -19,9 +19,7 @@ def args():
                         help='Get program info')
     parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
     parser.add_argument('--route', action='store_true', dest='route_config', default="test_check_default_route", help='Get route')
-    parser.add_argument('--cpu', action='store_const', dest='cpu_info', const="test_processor_info",
-                        default="test_processor_info",
-                        help='Get CPU info')
+    parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="test_processor_info", help='Get CPU info')
     parser.add_argument('--net', action='store_const', dest='net_info', const="test_network_bytes",
                         default="test_network_bytes",
                         help='Get Net stats')
@@ -169,11 +167,11 @@ if __name__ == "__main__":
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
         print(resp)
         raise SystemExit
-    # elif arguments.cpu:
-    #     print(arguments.cpu_info)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+    elif arguments.cpu_info:
+        print(arguments.cpu_info)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.p:
     #     print(arguments.package_version)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
