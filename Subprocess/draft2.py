@@ -191,21 +191,24 @@ if __name__ == "__main__":
         logging.info("getting verion info")
         p = subprocess.Popen([arguments.package_version, "--version"])
         p.communicate()
-        assert "version" in p
-        assert "build" in p
-
-    # elif arguments.d:
-    #     print(arguments.directory)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.port:
-    #     print(arguments.port_activity)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
-    #     print(resp)
-    #     raise SystemExit
-    # elif arguments.program:
-    #     print(arguments.program_proccess)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_proc_info"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+        raise SystemExit
+    elif arguments.directory:
+        logging.info(arguments.directory)
+        logging.info("getting files list")
+        resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+        print(resp)
+        raise SystemExit
+    elif arguments.port_activity:
+        logging.info(arguments.port_activity)
+        p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p2 = subprocess.Popen(["grep", arguments.port_activity], stdin=p1.stdout, stdout=subprocess.PIPE)
+        line = p2.stdout.readline()
+        print(line.decode())
+        raise SystemExit
+    elif arguments.program_process:
+        logging.info("".join(["program ", arguments.program_process]))
+        p1 = subprocess.Popen(["ps", "-o", "pid,ppid,user,args,lstart,etime"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p2 = subprocess.Popen(["grep", arguments.program_process], stdin=p1.stdout, stdout=subprocess.PIPE)
+        line = p2.stdout.read()
+        print(line.decode())
+        raise SystemExit
