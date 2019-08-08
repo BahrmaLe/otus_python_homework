@@ -9,36 +9,36 @@ logging.basicConfig(level=logging.INFO)
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store', dest='package', default="docker",
+    parser.add_argument('-p', action='store', dest='package_version', default="docker",
                         help='Get version of the package')
-    parser.add_argument('-d', action='store', dest='dir', default=".",
+    parser.add_argument('-d', action='store', dest='directory', default=".",
                         help='Get file list in the directory')
-    parser.add_argument('--port', action='store', dest='port', default=":21",
+    parser.add_argument('--port', action='store', dest='port_activity', default=":21",
                         help='Get port activity')
-    parser.add_argument('--program', action='store', dest='program', default="docker",
+    parser.add_argument('--program', action='store', dest='program_proccess', default="docker",
                         help='Get program info')
-    parser.add_argument('--ifconfig', action='store_const', dest='command', const="test_ifconfig",
+    parser.add_argument('--ifconfig', action='store_const', dest='ip_config', const="test_ifconfig",
                         default="test_ifconfig",
                         help='Get ifconfig info')
-    parser.add_argument('--route', action='store_const', dest='command', const="test_check_default_route",
+    parser.add_argument('--route', action='store_const', dest='route_config', const="test_check_default_route",
                         default="test_check_default_route",
                         help='Get route')
-    parser.add_argument('--cpu', action='store_const', dest='command', const="test_processor_info",
+    parser.add_argument('--cpu', action='store_const', dest='cpu_info', const="test_processor_info",
                         default="test_processor_info",
                         help='Get CPU info')
-    parser.add_argument('--net', action='store_const', dest='command', const="test_network_bytes",
+    parser.add_argument('--net', action='store_const', dest='net_info', const="test_network_bytes",
                         default="test_network_bytes",
                         help='Get Net stats')
-    parser.add_argument('--service', action='store_const', dest='command', const="apache2",
+    parser.add_argument('--service', action='store_const', dest='service_status', const="apache2",
                         default="test_service_stat",
                         help='Get Service stats')
-    parser.add_argument('--curdir', action='store_const', dest='command', const="test_current_dir",
+    parser.add_argument('--curdir', action='store_const', dest='current_directory', const="test_current_dir",
                         default="test_current_dir",
                         help='Get Current path')
-    parser.add_argument('--kernel', action='store_const', dest='command', const="test_kernel_version",
+    parser.add_argument('--kernel', action='store_const', dest='kernel_version', const="test_kernel_version",
                         default="test_kernel_version",
                         help='Get Kernel version')
-    parser.add_argument('--os', action='store_const', dest='command', const="test_os_version",
+    parser.add_argument('--os', action='store_const', dest='os_verison', const="test_os_version",
                         default="test_os_version",
                         help='Get OS Version')
     return parser.parse_args()
@@ -48,13 +48,10 @@ def test_ifconfig():
     pat_local = re.compile(b"lo:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
     pat_enp = re.compile(b"enp0s8.*:.*\\n *inet (\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})", re.MULTILINE)
     resp = subprocess.check_output(["ifconfig"])
-
     local_ip = pat_local.findall(resp)[0].decode()
     enp0s8_ip = pat_enp.findall(resp)[0].decode()
-
     logging.info(local_ip)
     logging.info(enp0s8_ip)
-
     assert local_ip == "127.0.0.1"
     assert enp0s8_ip == "192.168.56.103"
 
@@ -67,6 +64,7 @@ def test_check_default_route():
     ip = re.match(pat, line)
     default_route = ip.group(1).decode()
     logging.info(default_route)
+    print(default_route)
     assert "10.0.2.2" == default_route
 
 
@@ -74,6 +72,7 @@ def test_processor_info():
     resp = subprocess.check_output("lscpu").decode()
     pat = re.compile(r".*Model name:( *)(.*)", re.MULTILINE)
     model = pat.findall(resp)[0][1]
+    print(model.decode())
     assert "Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz" in model
     logging.info(model)
 
@@ -92,34 +91,38 @@ def test_network_bytes():
 
 def test_service_stat():
     arguments = args()
-    resp = subprocess.check_output(["systemctl", "status", arguments.command]).decode("utf-8")
+    resp = subprocess.check_output(["systemctl", "status", arguments.service_status]).decode("utf-8")
     pat = re.compile(r"Active: (\w*)", re.MULTILINE)
     status = pat.findall(resp)[0]
     logging.info(status)
+    print(status)
     assert status == "active"
 
 
 def test_current_dir():
     resp = subprocess.check_output(["pwd"]).decode()
+    print(resp)
     assert "/home/akuksenko/otus/otus_python_homework/Subprocess" in resp
     logging.info(resp)
 
 
 def test_kernel_version():
     resp = subprocess.check_output(["uname", "-r"]).decode()
+    print(resp)
     assert "4.15.0-55-generic" in resp
     logging.info(resp)
 
 
 def test_os_version():
     resp = subprocess.check_output(["cat", "/proc/version"]).decode()
+    print(resp)
     assert "Ubuntu 7.4.0-1ubuntu1~18.04.1)" in resp
     logging.info(resp)
 
 
 def test_list_of_files():
     arguments = args()
-    resp = subprocess.check_output(["ls", "-l", arguments.dir]).decode()
+    resp = subprocess.check_output(["ls", "-l", arguments.directory]).decode()
     print(resp)
     assert "total" in resp
     logging.info(resp)
@@ -127,7 +130,7 @@ def test_list_of_files():
 
 def test_version_package():
     arguments = args()
-    resp = subprocess.Popen([arguments.package, "--version"])
+    resp = subprocess.Popen([arguments.package_version, "--version"])
     resp.communicate()
     print(resp)
     assert "version" in resp
@@ -139,7 +142,7 @@ def test_proc_info():
     arguments = args()
     p1 = subprocess.Popen(["ps", "aux"],
                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
+    p2 = subprocess.Popen(["grep", arguments.program_proccess], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.read()
     print(line.decode())
     print(line)
@@ -149,7 +152,7 @@ def test_proc_info():
 def test_port_activity():
     arguments = args()
     p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
+    p2 = subprocess.Popen(["grep", arguments.port_activity], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.readline()
     print(line.decode())
     assert "unix" in line
@@ -159,65 +162,74 @@ def test_port_activity():
 if __name__ == "__main__":
     arguments = args()
 
-    if arguments.command == "ifconfig":
-        print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.ip_config:
+        print(args())
+    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "route":
-        print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.route_config:
+        print(args())
+    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "cpu":
-        print(subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode())
-    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.cpu_info:
+        print(args())
+    resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.package == "p":
+        print(args())
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_version_package"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.dir == "d":
+        print(args())
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_list_of_files"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.port == "port":
+        print(args())
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_port_activity"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "net":
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.net_info:
+        print(args())
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_network_bytes"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "service":
+    if arguments.service_status:
+        print(args())
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_service_stat"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "curdir":
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.current_directory:
+        print(args())
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_current_dir"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "kernel":
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.kernel_version:
+        print(args())
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_kernel_version"]).decode()
     print(resp)
     raise SystemExit
 
-    if arguments.command == "os":
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + arguments.command]).decode()
+    if arguments.os_verison:
+        print(args())
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_os_version"]).decode()
     print(resp)
     raise SystemExit
 
     if arguments.program == "program":
+        print(args())
         resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_proc_info"]).decode()
     print(resp)
     raise SystemExit
