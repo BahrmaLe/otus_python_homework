@@ -18,9 +18,7 @@ def args():
     parser.add_argument('--program', action='store_true', dest='program_proccess', default="docker",
                         help='Get program info')
     parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
-    parser.add_argument('--route', action='store_const', dest='route_config', const="test_check_default_route",
-                        default="test_check_default_route",
-                        help='Get route')
+    parser.add_argument('--route', action='store_true', dest='route_config', default="test_check_default_route", help='Get route')
     parser.add_argument('--cpu', action='store_const', dest='cpu_info', const="test_processor_info",
                         default="test_processor_info",
                         help='Get CPU info')
@@ -166,11 +164,13 @@ if __name__ == "__main__":
     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_ifconfig"]).decode()
     print(resp)
     raise SystemExit
-    # elif arguments.route:
-    #     print(arguments.route_config)
-    #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
-    #     print(resp)
-    #     raise SystemExit
+
+    # noinspection PyUnreachableCode
+    if arguments.route_config:
+        print(arguments.route_config)
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_check_default_route"]).decode()
+        print(resp)
+        raise SystemExit
     # elif arguments.cpu:
     #     print(arguments.cpu_info)
     #     resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_processor_info"]).decode()
