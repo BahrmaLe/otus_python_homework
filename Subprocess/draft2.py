@@ -83,12 +83,12 @@ def test_network_bytes():
 
 def test_apache_stat():
     resp = subprocess.check_output(["systemctl", "status", "apache2.service"]).decode("utf-8")
-    pat = re.compile(r"Active: (\w*)", re.MULTILINE)
-    status = pat.findall(resp)[0]
-    logging.info(status)
-    print(resp)
-    print(status)
-    assert status == "active"
+    if "apache2.service" in resp:
+        pat = re.compile(r"Active: (\w*)", re.MULTILINE)
+        status = pat.findall(resp)[0]
+        print(resp)
+        print(status)
+        assert status == "active"
 
 
 def test_current_dir():
@@ -176,7 +176,7 @@ if __name__ == "__main__":
         raise SystemExit
     elif arguments.apache:
         print(arguments.apache)
-        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"]).decode("utf-8")
+        resp = subprocess.check_output(["pytest", "-s", "-v", "draft2.py::" + "test_apache_stat"]).decode()
         print(resp)
         raise SystemExit
     # elif arguments.p:
