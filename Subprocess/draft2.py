@@ -10,10 +10,10 @@ logging.basicConfig(level=logging.INFO)
 def args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-p', action='store_true', dest='package_version', default="", help='Get version of the package')
-    parser.add_argument('-d', action='store_true', dest='directory', default="", help='Get file list in the directory')
-    parser.add_argument('--port', action='store_true', dest='port_activity', default="", help='Get port activity')
-    parser.add_argument('--program', action='store_true', dest='program_proccess', default="", help='Get program info')
+    parser.add_argument('-p', action='store', dest='package_version', default="bash", help='Get version of the package')
+    parser.add_argument('-d', action='store', dest='directory', default=".", help='Get file list in the directory')
+    parser.add_argument('--port', action='store', dest='port_activity', default=":21", help='Get port activity')
+    parser.add_argument('--program', action='store', dest='program_process', default="docker", help='Get program info')
     parser.add_argument('--ifconfig', action='store_true', dest='ip_config', default="", help='Get ifconfig info')
     parser.add_argument('--route', action='store_true', dest='route_config', default="", help='Get route')
     parser.add_argument('--cpu', action='store_true', dest='cpu_info', default="", help='Get CPU info')
@@ -106,7 +106,7 @@ def test_os_version():
 
 def test_list_of_files():
     arguments = args()
-    resp = subprocess.check_output(["ls", "-l", arguments.d]).decode()
+    resp = subprocess.check_output(["ls", "-l", arguments.directory]).decode()
     print(resp)
     assert "total" in resp
     logging.info(resp)
@@ -116,7 +116,7 @@ def test_version_package():
     arguments = args()
     resp = subprocess.Popen([arguments.package_version, "--version"])
     resp.communicate()
-    # print(resp)
+    print(resp)
     assert "version" in resp
     assert "build" in resp
 
@@ -125,7 +125,7 @@ def test_proc_info():
     arguments = args()
     p1 = subprocess.Popen(["ps", "aux"],
                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    p2 = subprocess.Popen(["grep", arguments.program], stdin=p1.stdout, stdout=subprocess.PIPE)
+    p2 = subprocess.Popen(["grep", arguments.program_process], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.read()
     print(line.decode())
     print(line)
@@ -135,7 +135,7 @@ def test_proc_info():
 def test_port_activity():
     arguments = args()
     p1 = subprocess.Popen(['netstat', '-atnp'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    p2 = subprocess.Popen(["grep", arguments.port], stdin=p1.stdout, stdout=subprocess.PIPE)
+    p2 = subprocess.Popen(["grep", arguments.port_activity], stdin=p1.stdout, stdout=subprocess.PIPE)
     line = p2.stdout.readline()
     print(line.decode())
     assert "unix" in line
