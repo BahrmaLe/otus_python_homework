@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BDD/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/features/web.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subprocess/draft2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/draft2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subprocess/test_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subprocess/test_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +49,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last.edited.regexp" value="192.168.56.103" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Selenium/Jenkins" />
+    <property name="last_opened_file_path" value="$USER_HOME$/GitHub/behavior-driven-python" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\features" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\API\MockedAPI" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
@@ -78,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for draft2.test_service_stat">
+  <component name="RunManager" selected="Python.tests">
     <configuration name="draft" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,6 +145,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BDD" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BDD/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile">
       <deployment type="dockerfile">
         <settings>
@@ -180,21 +204,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_product_page.test_products" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium/Opencart_products_page" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_product_page.test_products&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest in test_info.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -227,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tests" />
         <item itemvalue="Python tests.pytest for draft2.test_service_stat" />
         <item itemvalue="Python.draft" />
         <item itemvalue="Python tests.pytest in test_info.py" />
         <item itemvalue="Python tests.pytest in test_login_page.py" />
-        <item itemvalue="Python tests.pytest for test_product_page.test_products" />
       </list>
     </recent_temporary>
   </component>
@@ -245,13 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00134" summary="Added run script with argparse parameters">
-      <created>1565191358168</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1565191358168</updated>
     </task>
     <task id="LOCAL-00135" summary="Added run script with argparse parameters">
       <created>1565191870150</created>
@@ -589,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565281711487</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="Added run script with argparse parameters">
+      <created>1565282154258</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1565282154258</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TodoView">
