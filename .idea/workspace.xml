@@ -7,12 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BDD/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BDD/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BDD/features/web.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BDD/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/Robot/ActionClass.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/Robot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/Robot/valid_login.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/features/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium/Opencart_windows_operations/conftest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,24 +48,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last.edited.regexp" value="192.168.56.103" />
-    <property name="last_opened_file_path" value="$USER_HOME$/GitHub/behavior-driven-python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BDD/Robot" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\features" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\Robot" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\API\MockedAPI" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Seleium\Opencart_login_page" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\Robot" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\examples" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Jenkins" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumGrid" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\API\MockedAPI" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Subprocess" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -254,13 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00135" summary="Added run script with argparse parameters">
-      <created>1565191870150</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1565191870150</updated>
     </task>
     <task id="LOCAL-00136" summary="Added run script with argparse parameters">
       <created>1565191915666</created>
@@ -598,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565282154258</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Added run script with argparse parameters">
+      <created>1565364871160</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1565364871161</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TodoView">
