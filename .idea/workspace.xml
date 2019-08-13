@@ -6,8 +6,15 @@
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+    <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="Added run script with argparse parameters">
+      <change afterPath="$PROJECT_DIR$/BDD/LoginRobot/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Homework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/LoginUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/LoginUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSH/libs/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSH/libs/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ssh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSH/libs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +53,7 @@
     <property name="last.edited.regexp" value="192.168.56.103" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BDD/Robot" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,28 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tests">
-    <configuration name="draft" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Subprocess/draft.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.ssh">
     <configuration name="launch_test_script" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,6 +126,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ssh" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SSH/libs/ssh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,21 +176,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="pytest for draft2.test_service_stat" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;draft2.test_service_stat&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for test_info.test_if" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -199,43 +191,58 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_info.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for tests.test_create_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Subprocess" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Subprocess/test_info.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;tests.test_create_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_login_page.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for tests.test_delete_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium/Opencart_login_page" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Selenium/Opencart_login_page/test_login_page.py&quot;" />
+      <option name="_new_target" value="&quot;tests.test_delete_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in tests.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/SSH/libs/tests.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ssh" />
+        <item itemvalue="Python tests.pytest for tests.test_create_user" />
+        <item itemvalue="Python tests.pytest in tests.py" />
+        <item itemvalue="Python tests.pytest for tests.test_delete_user" />
         <item itemvalue="Python.tests" />
-        <item itemvalue="Python tests.pytest for draft2.test_service_stat" />
-        <item itemvalue="Python.draft" />
-        <item itemvalue="Python tests.pytest in test_info.py" />
-        <item itemvalue="Python tests.pytest in test_login_page.py" />
       </list>
     </recent_temporary>
   </component>
@@ -249,20 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Added run script with argparse parameters">
-      <created>1565193162321</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1565193162321</updated>
-    </task>
-    <task id="LOCAL-00138" summary="Added run script with argparse parameters">
-      <created>1565193348237</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1565193348237</updated>
     </task>
     <task id="LOCAL-00139" summary="Added run script with argparse parameters">
       <created>1565256799212</created>
@@ -593,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565518092565</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="Added run script with argparse parameters">
+      <created>1565528016935</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1565528016935</updated>
+    </task>
+    <task id="LOCAL-00187" summary="Robot">
+      <created>1565529446494</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1565529446494</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TodoView">
@@ -637,7 +644,8 @@
       <path value="$PROJECT_DIR$/Homework" />
     </ignored-roots>
     <MESSAGE value="Added run script with argparse parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added run script with argparse parameters" />
+    <MESSAGE value="Robot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Robot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,6 +664,11 @@
           <url>file://$PROJECT_DIR$/CDNJS/test_mock.py</url>
           <line>33</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SSH/libs/tests.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

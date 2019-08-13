@@ -29,6 +29,7 @@ user = 'akuksenko'
 secret = 'toor'
 port = 22
 
+
 class ShhClient:
     """Lib"""
 
@@ -94,15 +95,14 @@ class ShhClient:
         # self.execute("chown {0}:{1} /var/ftp_home".format(user, user))
         # self.execute("usermod -d /var/ftp_home/ {0}".format(user))
 
-    def check_user(self, user):
-        stdin, stdout, stderr = self.client.exec_command(("getent passwd {0}".format(user)))
-        print(stdout.read().decode())
+    def if_user_exist(self, user):
+        stdin, stdout, stderr = self.client.exec_command("cat /etc/passwd | grep {0}".format(user))
         print(len(stdout.read()))
         return len(stdout.read())
 
     def check_user_ftp(self, user):
         with self.client.invoke_shell() as ssh:
-            ssh.send("cat /etc/passwd {0}| grep {0}".format(user))
+            ssh.send("grep -с {0} /etc/passwd".format(user))
             out = ssh.recv(10000).decode("utf-8")
             print(out)
             return out
