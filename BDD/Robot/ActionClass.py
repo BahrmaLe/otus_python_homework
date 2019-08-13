@@ -1,8 +1,8 @@
 from robot.api.deco import keyword
 from selenium import webdriver
 import sys
-sys.path.remove('')
-sys.path.append('.')
+# sys.path.remove('')
+sys.path.append('Homework/BDD')
 
 
 class LoginAdmin:

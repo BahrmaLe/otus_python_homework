@@ -6,13 +6,13 @@
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="Added run script with argparse parameters">
-      <change afterPath="$PROJECT_DIR$/BDD/LoginRobot/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Homework.iml" afterDir="false" />
+    <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SSH/libs/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SSH/libs/test_FTP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/Login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/LoginUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/LoginUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/Robot/ActionClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/Robot/ActionClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSH/libs/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSH/libs/ftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ftp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSH/libs/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ssh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSH/libs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/tests.py" afterDir="false" />
     </list>
@@ -83,7 +83,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ssh">
+  <component name="RunManager" selected="Python tests.pytest for tests.TestsFTP.test_upload_file">
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SSH/libs/conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ftp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SSH/libs/ftp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="launch_test_script" type="PythonConfigurationType" factoryName="Python">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,27 +189,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BDD" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BDD/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile">
       <deployment type="dockerfile">
         <settings>
@@ -191,6 +212,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for tests.TestsFTP.test_upload_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.TestsFTP.test_upload_file&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for tests.test_create_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,43 +242,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for tests.test_delete_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_delete_user&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in tests.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SSH/libs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/SSH/libs/tests.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for tests.TestsFTP.test_upload_file" />
+        <item itemvalue="Python.ftp" />
+        <item itemvalue="Python.conftest" />
         <item itemvalue="Python.ssh" />
         <item itemvalue="Python tests.pytest for tests.test_create_user" />
-        <item itemvalue="Python tests.pytest in tests.py" />
-        <item itemvalue="Python tests.pytest for tests.test_delete_user" />
-        <item itemvalue="Python.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -256,13 +262,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00139" summary="Added run script with argparse parameters">
-      <created>1565256799212</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1565256799212</updated>
     </task>
     <task id="LOCAL-00140" summary="Added run script with argparse parameters">
       <created>1565257062019</created>
@@ -600,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565529446494</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Added run script with argparse parameters">
+      <created>1565690445245</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1565690445246</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TodoView">
@@ -643,9 +649,9 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Homework" />
     </ignored-roots>
-    <MESSAGE value="Added run script with argparse parameters" />
     <MESSAGE value="Robot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Robot" />
+    <MESSAGE value="Added run script with argparse parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added run script with argparse parameters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,9 +672,19 @@
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SSH/libs/tests.py</url>
+          <url>file://$PROJECT_DIR$/SSH/libs/conftest.py</url>
           <line>16</line>
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SSH/libs/ftp.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SSH/libs/tests.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

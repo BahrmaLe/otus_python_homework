@@ -4,8 +4,8 @@ import paramiko
 
 FTP_DAEMON = "vsftpd.conf"
 
-config = 'listen=NO\n' \
-      'listen_ipv6=YES\n' \
+config = 'listen=YES\n' \
+      'listen_ipv6=NO\n' \
       'anonymous_enable=NO\n' \
       'local_enable=YES\n' \
       'write_enable=YES\n' \
@@ -17,13 +17,13 @@ config = 'listen=NO\n' \
       'chroot_local_user=YES\n' \
       'secure_chroot_dir=/var/run/vsftpd/empty\n' \
       'pam_service_name=vsftpd\n' \
-      'rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem\n' \
-      'rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key\n' \
+      'rsa_cert_file=/etc/ssl/certs/vsftpd.pem\n' \
+      'rsa_private_key_file=/etc/ssl/private/vsftpd.key\n' \
       'ssl_enable=NO\n' \
-      'pasv_enable=Yes\n' \
       'pasv_min_port=10000\n' \
       'pasv_max_port=10100\n' \
       'allow_writeable_chroot=YES\n'
+
 host = '192.168.56.103'
 user = 'akuksenko'
 secret = 'toor'
@@ -92,8 +92,8 @@ class ShhClient:
         self.execute("".join(["sudo passwd", user]))
         self.execute(password)
         self.execute(password)
-        # self.execute("chown {0}:{1} /var/ftp_home".format(user, user))
-        # self.execute("usermod -d /var/ftp_home/ {0}".format(user))
+        self.execute("chown {0}:{1} /var/ftp_home".format(user, user))
+        self.execute("usermod -d /var/ftp_home/ {0}".format(user))
 
     def if_user_exist(self, user):
         stdin, stdout, stderr = self.client.exec_command("cat /etc/passwd | grep {0}".format(user))

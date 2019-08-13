@@ -11,8 +11,8 @@ port = 22
 
 @pytest.fixture
 def ftp():
-    ftp = FTPClient(ftp_host='192.168.56.103')
-    ftp.connect(user_name="akuksenko", password="toor")
+    ftp = FTPClient(ftp_host=host)
+    ftp.connect(user_name=user, password=secret)
     yield ftp
     ftp.close()
 

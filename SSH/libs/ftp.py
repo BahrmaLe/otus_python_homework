@@ -33,7 +33,7 @@ class FTPClient:
         for file in directory:
             if filename in file:
                 return True
-        return False
+            return False
 
     def upload_file(self, filename):
         """Upload"""
