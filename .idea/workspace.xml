@@ -7,14 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SSH/libs/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSH/libs/test_FTP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/LoginRobot/test_admin.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BDD/Robot/ActionClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/Robot/ActionClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/ftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ftp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/ssh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSH/libs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSH/libs/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/LoginAdmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/LoginAdmin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,13 +258,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00140" summary="Added run script with argparse parameters">
-      <created>1565257062019</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1565257062019</updated>
     </task>
     <task id="LOCAL-00141" summary="Added run script with argparse parameters">
       <created>1565259875080</created>
@@ -606,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565690445246</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="Added run script with argparse parameters">
+      <created>1565707802058</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1565707802058</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TodoView">
