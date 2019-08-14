@@ -5,7 +5,7 @@ import pytest
 @pytest.mark.usefixtures("pairs_of_response")
 def test_urls(pairs_of_response):
     """pairwise testing for content-type, headers in responses for all urls """
-    print(pairs_of_response.status_code)
+    print(type(pairs_of_response.status_code))
     assert pairs_of_response.status_code == 200
 
 
