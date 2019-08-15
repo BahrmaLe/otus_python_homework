@@ -8,6 +8,7 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${SERVER}         demo23.opencart.pro
+${LOCAL SERVER}         192.168.56.103/opencart
 ${BROWSER}        Chrome
 ${DELAY}          0
 ${VALID USER}     demo
@@ -15,11 +16,13 @@ ${VALID PASSWORD}    demo
 ${LOGIN URL}      http://${SERVER}/admin/
 ${WELCOME URL}    http://${SERVER}/welcome.html
 ${ERROR URL}      http://${SERVER}/error.html
+${LOCAL ADMIN URL}      http://${LOCAL SERVER}/admin/
 ${DASHBOARD}      dashboard
 ${CATEGORY}      category
 ${CUSTOMMENU}      custommenu
 ${SETTING}      setting
 ${REPORT}      report
+${Count}
 
 *** Keywords ***
 Open Browser To Login Page
@@ -87,3 +90,61 @@ Report Page Should Be Open
     Click Element    xpath=//*[@id="menu-report"]/ul/li[1]/ul/li[1]/a
     Location Should Contain    ${REPORT}
     Title Should Be    Отчет по продажам
+
+Open Browser To Local Admin Page
+    Open Browser    ${LOCAL ADMIN URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+
+Submit Admin
+    Click Button    xpath=//*[@id="content"]/div/div/div/div/div[2]/form/div[3]/button
+
+Product Should Be Added
+    [Arguments]    ${product_name}
+    Click Element    xpath=//*[@id="menu-catalog"]/a
+    Capture Page Screenshot
+    Wait Until Element Is Visible    xpath=//*[@id="collapse1"]/li[2]/a
+    Capture Page Screenshot
+    Click Element    xpath=//*[@id="collapse1"]/li[2]/a
+    Capture Page Screenshot
+    ${count1} =     Get Element Count    xpath=//*[@id="form-product"]/div/table/tbody/tr
+    Element Should Be Visible    xpath=//*[@id="content"]/div[1]/div/div/a
+    Capture Page Screenshot
+    Click Element    xpath=//*[@id="content"]/div[1]/div/div/a
+    Capture Page Screenshot
+    Input Text    xpath=//*[@id="input-name1"]    ${product_name}
+    Capture Page Screenshot
+    Input Text    xpath=//*[@id="input-meta-title1"]    ${product_name}
+    Capture Page Screenshot
+    Click Element    xpath=//*[@id="form-product"]/ul/li[2]/a
+    Capture Page Screenshot
+    Input Text    xpath=//*[@id="input-model"]    ${product_name}
+    Capture Page Screenshot
+    Click Element    css=#content > div.page-header > div > div > button
+    Go Back
+    Go Back
+    Reload Page
+    ${count2} =     Get Element Count    xpath=//*[@id="form-product"]/div/table/tbody/tr
+    Should Be True    ${count1}<${count2}
+    Capture Page Screenshot
+
+Product Should Be Deleted
+    Click Element    xpath=//*[@id="menu-catalog"]/a
+    Capture Page Screenshot
+    Wait Until Element Is Visible    xpath=//*[@id="collapse1"]/li[2]/a
+    Capture Page Screenshot
+    Click Element    xpath=//*[@id="collapse1"]/li[2]/a
+    Capture Page Screenshot
+    ${count1} =     Get Element Count    xpath=//*[@id="form-product"]/div/table/tbody/tr
+    Capture Page Screenshot
+    Select Checkbox    xpath=//*[@id="form-product"]/div/table/tbody/tr[1]/td[1]/input
+    Capture Page Screenshot
+    Select Checkbox    xpath=//*[@id="form-product"]/div/table/tbody/tr[2]/td[1]/input
+    Capture Page Screenshot
+    Choose Ok On Next Confirmation
+    Click Element    css=#content > div.page-header > div > div > button.btn.btn-danger
+    Confirm Action
+    ${count2} =     Get Element Count    xpath=//*[@id="form-product"]/div/table/tbody/tr
+    Should Be True    ${count1}>${count2}
+    Capture Page Screenshot
+
