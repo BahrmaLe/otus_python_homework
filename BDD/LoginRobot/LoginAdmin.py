@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 
-class LoginAdmin():
+class LoginAdmin:
 
     def __init__(self):
         self.options = webdriver.ChromeOptions()

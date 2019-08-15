@@ -2,15 +2,17 @@
 <project version="4">
   <component name="AnalysisUIOptions">
     <option name="FILTER_RESOLVED_ITEMS" value="false" />
-    <option name="SCOPE_TYPE" value="8" />
+    <option name="SCOPE_TYPE" value="3" />
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/API/Mock/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Mock/test_mock.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/admin_tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/admin_tests/resource.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BDD/admin_tests/valid_admin_pages.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/LoginAdmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/LoginAdmin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/LoginRobot/test_admin.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/LoginRobot/test_admin.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,24 +49,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last.edited.regexp" value="192.168.56.103" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/BDD/Robot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BDD" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\Admin" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\Robot" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\examples" />
+      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Jenkins" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\features" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\Robot" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\API\MockedAPI" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_windows_operations" />
       <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Opencart_login_page" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\Robot" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\BDD\examples" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\Selenium\Jenkins" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework" />
-      <recent name="C:\Users\60064265\PycharmProjects\Homework\SeleniumGrid" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,13 +242,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00142" summary="Added run script with argparse parameters">
-      <created>1565261143359</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1565261143359</updated>
     </task>
     <task id="LOCAL-00143" summary="Added run script with argparse parameters">
       <created>1565265095529</created>
@@ -584,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565711178563</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="Added run script with argparse parameters">
+      <created>1565783613908</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1565783613908</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TodoView">
