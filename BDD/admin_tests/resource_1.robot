@@ -5,8 +5,11 @@ Documentation     A resource file with reusable keywords and variables.
 ...               domain specific language. They utilize keywords provided
 ...               by the imported SeleniumLibrary.
 Library           SeleniumLibrary
+Library           DatabaseLibrary
+Library           OperatingSystem
 
 *** Variables ***
+${DBName}         my_db_test
 ${SERVER}         demo23.opencart.pro
 ${LOCAL SERVER}         192.168.56.103/opencart
 ${BROWSER}        Chrome
@@ -22,7 +25,6 @@ ${CATEGORY}      category
 ${CUSTOMMENU}      custommenu
 ${SETTING}      setting
 ${REPORT}      report
-${Count}
 
 *** Keywords ***
 Open Browser To Login Page
@@ -125,7 +127,9 @@ Product Should Be Added
     Go Back
     Reload Page
     ${count2} =     Get Element Count    xpath=//*[@id="form-product"]/div/table/tbody/tr
-    Should Be True    ${count1}<${count2}
+    Should Be True    ${count1} < ${count2}
+    set global variable  ${count1}
+    set global variable  ${count2}
     Capture Page Screenshot
 
 Product Should Be Deleted
@@ -146,5 +150,34 @@ Product Should Be Deleted
     Confirm Action
     ${count2} =     Get Element Count    xpath=//*[@id="form-product"]/div/table/tbody/tr
     Should Be True    ${count1}>${count2}
+    set global variable  ${count1}
+    set global variable  ${count2}
     Capture Page Screenshot
 
+Remove old DB if exists
+    [Tags]    db    smoke
+    ${Status}    ${value} =    Run Keyword And Ignore Error    File Should Not Exist    ./${DBName}.db
+    Run Keyword If    "${Status}" == "FAIL"    Run Keyword And Ignore Error    Remove File    ./${DBName}.db
+    File Should Not Exist    ./${DBName}.db
+    Comment    Sleep    1s
+
+Connect to SQLiteDB
+    [Tags]    db    smoke
+    Comment    Connect To Database Using Custom Params sqlite3 database='path_to_dbfile\dbname.db'
+    Connect To Database Using Custom Params    sqlite3    database="./${DBName}.db", isolation_level=None
+
+Create Product table
+    [Tags]    db    smoke
+    ${output} =    Execute SQL String    CREATE TABLE product (id integer unique,product_count_before int,product_count_after int);
+    Log    ${output}
+    Should Be Equal As Strings    ${output}    None
+
+Table Must Exist - product
+    [Tags]    db    smoke
+    Table Must Exist    product
+
+Execute SQL Script - Insert Data product table
+    [Tags]    db    smoke
+    ${output} =    Execute SQL Script    INSERT INTO product VALUES(1, '${count1}', '${count2}');    True
+    Log    ${output}
+    Should Be Equal As Strings    ${output}    None
