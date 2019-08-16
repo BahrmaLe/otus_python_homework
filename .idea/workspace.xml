@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d62633-11e2-49c1-8f23-9a7d863e28f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BDD/admin_tests/MySQL_DB_Tests.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BDD/admin_tests/MySQL_DB_Tests.robot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BDD/admin_tests/admin_product_page.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/admin_tests/admin_product_page.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BDD/admin_tests/resource_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/admin_tests/resource_1.robot" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last.edited.regexp" value="192.168.56.103" />
-    <property name="last_opened_file_path" value="$USER_HOME$/GitHub/Robotframework-Database-Library" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BDD/admin_tests" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -240,13 +240,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554208838655</updated>
-    </task>
-    <task id="LOCAL-00145" summary="Added run script with argparse parameters">
-      <created>1565265293766</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1565265293766</updated>
     </task>
     <task id="LOCAL-00146" summary="Added run script with argparse parameters">
       <created>1565265354684</created>
@@ -584,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565885449440</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="BDD">
+      <created>1565962024356</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1565962024356</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TodoView">

@@ -168,7 +168,7 @@ Connect to SQLiteDB
 
 Create Product table
     [Tags]    db    smoke
-    ${output} =    Execute SQL String    CREATE TABLE product (id integer unique,product_count_before int,product_count_after int);
+    ${output} =    Execute SQL String    CREATE TABLE product (id integer unique,products_before integer,products_after integer);
     Log    ${output}
     Should Be Equal As Strings    ${output}    None
 
@@ -178,6 +178,6 @@ Table Must Exist - product
 
 Execute SQL Script - Insert Data product table
     [Tags]    db    smoke
-    ${output} =    Execute SQL Script    INSERT INTO product VALUES(1, '${count1}', '${count2}');    True
+    ${output} =    Execute SQL String    INSERT INTO product VALUES('${count1} + ${count2}', '${count1}', '${count2}');    True
     Log    ${output}
     Should Be Equal As Strings    ${output}    None
